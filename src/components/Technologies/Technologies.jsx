@@ -120,11 +120,12 @@ const IconItem = styled.div`
   justify-content: center;
   gap: 0.5rem;
   text-align: center;
-  color: #555;
+  color: #E6E6E6;
 
   svg {
     width: 3rem;
     height: 3rem;
+    filter: drop-shadow(0px 0px 8px #01be96); /* Agrega un filtro de sombra */
   }
 
   span {

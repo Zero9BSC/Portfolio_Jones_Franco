@@ -14,11 +14,18 @@ const ProfComponent = () => {
           </h4>
           <h1 className="green">Franco Nicolas Jones</h1>
           <h3>Web Developer</h3>
-          <p>
+          {/* <p>
           Hello! I'm Jones Franco Nicolas, a passionate software developer with experience in Python, JavaScript, and C++. I excel in adapting to new challenges and solving problems, which enables me to thrive in dynamic environments. I am actively seeking opportunities in Europe to fulfill my dream of working and living in this beautiful continent.
           I am available for immediate travel and open to exploring opportunities in different European countries. I am excited about the opportunity to be part of a creative team and contribute to the success of your company. Thank you for visiting my portfolio website!
+          </p> */}
+          <p>
+          Hello! I'm Jones Franco Nicolas, a software developer experienced in Python, JavaScript, and C++. Seeking opportunities in Europe to fulfill my dream. Available for immediate travel. Let's connect and create something amazing! Thank you for visiting my portfolio website!
           </p>
-          <button>Let's talk</button>
+          <button>
+            <LinkButton href="https://tu-sitio-web.com" target="_blank" rel="noopener noreferrer">
+              Let's talk
+            </LinkButton>
+          </button>
           <Social>
             <p>Check out my</p>
             <div className="social-icons">
@@ -106,6 +113,13 @@ const Texts = styled.div`
     }
   }
 `;
+
+const LinkButton = styled.a`
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+`;
+
 const Social = styled.div`
   margin-top: 3rem;
   display: flex;

@@ -6,12 +6,14 @@ import styled from 'styled-components';
 
 let data = [
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661324124/Yt-portfolio/ui5_mnvdaw.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "https://imgur.com/YTHPKKB.png",
+        disc : "Dolce&Ricco is a website of a local bakery that offers delicious homemade recipes. It provides a wide variety of options to purchase bakery products.",
+        demo : "https://dolcericco.netlify.app/"
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661324074/Yt-portfolio/ui4_jku3ol.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "https://imgur.com/hjPdVOC.png",
+        disc : "HealthyHearts is a website created with Flask.",
+        demo : "https://healthyhearts.netlify.app/"
     },
     {
         img : "https://res.cloudinary.com/ghazni/image/upload/v1661323981/Yt-portfolio/ui2_wtollo.png",
