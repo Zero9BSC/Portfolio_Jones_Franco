@@ -12,8 +12,8 @@ const ProfComponent = () => {
           <h4>
             Hello <span className="green">I'am</span>
           </h4>
-          <h1 className="green">Jones Franco Nicolas</h1>
-          <h3>Django Web Developer</h3>
+          <h1 className="green">Franco Nicolas Jones</h1>
+          <h3>Web Developer</h3>
           <p>
           Hello! I'm Jones Franco Nicolas, a passionate software developer with experience in Python, JavaScript, and C++. I excel in adapting to new challenges and solving problems, which enables me to thrive in dynamic environments. I am actively seeking opportunities in Europe to fulfill my dream of working and living in this beautiful continent.
           I am available for immediate travel and open to exploring opportunities in different European countries. I am excited about the opportunity to be part of a creative team and contribute to the success of your company. Thank you for visiting my portfolio website!
