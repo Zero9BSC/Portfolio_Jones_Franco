@@ -1,6 +1,6 @@
 Hello I'am
-Milad Amiri
-UX/UI Designer And Graphic Designer
+Franco Nicolas Jones
+FullStack Web Developer
 
 ## colors
 green : #01be96

@@ -1,30 +1,41 @@
+## Portfolio using React.js and Styled-Components in 2023
 
-## Portfolio using React js and styled-components 2023
+Hello! This is my portfolio created with React.
 
-<img src="https://res.cloudinary.com/ghazni/image/upload/v1678467366/portfolio_6_tg19nz.png" alt="banner"/>
+This repository contains my portfolio website, which utilizes React.js, Styled-Components, and the react-awesome-reveal library. It takes advantage of React Hooks, the React-Slick library, and has a responsive design. It showcases my projects, skills, and experience. Feel free to explore and learn more about my work.
 
-## Demo
-[Demo](https://uxui-profile.netlify.app/)
-
-[Tutorial Video Link](https://youtu.be/xbyoqfwCFE8)
-
-## Features
-
-- Animated navbar
-- Slider
-- Animation on scroll
-- Responsive
-
-## Description
-
-This portfolio is build using React JS, Styled-Components and react awesome reveal library. People can see the owners services, projects, clients ideas and also has a contact form for people to get in touch with. This project has a youtube video tutorial that teaches the React newbies about React Hook, React-Slick and responsive design.
-
-Developed By Milad Amiri 2023.
-Watch more videos from me [Milad Tech](https://www.youtube.com/@miladtech2844)
-
-## Technologies 
-
+## Technologies Used
+- React.js
+- HTML
+- CSS
+- JavaScript
 - [React JS](https://reactjs.org/docs/getting-started.html)
 - [Styled-Components](https://styled-components.com)
 - [React Slick](https://react-slick.neostack.com)
 - [React Awesome Reveal](https://react-awesome-reveal.morello.dev/)
+
+## Features
+- Responsive design for various screen sizes
+- Project showcase with detailed information
+- Skills and experience section
+- Contact information
+- Animated navbar
+- Slider
+- Animation on scroll
+
+## How to Run
+1. Clone this repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install the dependencies.
+4. Run `npm start` to start the development server.
+5. Open `http://localhost:3000` in your browser.
+
+## Contact
+You can reach out to me on [LinkedIn](https://www.linkedin.com/in/franco-jones/).
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+Feel free to fork and modify this project to create your own portfolio website. If you have any questions or suggestions, please feel free to reach out.
+
+Enjoy exploring my portfolio!
