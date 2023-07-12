@@ -4,6 +4,11 @@ import { SiInformatica } from "react-icons/si";
 
 const Header = () => {
     const [bar, setBar] = useState(false);
+
+    const handleLinkClick = () => {
+        setBar(false);
+    };
+    
   return (
     <Container bar={bar}>
         <Logo>
@@ -11,12 +16,12 @@ const Header = () => {
             <h1>Portfolio</h1>
         </Logo>
         <Nav bar={bar}>
-            <span><a href="#home">Home</a></span>
-            <span><a href="#service">Services</a></span>
-            <span><a href="#technologies">Technologies</a></span>
-            <span><a href="#project">Projects</a></span>
-            <span><a href="#client">Testimonials</a></span>
-            <span><a href="#footer">Portfolio</a></span>
+            <span><a href="#home" onClick={handleLinkClick}>Home</a></span>
+            <span><a href="#service" onClick={handleLinkClick}>Services</a></span>
+            <span><a href="#technologies" onClick={handleLinkClick}>Technologies</a></span>
+            <span><a href="#project" onClick={handleLinkClick}>Projects</a></span>
+            <span><a href="#client" onClick={handleLinkClick}>Testimonials</a></span>
+            <span><a href="#footer" onClick={handleLinkClick}>Contact</a></span>
         </Nav>
         <div
         onClick={() => setBar(!bar)}
