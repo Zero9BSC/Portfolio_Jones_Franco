@@ -1,10 +1,18 @@
-import React from "react";
+// import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { AiOutlineInstagram, AiFillGithub } from "react-icons/ai";
+// import { AiOutlineInstagram, AiFillGithub } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
 
 const ProfComponent = () => {
+  const [showResume, setShowResume] = useState(false);
+
+  const toggleResume = () => {
+    setShowResume(!showResume);
+  };
+
   return (
     <Container id="home">
       <Slide direction="left">
@@ -21,26 +29,33 @@ const ProfComponent = () => {
           <p>
           Hello! I'm Jones Franco Nicolas, a software developer experienced in Python, JavaScript, and C++. Seeking opportunities in Europe to fulfill my dream. Available for immediate travel. Let's connect and create something amazing! Thank you for visiting my portfolio website!
           </p>
-          <button>
-            <LinkButton href="https://tu-sitio-web.com" target="_blank" rel="noopener noreferrer">
-              Let's talk
-            </LinkButton>
-          </button>
+          <ButtonContainer>
+            <button>
+              <DownloadButton href="https://drive.google.com/file/d/1YVT7ivVfBkzN_wepBytw8wIAK6ih-HV3/view?usp=sharing" target="_blank" rel="noopener noreferrer" download onClick={toggleResume}>
+                Download Resume
+              </DownloadButton>
+            </button>
+            <button>
+              <LinkButton href="#footer">
+                Let's talk
+              </LinkButton>
+            </button>
+          </ButtonContainer>
           <Social>
             <p>Check out my</p>
             <div className="social-icons">
-              <span>
+              {/* <span>
                 <a href="/">
                   <AiOutlineInstagram />
                 </a>
-              </span>
+              </span> */}
               <span>
-                <a href="https://github.com/Zero9BSC">
+                <a href="https://github.com/Zero9BSC" target="_blank" rel="noopener noreferrer">
                   <AiFillGithub />
                 </a>
               </span>
               <span>
-                <a href="https://www.linkedin.com/in/franco-jones/">
+                <a href="https://www.linkedin.com/in/franco-jones/" target="_blank" rel="noopener noreferrer">
                   <FaLinkedinIn />
                 </a>
               </span>
@@ -112,6 +127,17 @@ const Texts = styled.div`
       filter: drop-shadow(0px 10px 10px #01be9570);
     }
   }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+
+const DownloadButton = styled.a`
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 `;
 
 const LinkButton = styled.a`

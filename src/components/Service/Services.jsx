@@ -20,24 +20,24 @@ const Services = () => {
           <Card
             Icon={MdDesignServices}
             title={"FullStack Developer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
+            disc={`Experienced FullStack Developer skilled in Python, JavaScript, and frameworks like Django, Flask, and React. 
+            I create complete web applications, from backend to frontend, ensuring efficient and scalable solutions.`}
           />
         </Slide>
         <Slide direction="up">
           <Card
             Icon={FiCodesandbox}
             title={"Software Developer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
+            disc={`I create innovative and functional solutions,
+            delivering high-quality software that enhances the user experience.`}
           />
         </Slide>
         <Slide direction="right">
           <Card
             Icon={CgWebsite}
             title={"Web Designer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
+            disc={`Specialized in custom applications, I use Python, JavaScript, and C++ 
+                to develop efficient and scalable solutions, always focused on meeting the client's needs.`}
           />
         </Slide>
       </Cards>
