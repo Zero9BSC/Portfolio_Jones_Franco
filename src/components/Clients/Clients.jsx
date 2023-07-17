@@ -7,36 +7,32 @@ import { Slide } from 'react-awesome-reveal';
 
 let clients = [
     {
-        name : "Daniel Velazquez",
+        name : "Luca Fischer",
         position : "web developer",
         img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
         stars : 3,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        disc : `He is an exceptional IT programmer. His technical knowledge and problem-solving skills are outstanding. He always finds innovative and efficient solutions to the challenges he faces. He is a valuable asset to any development team.`
     },
     {
-        name : "Marina Arenas",
+        name : "Sophia Andersen",
         position : "web developer",
         img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
         stars : 4,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        disc : `He demonstrates exceptional performance as an IT programmer. His ability to write clean and well-structured code is impressive. Additionally, he pays great attention to detail, ensuring that his applications are robust and error-free. He always meets deadlines, and his work is of high quality.`
     },
     {
-        name : "Steven Barrionuevo",
+        name : "Oliver Müller",
         position : "web developer",
         img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
         stars : 5,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        disc : `He stands out as an IT programmer for his creativity and proactive approach. He is always willing to take on new responsibilities and learn new technologies. Furthermore, he demonstrates great teamwork skills by providing support to his colleagues and effectively sharing his knowledge.`
     },
     {
-        name : "Luciano Alzugaray",
+        name : "Isabella Weber",
         position : "web developer",
         img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
         stars : 5,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        disc : `He is a highly competent and reliable IT programmer. His dedication and work ethic are commendable. He constantly seeks to improve his skills and stay updated with the latest trends in programming. His methodical approach and ability to work under pressure make him a key asset in any development project.`
     },
 ]
 var settings = {

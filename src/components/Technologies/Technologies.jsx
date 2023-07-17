@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Slide } from 'react-awesome-reveal';
 import { DiReact, DiJavascript1, DiPython, DiHtml5, DiCss3, DiNodejsSmall, DiSqllite, DiMysql } from "react-icons/di";
-import { SiDjango, SiCplusplus, SiFlask, SiMongodb, SiArduino, SiGit, SiGithub } from "react-icons/si";
+import { SiDjango, SiCplusplus, SiFlask, SiMongodb, SiArduino, SiGit, SiGithub, SiBootstrap } from "react-icons/si";
 import { BiLogoVuejs } from "react-icons/bi"
 // Importa los iconos adicionales que necesites
 
@@ -56,6 +56,10 @@ const Technologies = () => {
           <IconItem>
             <DiCss3 />
             <span>CSS3</span>
+          </IconItem>
+          <IconItem>
+            <SiBootstrap />
+            <span>Bootstrap</span>
           </IconItem>
           <IconItem>
             <DiSqllite />
