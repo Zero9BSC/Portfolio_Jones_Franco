@@ -1,5 +1,5 @@
 // import React from "react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // import { AiOutlineInstagram, AiFillGithub } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
@@ -8,10 +8,55 @@ import { Slide } from "react-awesome-reveal";
 
 const ProfComponent = () => {
   const [showResume, setShowResume] = useState(false);
+  const [currentText, setCurrentText] = useState("");
 
   const toggleResume = () => {
     setShowResume(!showResume);
   };
+
+  const textLoad = () => {
+    const phrases = ["Full Stack Developer", "Software Developer", "Web Designer"];
+    let currentPhraseIndex = 0;
+  
+    const updateText = () => {
+      const currentPhrase = phrases[currentPhraseIndex];
+      let currentCharacterIndex = 0;
+      let currentText = "";
+  
+      const typeText = () => {
+        currentText = currentPhrase.slice(0, currentCharacterIndex);
+        setCurrentText(currentText);
+  
+        if (currentCharacterIndex < currentPhrase.length) {
+          currentCharacterIndex++;
+          setTimeout(typeText, 200); // Velocidad de escritura (ajusta según tu preferencia)
+        } else {
+          setTimeout(eraseText, 2000); // Espera antes de borrar el texto
+        }
+      };
+  
+      const eraseText = () => {
+        currentText = currentPhrase.slice(0, currentCharacterIndex);
+        setCurrentText(currentText);
+  
+        if (currentCharacterIndex > 0) {
+          currentCharacterIndex--;
+          setTimeout(eraseText, 70); // Velocidad de borrado (ajusta según tu preferencia)
+        } else {
+          currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+          setTimeout(updateText, 1000); // Espera antes de comenzar a escribir la siguiente frase
+        }
+      };
+  
+      typeText();
+    };
+  
+    updateText();
+  };
+  
+  useEffect(() => {
+    textLoad();
+  }, []);
 
   return (
     <Container id="home">
@@ -21,7 +66,10 @@ const ProfComponent = () => {
             Hello <span className="green">I'am</span>
           </h4>
           <h1 className="green">Franco Nicolas Jones</h1>
-          <h3>Web Developer</h3>
+          <h3>
+            {currentText}
+            <span className="cursor-blink"></span>
+          </h3>
           {/* <p>
           Hello! I'm Jones Franco Nicolas, a passionate software developer with experience in Python, JavaScript, and C++. I excel in adapting to new challenges and solving problems, which enables me to thrive in dynamic environments. I am actively seeking opportunities in Europe to fulfill my dream of working and living in this beautiful continent.
           I am available for immediate travel and open to exploring opportunities in different European countries. I am excited about the opportunity to be part of a creative team and contribute to the success of your company. Thank you for visiting my portfolio website!
@@ -112,6 +160,23 @@ const Texts = styled.div`
   }
   p {
     font-weight: 300;
+  }
+
+  .cursor-blink {
+    display: inline-block;
+    width: 2px; /* Ancho del cursor */
+    height: 1em; /* Altura del cursor */
+    background-color: white; /* Color del cursor */
+    animation: blink 0.7s infinite; /* Animación de parpadeo */
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
   }
 
   button {

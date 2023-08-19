@@ -15,7 +15,7 @@ const Technologies = () => {
         </Slide>
         
         <IconGrid>
-          {/* Agrega los iconos correspondientes para cada tecnología */}
+          {/* Se agregan los iconos correspondientes para cada tecnología */}
 
           <IconItem>
             <DiPython />
@@ -85,7 +85,6 @@ const Technologies = () => {
             <SiGithub />
             <span>Github</span>
           </IconItem>
-          {/* Agrega más iconos y nombres de tecnologías según tus necesidades */}
         </IconGrid>
       </Container>
     );

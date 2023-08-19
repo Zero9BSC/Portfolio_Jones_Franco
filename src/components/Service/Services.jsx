@@ -1,7 +1,6 @@
 import React from "react";
-import { MdDesignServices } from "react-icons/md";
 import { FiCodesandbox } from "react-icons/fi";
-import { CgWebsite } from "react-icons/cg";
+import { BsLayoutTextWindow, BsStack } from "react-icons/bs"
 import styled from "styled-components";
 import Card from "./Card";
 import { Slide } from "react-awesome-reveal";
@@ -18,9 +17,9 @@ const Services = () => {
       <Cards>
         <Slide direction="left">
           <Card
-            Icon={MdDesignServices}
-            title={"FullStack Developer"}
-            disc={`Experienced FullStack Developer skilled in Python, JavaScript, and frameworks like Django, Flask, and React. 
+            Icon={ BsStack }
+            title={"Full Stack Developer"}
+            disc={`Experienced Full Stack Developer skilled in Python, JavaScript, and frameworks like Django, Flask, and React. 
             I create complete web applications, from backend to frontend, ensuring efficient and scalable solutions.`}
           />
         </Slide>
@@ -34,7 +33,7 @@ const Services = () => {
         </Slide>
         <Slide direction="right">
           <Card
-            Icon={CgWebsite}
+            Icon={BsLayoutTextWindow}
             title={"Web Designer"}
             disc={`Specialized in custom applications, I use Python, JavaScript, and C++ 
                 to develop efficient and scalable solutions, always focused on meeting the client's needs.`}

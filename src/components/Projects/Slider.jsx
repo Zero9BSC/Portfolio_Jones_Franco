@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 let data = [
     {
-        img : "https://imgur.com/YTHPKKB.png",
+        img : "https://imgur.com/ZL6QL3R.png",
         disc : "Dolce&Ricco is a website of a local bakery that offers delicious homemade recipes. It provides a wide variety of options to purchase bakery products.",
         demo : "https://dolcericco.netlify.app/"
     },
@@ -16,12 +16,14 @@ let data = [
         demo : "https://healthyhearts.netlify.app/"
     },
     {
-        img : "https://imgur.com/JgRX3xh.png",
-        disc : "New project coming soon!"
+        img : "https://imgur.com/sxvSvfR.png",
+        disc : "A simple viewer for AFIP (Federal Administration of Public Revenue) reports in Argentina.",
+        demo : "https://afipreportviewer.netlify.app/"
     },
     {
-        img : "https://imgur.com/JgRX3xh.png",
-        disc : "New project coming soon!"
+        img : "https://imgur.com/grFNZcv.png",
+        disc : "New project coming soon!",
+        demo : "https://drive.google.com/file/d/1UQogxk6BA6FiGMrn9pE7OHwpk2uwgWmD/view"
     },
     {
         img : "https://imgur.com/JgRX3xh.png",
