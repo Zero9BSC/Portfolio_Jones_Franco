@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Header from "./components/Banner/Header";
 import ProfComponent from "./components/Banner/ProfComponent";
-import Clients from "./components/Clients/Clients";
+// import Clients from "./components/Clients/Clients";
 import Footer from "./components/Footer/Footer";
 import Projects from "./components/Projects/Projects";
 import Technologies from "./components/Technologies/Technologies";
@@ -18,7 +18,7 @@ function App() {
       <LightColor>
         <Projects />
       </LightColor>
-      <Clients />
+      {/* <Clients /> */}
       <LightColor>
         <Footer />
       </LightColor>
@@ -29,15 +29,15 @@ function App() {
 export default App;
 
 const Container = styled.div``;
-const Banner = styled.div`
-  background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
-  height: 100vh;
-  @media (max-width: 640px) {
-    height: 100%;
-    padding-bottom: 2rem;
-  }
-`;
+  const Banner = styled.div`
+    background: linear-gradient(159deg, #303C55 0%, #1F2533 100%); /* Colores azules oscuros */
+    height: 100vh;
+    @media (max-width: 640px) {
+      height: 100%;
+      padding-bottom: 2rem;
+    }
+  `;
 
-const LightColor = styled.div`
-  background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
-`;
+  const LightColor = styled.div`
+    background: linear-gradient(159deg, #303C55 0%, #1F2533 100%); /* Colores azules oscuros */
+  `;
