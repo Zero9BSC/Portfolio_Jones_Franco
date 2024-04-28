@@ -20,7 +20,7 @@ const Header = () => {
             <span><a href="#service" onClick={handleLinkClick}>Services</a></span>
             <span><a href="#technologies" onClick={handleLinkClick}>Technologies</a></span>
             <span><a href="#project" onClick={handleLinkClick}>Projects</a></span>
-            <span><a href="#client" onClick={handleLinkClick}>Testimonials</a></span>
+            {/* <span><a href="#client" onClick={handleLinkClick}>Testimonials</a></span> */}
             <span><a href="#footer" onClick={handleLinkClick}>Contact</a></span>
         </Nav>
         <div
