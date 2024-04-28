@@ -6,8 +6,8 @@ import styled from 'styled-components';
 
 let data = [
     {
-      img : "https://imgur.com/grFNZcv.png",
-      disc : "Gaming Zone a Gamer blog for Gamers... ",
+      img : "https://imgur.com/Ul6eOrI.png",
+      disc : "Gaming Zone a Gamer blog for Gamers!",
       demo : "http://francoj.pythonanywhere.com/"
     },
     {
