@@ -16,6 +16,11 @@ let data = [
       demo: "https://estudiokaisen.netlify.app/"
     },
     {
+      img : "https://imgur.com/ceiJGpn.png",
+      disc : "FirstPrintWizard is a simple application that allows you to select PDF files and print them to a specific printer on your system. The application is designed to be user-friendly and provide a quick solution for printing PDF documents.",
+      demo: "https://github.com/Zero9BSC/FirstPrintWizard.git"
+    },
+    {
         img : "https://imgur.com/ZL6QL3R.png",
         disc : "Dolce&Ricco is a website of a local bakery that offers delicious homemade recipes. It provides a wide variety of options to purchase bakery products.",
         demo : "https://dolcericco.netlify.app/"
