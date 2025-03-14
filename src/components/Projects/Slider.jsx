@@ -11,6 +11,11 @@ let data = [
       demo : "http://francoj.pythonanywhere.com/"
     },
     {
+      img : "https://imgur.com/GsgHJsz.png",
+      disc : "Development of a modern and responsive corporate website in React for Kaisen Accounting. Implementation of dynamic effects, Google Maps integration, and a functional contact form.",
+      demo: "https://estudiokaisen.netlify.app/"
+    },
+    {
         img : "https://imgur.com/ZL6QL3R.png",
         disc : "Dolce&Ricco is a website of a local bakery that offers delicious homemade recipes. It provides a wide variety of options to purchase bakery products.",
         demo : "https://dolcericco.netlify.app/"
@@ -22,7 +27,7 @@ let data = [
     },
     {
         img : "https://imgur.com/sxvSvfR.png",
-        disc : "A simple viewer for AFIP (Federal Administration of Public Revenue) reports in Argentina.",
+        disc : "A simple viewer for ARCA (Federal Administration of Public Revenue) reports in Argentina.",
         demo : "https://afipreportviewer.netlify.app/"
     },
     {

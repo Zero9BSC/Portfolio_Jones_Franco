@@ -38,7 +38,7 @@ const Footer = () => {
               <FiPhoneCall />
             </span>
             <Slide direction="left">
-              <a href="tel:+542804239246">+54 280 4239246</a>
+              <a href="https://wa.me/4915252491730">+49 0152 5249 1730</a>
             </Slide>
           </div>
           <div>
@@ -194,8 +194,8 @@ const Profile = styled.div`
         align-items: center;
         justify-content: center;
         background-color: #000;
-        width: 2rem;
-        height: 2rem;
+        width: 3rem;
+        height: 3rem;
         margin-right: 0.5rem;
         border-radius: 50px;
 
@@ -206,6 +206,10 @@ const Profile = styled.div`
         a {
           margin-top: 0.2rem;
           color: #fff;
+        }
+        
+        svg {
+          font-size: 2rem;
         }
       }
     }
