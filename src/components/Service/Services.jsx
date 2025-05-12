@@ -1,6 +1,6 @@
 import React from "react";
 import { FiCodesandbox } from "react-icons/fi";
-import { BsLayoutTextWindow, BsStack } from "react-icons/bs"
+import { BsLayoutTextWindow, BsStack, BsLaptop } from "react-icons/bs"
 import styled from "styled-components";
 import Card from "./Card";
 import { Slide } from "react-awesome-reveal";
@@ -37,6 +37,14 @@ const Services = () => {
             title={"Web Designer"}
             disc={`Specialized in custom applications, I use Python, JavaScript, and C++ 
                 to develop efficient and scalable solutions, always focused on meeting the client's needs.`}
+          />
+        </Slide>
+        <Slide direction="right">
+          <Card
+            Icon={BsLaptop}
+            title={"IT Support Specialist"}
+            disc={`As an experienced IT Support Specialist, I offer troubleshooting, system maintenance, and network management. 
+            Whether you're dealing with hardware issues or software configuration, I provide fast, reliable solutions to keep your systems running smoothly.`}
           />
         </Slide>
       </Cards>

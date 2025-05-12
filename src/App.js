@@ -6,6 +6,8 @@ import Footer from "./components/Footer/Footer";
 import Projects from "./components/Projects/Projects";
 import Technologies from "./components/Technologies/Technologies";
 import Services from "./components/Service/Services";
+import ITSupport from "./components/Service/ITSupport";
+
 function App() {
   return (
     <Container>
@@ -14,6 +16,7 @@ function App() {
         <ProfComponent />
       </Banner>
       <Services />
+      <ITSupport />
       <Technologies />
       <LightColor>
         <Projects />

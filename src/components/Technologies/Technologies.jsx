@@ -4,6 +4,7 @@ import { Slide } from 'react-awesome-reveal';
 import { DiReact, DiJavascript1, DiPython, DiHtml5, DiCss3, DiNodejsSmall, DiSqllite, DiMysql } from "react-icons/di";
 import { SiDjango, SiCplusplus, SiFlask, SiMongodb, SiArduino, SiGit, SiGithub, SiBootstrap } from "react-icons/si";
 import { BiLogoVuejs } from "react-icons/bi"
+import { FaDocker } from "react-icons/fa6";
 // Importa los iconos adicionales que necesites
 
 
@@ -84,6 +85,10 @@ const Technologies = () => {
           <IconItem>
             <SiGithub />
             <span>Github</span>
+          </IconItem>
+          <IconItem>
+            <FaDocker />
+            <span>Docker</span>
           </IconItem>
         </IconGrid>
       </Container>

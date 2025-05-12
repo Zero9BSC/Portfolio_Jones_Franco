@@ -1,81 +1,29 @@
-// import React from "react";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-// import { AiOutlineInstagram, AiFillGithub } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
 
 const ProfComponent = () => {
   const [showResume, setShowResume] = useState(false);
-  const [currentText, setCurrentText] = useState("");
 
   const toggleResume = () => {
     setShowResume(!showResume);
   };
-
-  const textLoad = () => {
-    const phrases = ["Full Stack Developer", "Software Developer", "Web Designer"];
-    let currentPhraseIndex = 0;
-  
-    const updateText = () => {
-      const currentPhrase = phrases[currentPhraseIndex];
-      let currentCharacterIndex = 0;
-      let currentText = "";
-  
-      const typeText = () => {
-        currentText = currentPhrase.slice(0, currentCharacterIndex);
-        setCurrentText(currentText);
-  
-        if (currentCharacterIndex < currentPhrase.length) {
-          currentCharacterIndex++;
-          setTimeout(typeText, 200); // Velocidad de escritura (ajusta según tu preferencia)
-        } else {
-          setTimeout(eraseText, 2000); // Espera antes de borrar el texto
-        }
-      };
-  
-      const eraseText = () => {
-        currentText = currentPhrase.slice(0, currentCharacterIndex);
-        setCurrentText(currentText);
-  
-        if (currentCharacterIndex > 0) {
-          currentCharacterIndex--;
-          setTimeout(eraseText, 70); // Velocidad de borrado (ajusta según tu preferencia)
-        } else {
-          currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-          setTimeout(updateText, 1000); // Espera antes de comenzar a escribir la siguiente frase
-        }
-      };
-  
-      typeText();
-    };
-  
-    updateText();
-  };
-  
-  useEffect(() => {
-    textLoad();
-  }, []);
 
   return (
     <Container id="home">
       <Slide direction="left">
         <Texts>
           <h4>
-            Hello <span className="green">I'am</span>
+            Hello <span className="green">I'm</span>
           </h4>
           <h1 className="green">Franco Nicolas Jones</h1>
-          <h3>
-            {currentText}
-            <span className="cursor-blink"></span>
-          </h3>
-          {/* <p>
-          Hello! I'm Jones Franco Nicolas, a passionate software developer with experience in Python, JavaScript, and C++. I excel in adapting to new challenges and solving problems, which enables me to thrive in dynamic environments. I am actively seeking opportunities in Europe to fulfill my dream of working and living in this beautiful continent.
-          I am available for immediate travel and open to exploring opportunities in different European countries. I am excited about the opportunity to be part of a creative team and contribute to the success of your company. Thank you for visiting my portfolio website!
-          </p> */}
+          <h3>Full Stack Developer | Software Developer | IT Support Specialist | Web Designer</h3>
           <p>
-          Hello! I'm Jones Franco Nicolas, a software developer experienced in Python, JavaScript, and C++. Seeking opportunities in Europe to fulfill my dream. Available for immediate travel. Let's connect and create something amazing! Thank you for visiting my portfolio website!
+            Hello! I'm Jones Franco Nicolas, a highly motivated software developer with proven expertise in Python, JavaScript, and C++. What sets me apart? A relentless passion for technology, daily commitment to learning, and the ability to deliver real results under any circumstance.<br /><br />
+            From solving complex problems to contributing clean, scalable code, I adapt quickly and thrive both in independent projects and collaborative teams. I combine strong technical skills with soft skills: punctuality, integrity, and an eye for detail—qualities that make a difference in any project.<br /><br />
+            If you are looking for someone who not only gets the job done but exceeds expectations with dedication and creativity, let's connect! I’m available for immediate relocation and open to remote or on-site opportunities across Europe. Thank you for visiting my portfolio!
           </p>
           <ButtonContainer>
             <button>
@@ -92,11 +40,6 @@ const ProfComponent = () => {
           <Social>
             <p>Check out my</p>
             <div className="social-icons">
-              {/* <span>
-                <a href="/">
-                  <AiOutlineInstagram />
-                </a>
-              </span> */}
               <span>
                 <a href="https://github.com/Zero9BSC" target="_blank" rel="noopener noreferrer">
                   <AiFillGithub />
@@ -111,10 +54,12 @@ const ProfComponent = () => {
           </Social>
         </Texts>
       </Slide>
+
       <Slide direction="right">
         <Profile>
-          <img
-            src="https://res.cloudinary.com/dibxkwi9p/image/upload/v1687909037/profile-pic_12_ey4aij.png"
+          <img 
+            className="person"
+            src="https://res.cloudinary.com/dtyz1nutj/image/upload/profile-pic_4_dhwbg7.png" 
             alt="profile"
           />
         </Profile>
@@ -133,6 +78,7 @@ const Container = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   z-index: 1;
+
   @media (max-width: 840px) {
     width: 90%;
   }
@@ -141,6 +87,7 @@ const Container = styled.div`
     flex-direction: column;
   }
 `;
+
 const Texts = styled.div`
   flex: 1;
   h4 {
@@ -160,23 +107,6 @@ const Texts = styled.div`
   }
   p {
     font-weight: 300;
-  }
-
-  .cursor-blink {
-    display: inline-block;
-    width: 2px; /* Ancho del cursor */
-    height: 1em; /* Altura del cursor */
-    background-color: white; /* Color del cursor */
-    animation: blink 0.7s infinite; /* Animación de parpadeo */
-  }
-  
-  @keyframes blink {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
   }
 
   button {
@@ -216,6 +146,7 @@ const Social = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+
   p {
     font-size: 0.9rem;
     @media (max-width: 690px) {
@@ -227,6 +158,7 @@ const Social = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
+    
     span {
       width: 2.3rem;
       height: 2rem;
@@ -234,6 +166,7 @@ const Social = styled.div`
       background-color: #01be96;
       position: relative;
       transition: transform 400ms ease-in-out;
+      
       :hover {
         transform: rotate(360deg);
       }
@@ -248,11 +181,15 @@ const Social = styled.div`
     }
   }
 `;
+
 const Profile = styled.div`
   img {
     width: 25rem;
-    filter: drop-shadow(0px 10px 10px #01be9570);
+    border-radius: 50%;
+    box-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88;
+    animation: pulse 2.5s infinite;
     transition: transform 400ms ease-in-out;
+
     @media (max-width: 790px) {
       width: 20rem;
     }
@@ -268,5 +205,11 @@ const Profile = styled.div`
 
   :hover img {
     transform: translateY(-10px);
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88; }
+    50% { box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88; }
+    100% { box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88; }
   }
 `;
