@@ -1,23 +1,68 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# === Node dependencies ===
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
+# === Testing ===
+/lib-cov
 /coverage
 
-# production
+# === Production builds ===
 /build
+/dist
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+# === Logs ===
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+# === Runtime data ===
+/pids
+*.pid
+*.seed
+*.pid.lock
+
+# === Grunt / Bower / JSPM / TypeScript ===
+/.grunt/
+/bower_components/
+/jspm_packages/
+*.tsbuildinfo
+
+# === Lint cache ===
+/.eslintcache
+/.stylelintcache
+
+# === dotenv environment variables ===
+/.env
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+
+# === VSCode ===
+/.vscode/
+/.history/
+
+# === System files (MacOS) ===
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# === System files (Windows) ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === System files (Linux) ===
+*~
+
+# === Editor / IDE files ===
+/.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*.tmp

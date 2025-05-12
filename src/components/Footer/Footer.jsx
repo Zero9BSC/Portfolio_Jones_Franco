@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import { MdAlternateEmail } from "react-icons/md";
@@ -9,26 +9,28 @@ import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
 
 const Footer = () => {
-  const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-        'service_bca6l9l',
-        'template_gmhrtx7',
-        form.current,
-        'MKVh3oI-oiLuqoO-J'
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: e.target.from_name.value,
+        from_email: e.target.from_email.value,
+        message: e.target.message.value,
+      },
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
     )
     .then(
-        (result) => {
-            console.log('Email sent:', result.text);
-            alert('✅ Message sent successfully!');
-        },
-        (error) => {
-            console.error('EmailJS error:', error);
-            alert('❌ An error occurred. Please try again.');
-        }
+      (result) => {
+        console.log('Email sent:', result.text);
+        alert('✅ Message sent successfully!');
+      },
+      (error) => {
+        console.error('EmailJS error:', error);
+        alert('❌ An error occurred. Please try again.');
+      }
     );
 
     e.target.reset();
@@ -95,7 +97,7 @@ const Footer = () => {
 
       <Form>
         <Slide direction="right">
-          <form ref={form} onSubmit={sendEmail}>
+          <form onSubmit={sendEmail}>
             <div className="name">
               <span><CgProfile /></span>
               <input type="text" name="from_name" placeholder="Fullname..." required />
@@ -119,7 +121,6 @@ const Footer = () => {
 export default Footer;
 
 // --- Styled Components ---
-
 const Container = styled.div`
   margin-top: 2rem;
   padding: 2rem 0;
@@ -202,10 +203,18 @@ const ArrowUp = styled.div`
   :hover {
     box-shadow: 0 0 12px #01be9570;
   }
+
+  @media (max-width: 650px) {
+    bottom: 25px;
+    right: 15px;
+    left: auto;
+    transform: none;
+  }
 `;
 
 const Form = styled.div`
   flex: 1;
+  padding-bottom: 4rem;
 
   form {
     background-color: #191923;
