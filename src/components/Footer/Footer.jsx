@@ -15,18 +15,21 @@ const Footer = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_bca6l9l',
-      'template_gmhrtx7',
-      form.current,
-      'MKVh3oI-oiLuqoO-J'
+        'service_bca6l9l',
+        'template_gmhrtx7',
+        form.current,
+        'MKVh3oI-oiLuqoO-J'
     )
-    .then((result) => {
-      console.log(result.text);
-      alert('✅ Message sent successfully!');
-    }, (error) => {
-      console.log(error.text);
-      alert('❌ An error occurred. Please try again.');
-    });
+    .then(
+        (result) => {
+            console.log('Email sent:', result.text);
+            alert('✅ Message sent successfully!');
+        },
+        (error) => {
+            console.error('EmailJS error:', error);
+            alert('❌ An error occurred. Please try again.');
+        }
+    );
 
     e.target.reset();
   };
