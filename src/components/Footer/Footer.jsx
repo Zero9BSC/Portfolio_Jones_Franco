@@ -1,57 +1,66 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
+import emailjs from "@emailjs/browser";
 import { MdAlternateEmail } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
-// import { BsFacebook, BsSlack } from "react-icons/bs";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
 
 const Footer = () => {
-  const scrollUp = () => {
-    window.scroll({
-      top: 0,
-      behavior: "smooth",
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_bca6l9l',
+      'template_gmhrtx7',
+      form.current,
+      'MKVh3oI-oiLuqoO-J'
+    )
+    .then((result) => {
+      console.log(result.text);
+      alert('✅ Message sent successfully!');
+    }, (error) => {
+      console.log(error.text);
+      alert('❌ An error occurred. Please try again.');
     });
+
+    e.target.reset();
   };
+
+  const scrollUp = () => {
+    window.scroll({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <Container id="footer">
       <Profile>
         <Slide direction="left" delay={1}>
           <h1>Contact</h1>
         </Slide>
-        {/* <div className="address">
-          <Slide direction="left">
-            <h1>Address:</h1>
-          </Slide>
-          <Slide direction="left">
-            <p>54 Rio Negro, Gaiman, Chubut(CP9105), Argentina</p>
-          </Slide>
-        </div> */}
         <div className="links">
           <Slide direction="left">
             <h1>Contact me directly:</h1>
           </Slide>
           <div>
-            <span>
-              <FiPhoneCall />
-            </span>
+            <span><FiPhoneCall /></span>
             <Slide direction="left">
               <a href="https://wa.me/4915252491730">+49 0152 5249 1730</a>
             </Slide>
           </div>
           <div>
             <Slide direction="left">
-              <span>
-                <HiOutlineMailOpen />
-              </span>
+              <span><HiOutlineMailOpen /></span>
             </Slide>
             <Slide>
               <a href="mailto:franconicolasjones@gmail.com">franconicolasjones@gmail.com</a>
             </Slide>
           </div>
         </div>
+
         <div className="profiles">
           <Slide direction="left">
             <h1>Check my profiles</h1>
@@ -71,50 +80,32 @@ const Footer = () => {
                 </a>
               </span>
             </Zoom>
-            {/* <Zoom>
-              <span>
-                <a href="/">
-                  <BsFacebook />
-                </a>
-              </span>
-            </Zoom>
-            <Zoom>
-              <span>
-                <a href="/">
-                  <BsSlack />
-                </a>
-              </span>
-            </Zoom> */}
           </div>
         </div>
+
         <Fade>
           <ArrowUp onClick={scrollUp}>
             <AiOutlineArrowUp />
           </ArrowUp>
         </Fade>
       </Profile>
+
       <Form>
         <Slide direction="right">
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="name">
-              <span>
-                <CgProfile />
-              </span>
-              <input type="text" placeholder="Fullname..." />
+              <span><CgProfile /></span>
+              <input type="text" name="from_name" placeholder="Fullname..." required />
             </div>
             <div className="email">
-              <span>
-                <MdAlternateEmail />
-              </span>
-              <input type="email" placeholder="Email..." />
+              <span><MdAlternateEmail /></span>
+              <input type="email" name="from_email" placeholder="Email..." required />
             </div>
             <div className="message">
-              <span className="messageIcon">
-                <FiMail />
-              </span>
-              <textarea cols="30" rows="10" placeholder="Message..."></textarea>
+              <span className="messageIcon"><FiMail /></span>
+              <textarea name="message" cols="30" rows="10" placeholder="Message..." required></textarea>
             </div>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
           </form>
         </Slide>
       </Form>
@@ -124,42 +115,30 @@ const Footer = () => {
 
 export default Footer;
 
+// --- Styled Components ---
+
 const Container = styled.div`
   margin-top: 2rem;
-  position: relative;
   padding: 2rem 0;
   width: 80%;
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
   @media (max-width: 840px) {
     width: 90%;
   }
-
   @media (max-width: 650px) {
     flex-direction: column;
     gap: 3rem;
   }
 `;
+
 const Profile = styled.div`
   flex: 1;
-  .address {
-    padding: 1rem 0;
-    h1 {
-      font-size: 1.2rem;
-    }
 
-    p {
-      width: 60%;
-      padding-top: 0.5rem;
-      @media (max-width: 650px) {
-        width: 100%;
-      }
-    }
-  }
-
-  .links {
+  .links, .profiles {
     h1 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
@@ -169,55 +148,43 @@ const Profile = styled.div`
       display: flex;
       align-items: center;
       gap: 0.5rem;
+
       a {
         text-decoration: none;
         color: lightgray;
-        :hover {
-          color: orange;
-        }
+        :hover { color: orange; }
       }
     }
   }
 
-  .profiles {
-    h1 {
-      font-size: 1.2rem;
-      padding: 1rem 0;
-    }
+  .profiles .icons {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
 
-    .icons {
+    span {
+      background-color: #000;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
       display: flex;
       align-items: center;
+      justify-content: center;
+      margin-right: 0.5rem;
+      :hover { background-color: orange; }
 
-      span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #000;
-        width: 3rem;
-        height: 3rem;
-        margin-right: 0.5rem;
-        border-radius: 50px;
-
-        :hover {
-          background-color: orange;
-        }
-
-        a {
-          margin-top: 0.2rem;
-          color: #fff;
-        }
-        
-        svg {
-          font-size: 2rem;
-        }
-      }
+      a { color: #fff; }
+      svg { font-size: 2rem; }
     }
   }
 `;
+
 const ArrowUp = styled.div`
-  width: 2rem;
-  height: 2rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: #01be96;
   display: flex;
   align-items: center;
@@ -225,32 +192,29 @@ const ArrowUp = styled.div`
   cursor: pointer;
   font-size: 1.3rem;
   font-weight: 700;
-  margin-top: 2rem;
-  @media (max-width: 650px) {
-    position: absolute;
-    right: 3rem;
-    top: 16rem;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #01be9551;
+  z-index: 999;
+
+  :hover {
+    box-shadow: 0 0 12px #01be9570;
   }
 `;
+
 const Form = styled.div`
   flex: 1;
-  h1 {
-    font-size: 1.3rem;
-    padding-bottom: 0.7rem;
-  }
 
   form {
     background-color: #191923;
     padding: 0.8rem;
     border-radius: 5px;
-    .name,
-    .email,
-    .message {
+
+    .name, .email, .message {
       display: flex;
       border: 1px solid gray;
       margin-bottom: 0.5rem;
-      input,
-      textarea {
+
+      input, textarea {
         width: 100%;
         border: none;
         outline: none;
@@ -258,6 +222,7 @@ const Form = styled.div`
         background-color: transparent;
         padding: 1rem 0.5rem;
       }
+
       span {
         background-color: #3e3e3e;
         width: 3rem;
@@ -265,6 +230,7 @@ const Form = styled.div`
         align-items: center;
         justify-content: center;
       }
+
       .messageIcon {
         align-items: flex-start;
         padding-top: 0.5rem;
@@ -279,9 +245,7 @@ const Form = styled.div`
       border-radius: 5px;
       filter: drop-shadow(0px 4px 5px #01be9551);
       cursor: pointer;
-      :hover {
-        filter: drop-shadow(0px 6px 9px #01be9551);
-      }
+      :hover { filter: drop-shadow(0px 6px 9px #01be9551); }
     }
   }
 `;
