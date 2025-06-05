@@ -5,14 +5,16 @@ import { DiReact, DiJavascript1, DiPython, DiHtml5, DiCss3, DiNodejsSmall, DiSql
 import { SiDjango, SiCplusplus, SiFlask, SiMongodb, SiArduino, SiGit, SiGithub, SiBootstrap } from "react-icons/si";
 import { BiLogoVuejs } from "react-icons/bi"
 import { FaDocker } from "react-icons/fa6";
-// Importa los iconos adicionales que necesites
+import { useTranslation } from 'react-i18next';
 
 
 const Technologies = () => {
+    const { t } = useTranslation();
+
     return (
     <Container id='technologies'>
         <Slide direction="left">
-            <h2>Technologies</h2>
+            <h2>{t("technologies.title")}</h2>
         </Slide>
         
         <IconGrid>
@@ -115,7 +117,7 @@ const Container = styled.div`
 
 const IconGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Ajusta el número de columnas según tus necesidades */
+  grid-template-columns: repeat(5, 1fr); /* Ajusta el número de columnas */
   gap: 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;

@@ -1,21 +1,24 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 import SliderComp from './Slider';
 import { Zoom } from 'react-awesome-reveal';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <Container id='project'>
-        <Zoom>
-            <h1>Recent <span className="green">Projects</span></h1>
-            <p>Here are some of the projects I have worked on</p>
-        </Zoom>
-        <Slide>
-            <SliderComp/>
-        </Slide>
+      <Zoom>
+        <h1>{t('projects.title')} <span className="green">{t('projects.highlight')}</span></h1>
+        <p>{t('projects.subtitle')}</p>
+      </Zoom>
+      <Slide>
+        <SliderComp />
+      </Slide>
     </Container>
-  )
-}
+  );
+};
 
 export default Projects;
 

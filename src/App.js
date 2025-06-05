@@ -8,6 +8,7 @@ import Technologies from "./components/Technologies/Technologies";
 import Services from "./components/Service/Services";
 import ITSupport from "./components/Service/ITSupport";
 
+
 function App() {
   return (
     <Container>
@@ -32,6 +33,7 @@ function App() {
 export default App;
 
 const Container = styled.div``;
+
   const Banner = styled.div`
     background: linear-gradient(159deg, #303C55 0%, #1F2533 100%); /* Colores azules oscuros */
     height: 100vh;

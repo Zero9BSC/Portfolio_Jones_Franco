@@ -7,8 +7,13 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from "../LanguageSelector";
+
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -25,11 +30,11 @@ const Footer = () => {
     .then(
       (result) => {
         console.log('Email sent:', result.text);
-        alert('✅ Message sent successfully!');
+        alert('✅ ' + t('footer.successMsg'));
       },
       (error) => {
         console.error('EmailJS error:', error);
-        alert('❌ An error occurred. Please try again.');
+        alert('❌ ' + t('footer.errorMsg'));
       }
     );
 
@@ -44,11 +49,11 @@ const Footer = () => {
     <Container id="footer">
       <Profile>
         <Slide direction="left" delay={1}>
-          <h1>Contact</h1>
+          <h1>{t('footer.title')}</h1>
         </Slide>
         <div className="links">
           <Slide direction="left">
-            <h1>Contact me directly:</h1>
+            <h1>{t('footer.directContact')}</h1>
           </Slide>
           <div>
             <span><FiPhoneCall /></span>
@@ -68,7 +73,7 @@ const Footer = () => {
 
         <div className="profiles">
           <Slide direction="left">
-            <h1>Check my profiles</h1>
+            <h1>{t('footer.checkProfiles')}</h1>
           </Slide>
           <div className="icons">
             <Zoom>
@@ -100,19 +105,22 @@ const Footer = () => {
           <form onSubmit={sendEmail}>
             <div className="name">
               <span><CgProfile /></span>
-              <input type="text" name="from_name" placeholder="Fullname..." required />
+              <input type="text" name="from_name" placeholder={t('footer.namePlaceholder')} required />
             </div>
             <div className="email">
               <span><MdAlternateEmail /></span>
-              <input type="email" name="from_email" placeholder="Email..." required />
+              <input type="email" name="from_email" placeholder={t('footer.emailPlaceholder')} required />
             </div>
             <div className="message">
               <span className="messageIcon"><FiMail /></span>
-              <textarea name="message" cols="30" rows="10" placeholder="Message..." required></textarea>
+              <textarea name="message" cols="30" rows="10" placeholder={t('footer.messagePlaceholder')} required></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">{t('footer.submit')}</button>
           </form>
         </Slide>
+        <LanguageWrapper>
+          <LanguageSelector />
+        </LanguageWrapper>
       </Form>
     </Container>
   );
@@ -182,6 +190,11 @@ const Profile = styled.div`
     }
   }
 `;
+const LanguageWrapper = styled.div`
+  margin-top: 2rem;
+  text-align: center;
+`;
+
 
 const ArrowUp = styled.div`
   position: fixed;

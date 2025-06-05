@@ -1,50 +1,49 @@
 import React from "react";
 import { FiCodesandbox } from "react-icons/fi";
-import { BsLayoutTextWindow, BsStack, BsLaptop } from "react-icons/bs"
+import { BsLayoutTextWindow, BsStack, BsLaptop } from "react-icons/bs";
 import styled from "styled-components";
 import Card from "./Card";
 import { Slide } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
+
   return (
     <Container id="service">
       <Slide direction="down">
         <h4>
-          My <span className="green">services</span>
+          {t("services.header")} <span className="green">{t("services.highlight")}</span>
         </h4>
-        <h1>What I Do</h1>
+        <h1>{t("services.subheader")}</h1>
       </Slide>
       <Cards>
         <Slide direction="left">
           <Card
-            Icon={ BsStack }
-            title={"Full Stack Developer"}
-            disc={`Experienced Full Stack Developer skilled in Python, JavaScript, and frameworks like Django, Flask, and React. 
-            I create complete web applications, from backend to frontend, ensuring efficient and scalable solutions.`}
+            Icon={BsStack}
+            title={t("services.cards.0.title")}
+            disc={t("services.cards.0.desc")}
           />
         </Slide>
         <Slide direction="up">
           <Card
             Icon={FiCodesandbox}
-            title={"Software Developer"}
-            disc={`I create innovative and functional solutions,
-            delivering high-quality software that enhances the user experience.`}
+            title={t("services.cards.1.title")}
+            disc={t("services.cards.1.desc")}
           />
         </Slide>
         <Slide direction="right">
           <Card
             Icon={BsLayoutTextWindow}
-            title={"Web Designer"}
-            disc={`Specialized in custom applications, I use Python, JavaScript, and C++ 
-                to develop efficient and scalable solutions, always focused on meeting the client's needs.`}
+            title={t("services.cards.2.title")}
+            disc={t("services.cards.2.desc")}
           />
         </Slide>
         <Slide direction="right">
           <Card
             Icon={BsLaptop}
-            title={"IT Support Specialist"}
-            disc={`As an experienced IT Support Specialist, I offer troubleshooting, system maintenance, and network management. 
-            Whether you're dealing with hardware issues or software configuration, I provide fast, reliable solutions to keep your systems running smoothly.`}
+            title={t("services.cards.3.title")}
+            disc={t("services.cards.3.desc")}
           />
         </Slide>
       </Cards>
@@ -67,6 +66,7 @@ const Container = styled.div`
     padding-top: 1rem;
   }
 `;
+
 const Cards = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

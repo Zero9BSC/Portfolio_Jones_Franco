@@ -3,9 +3,13 @@ import styled from "styled-components";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
+import { useTranslation } from 'react-i18next';
+
 
 const ProfComponent = () => {
   const [showResume, setShowResume] = useState(false);
+  
+  const { t } = useTranslation();
 
   const toggleResume = () => {
     setShowResume(!showResume);
@@ -16,29 +20,25 @@ const ProfComponent = () => {
       <Slide direction="left">
         <Texts>
           <h4>
-            Hello <span className="green">I'm</span>
+            {t("intro.greeting")} <span className="green">{t("intro.im")}</span>
           </h4>
           <h1 className="green">Franco Nicolas Jones</h1>
-          <h3>Full Stack Developer | Software Developer | IT Support Specialist | Web Designer</h3>
-          <p>
-            Hello! I'm Jones Franco Nicolas, a highly motivated software developer with proven expertise in Python, JavaScript, and C++. What sets me apart? A relentless passion for technology, daily commitment to learning, and the ability to deliver real results under any circumstance.<br /><br />
-            From solving complex problems to contributing clean, scalable code, I adapt quickly and thrive both in independent projects and collaborative teams. I combine strong technical skills with soft skills: punctuality, integrity, and an eye for detail—qualities that make a difference in any project.<br /><br />
-            If you are looking for someone who not only gets the job done but exceeds expectations with dedication and creativity, let's connect! I’m available for immediate relocation and open to remote or on-site opportunities across Europe. Thank you for visiting my portfolio!
-          </p>
+          <h3>{t("intro.roles")}</h3>
+          <p>{t("intro.description")}</p>
           <ButtonContainer>
             <button>
               <DownloadButton href="https://drive.google.com/file/d/1CDcqIlfbSJ9qRBSw4nQb38DzFxHqXQQn/view?usp=sharing" target="_blank" rel="noopener noreferrer" download onClick={toggleResume}>
-                Download Resume
+                {t("intro.resumeBtn")}
               </DownloadButton>
             </button>
             <button>
               <LinkButton href="#footer">
-                Let's talk
+                {t("intro.contactBtn")}
               </LinkButton>
             </button>
           </ButtonContainer>
           <Social>
-            <p>Check out my</p>
+            <p>{t("intro.checkOut")}</p>
             <div className="social-icons">
               <span>
                 <a href="https://github.com/Zero9BSC" target="_blank" rel="noopener noreferrer">

@@ -1,0 +1,104 @@
+{
+  "welcome": "Willkommen in meinem Portfolio",
+  "nav": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "technologies": "Technologien",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "intro": {
+    "greeting": "Hallo",
+    "im": "Ich bin",
+    "roles": "Full Stack Entwickler | Softwareentwickler | IT-Support-Spezialist | Webdesigner",
+    "description": "Hallo! Ich bin Jones Franco Nicolas, ein hochmotivierter Softwareentwickler mit nachgewiesener Erfahrung in Python, JavaScript und C++. Was mich auszeichnet? Eine unermüdliche Leidenschaft für Technologie, tägliches Lernen und die Fähigkeit, unter allen Umständen echte Ergebnisse zu liefern.\n\nOb komplexe Probleme lösen oder sauberen, skalierbaren Code schreiben – ich passe mich schnell an und arbeite erfolgreich sowohl selbstständig als auch im Team. Ich kombiniere technische Fähigkeiten mit Soft Skills: Pünktlichkeit, Integrität und ein Auge fürs Detail – Eigenschaften, die in jedem Projekt den Unterschied machen.\n\nWenn Sie jemanden suchen, der nicht nur Ergebnisse liefert, sondern Erwartungen mit Hingabe und Kreativität übertrifft – lassen Sie uns verbinden! Ich bin bereit für eine sofortige Umsiedlung und offen für Remote- oder Vor-Ort-Arbeit in ganz Europa. Vielen Dank für den Besuch meines Portfolios!",
+    "resumeBtn": "Lebenslauf herunterladen",
+    "contactBtn": "Lass uns reden",
+    "checkOut": "Besuche mein"
+  },
+  "footer": {
+    "title": "Kontakt",
+    "directContact": "Kontaktiere mich direkt:",
+    "checkProfiles": "Meine Profile ansehen",
+    "namePlaceholder": "Vollständiger Name...",
+    "emailPlaceholder": "E-Mail...",
+    "messagePlaceholder": "Nachricht...",
+    "submit": "Senden",
+    "successMsg": "Nachricht erfolgreich gesendet!",
+    "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuche es erneut."
+  },
+  "project": {
+    "description": "Beschreibung"
+  },
+  "projects": {
+    "title": "Neueste",
+    "highlight": "Projekte",
+    "subtitle": "Hier sind einige der Projekte, an denen ich gearbeitet habe",
+    "slider": [
+      { "desc": "Gaming Zone, ein Gamer-Blog von Gamern für Gamer!" },
+      {
+        "desc": "Moderne und responsive Firmenwebsite in React für Kaisen Accounting, mit Effekten, Google Maps und Kontaktformular."
+      },
+      {
+        "desc": "FirstPrintWizard ermöglicht das Drucken von PDFs auf einem ausgewählten Drucker. Einfach und benutzerfreundlich."
+      },
+      {
+        "desc": "Dolce&Ricco ist eine Bäckerei-Webseite mit hausgemachten Rezepten und Bestelloptionen."
+      },
+      {
+        "desc": "HealthyHearts ist eine Gesundheitsseite, erstellt mit Flask."
+      },
+      {
+        "desc": "ARCA-Viewer für Steuerberichte (AFIP) in Argentinien."
+      },
+      {
+        "desc": "Neues Projekt kommt bald!"
+      }
+    ]
+  },
+  "itsupport": {
+    "header": "Meine",
+    "highlight": "IT-Support",
+    "subheader": "Was ich für Sie tun kann",
+    "cards": [
+      {
+        "title": "Hardware-Support",
+        "desc": "Diagnose, Reparatur und Aufrüstung von Desktops, Laptops und Servern. Ich sorge dafür, dass Ihre Geräte optimal laufen."
+      },
+      {
+        "title": "Software-Fehlerbehebung",
+        "desc": "Von Betriebssystemproblemen bis hin zu Anwendungsfehlern – ich finde Lösungen, damit Ihre Software reibungslos und sicher läuft."
+      },
+      {
+        "title": "Netzwerkverwaltung",
+        "desc": "Unterstützung bei der Einrichtung und Wartung von Netzwerken, einschließlich Router, Firewalls und VPNs, für eine sichere und stabile Verbindung."
+      }
+    ]
+  },
+  "services": {
+    "header": "Meine",
+    "highlight": "Dienstleistungen",
+    "subheader": "Was ich tue",
+    "cards": [
+      {
+        "title": "Full Stack Entwickler",
+        "desc": "Erfahrener Full Stack Entwickler mit Kenntnissen in Python, JavaScript und Frameworks wie Django, Flask und React. Ich entwickle vollständige Webanwendungen vom Backend bis zum Frontend und sorge für effiziente und skalierbare Lösungen."
+      },
+      {
+        "title": "Softwareentwickler",
+        "desc": "Ich entwickle innovative und funktionale Lösungen und liefere hochwertige Software, die das Benutzererlebnis verbessert."
+      },
+      {
+        "title": "Webdesigner",
+        "desc": "Spezialisiert auf maßgeschneiderte Anwendungen, nutze ich Python, JavaScript und C++, um effiziente und skalierbare Lösungen zu entwickeln – stets mit Fokus auf die Bedürfnisse des Kunden."
+      },
+      {
+        "title": "IT-Support-Spezialist",
+        "desc": "Als erfahrener IT-Support-Spezialist biete ich Fehlerbehebung, Systemwartung und Netzwerkmanagement. Ob Hardwareprobleme oder Softwarekonfiguration – ich liefere schnelle, zuverlässige Lösungen für einen reibungslosen Betrieb."
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Technologien"
+  }
+}

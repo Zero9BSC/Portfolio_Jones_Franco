@@ -1,38 +1,43 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { SiInformatica } from "react-icons/si";
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from "../LanguageSelector";
+
 
 const Header = () => {
     const [bar, setBar] = useState(false);
+    const { t } = useTranslation();
 
     const handleLinkClick = () => {
         setBar(false);
     };
-    
-  return (
-    <Container bar={bar}>
-        <Logo>
-            <span className='green'><SiInformatica/></span>
-            <h1>Portfolio</h1>
-        </Logo>
-        <Nav bar={bar}>
-            <span><a href="#home" onClick={handleLinkClick}>Home</a></span>
-            <span><a href="#service" onClick={handleLinkClick}>Services</a></span>
-            <span><a href="#technologies" onClick={handleLinkClick}>Technologies</a></span>
-            <span><a href="#project" onClick={handleLinkClick}>Projects</a></span>
-            {/* <span><a href="#client" onClick={handleLinkClick}>Testimonials</a></span> */}
-            <span><a href="#footer" onClick={handleLinkClick}>Contact</a></span>
-        </Nav>
-        <div
-        onClick={() => setBar(!bar)}
-        className="bars">
-            <div className="bar"></div>
-        </div>
-    </Container>
-  )
-}
 
-export default Header
+    return (
+        <Container bar={bar}>
+            <Logo>
+                <span className='green'><SiInformatica /></span>
+                <h1>Portfolio</h1>
+            </Logo>
+            <Nav bar={bar}>
+                <span><a href="#home" onClick={handleLinkClick}>{t('nav.home')}</a></span>
+                <span><a href="#service" onClick={handleLinkClick}>{t('nav.services')}</a></span>
+                <span><a href="#technologies" onClick={handleLinkClick}>{t('nav.technologies')}</a></span>
+                <span><a href="#project" onClick={handleLinkClick}>{t('nav.projects')}</a></span>
+                <span><a href="#footer" onClick={handleLinkClick}>{t('nav.contact')}</a></span>
+                <span>
+                    <LanguageSelector menu/>
+                </span>
+            </Nav>
+            <div onClick={() => setBar(!bar)} className="bars">
+                <div className="bar"></div>
+            </div>
+        </Container>
+    );
+};
+
+export default Header;
+
 
 const Container = styled.div`
     display: flex;

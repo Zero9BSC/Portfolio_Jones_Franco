@@ -1,0 +1,104 @@
+{
+  "welcome": "Welcome to my portfolio",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "technologies": "Technologies",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "intro": {
+    "greeting": "Hello",
+    "im": "I'm",
+    "roles": "Full Stack Developer | Software Developer | IT Support Specialist | Web Designer",
+    "description": "Hello! I'm Jones Franco Nicolas, a highly motivated software developer with proven expertise in Python, JavaScript, and C++. What sets me apart? A relentless passion for technology, daily commitment to learning, and the ability to deliver real results under any circumstance.\n\nFrom solving complex problems to contributing clean, scalable code, I adapt quickly and thrive both in independent projects and collaborative teams. I combine strong technical skills with soft skills: punctuality, integrity, and an eye for detail—qualities that make a difference in any project.\n\nIf you are looking for someone who not only gets the job done but exceeds expectations with dedication and creativity, let's connect! I’m available for immediate relocation and open to remote or on-site opportunities across Europe. Thank you for visiting my portfolio.",
+    "resumeBtn": "Download Resume",
+    "contactBtn": "Let's talk",
+    "checkOut": "Check out my"
+  },
+  "footer": {
+    "title": "Contact",
+    "directContact": "Contact me directly:",
+    "checkProfiles": "Check my profiles",
+    "namePlaceholder": "Fullname...",
+    "emailPlaceholder": "Email...",
+    "messagePlaceholder": "Message...",
+    "submit": "Submit",
+    "successMsg": "Message sent successfully!",
+    "errorMsg": "An error occurred. Please try again."
+  },
+  "project": {
+    "description": "Description"
+  },
+  "projects": {
+    "title": "Recent",
+    "highlight": "Projects",
+    "subtitle": "Here are some of the projects I have worked on",
+    "slider": [
+      { "desc": "Gaming Zone, a Gamer blog for Gamers!" },
+      {
+        "desc": "Modern and responsive corporate website in React for Kaisen Accounting. Includes dynamic effects, Google Maps, and contact form."
+      },
+      {
+        "desc": "FirstPrintWizard allows printing PDF files directly to a selected printer. Simple and user-friendly."
+      },
+      {
+        "desc": "Dolce&Ricco is a bakery website offering homemade recipes and product ordering."
+      },
+      {
+        "desc": "HealthyHearts is a health-themed website built with Flask."
+      },
+      {
+        "desc": "ARCA Viewer for public revenue reports in Argentina (AFIP)."
+      },
+      {
+        "desc": "New project coming soon!"
+      }
+    ]
+  },
+  "itsupport": {
+    "header": "My",
+    "highlight": "IT Support",
+    "subheader": "What I Can Do For You",
+    "cards": [
+      {
+        "title": "Hardware Support",
+        "desc": "Diagnosis, repair, and upgrade of desktops, laptops, and servers. I ensure your equipment is running at peak performance."
+      },
+      {
+        "title": "Software Troubleshooting",
+        "desc": "From operating system issues to application bugs, I provide solutions to ensure your software runs smoothly and securely."
+      },
+      {
+        "title": "Network Management",
+        "desc": "Support for setting up and maintaining networks, including routers, firewalls, and VPNs, ensuring a secure and stable connection."
+      }
+    ]
+  },
+  "services": {
+    "header": "My",
+    "highlight": "services",
+    "subheader": "What I Do",
+    "cards": [
+      {
+        "title": "Full Stack Developer",
+        "desc": "Experienced Full Stack Developer skilled in Python, JavaScript, and frameworks like Django, Flask, and React. I create complete web applications, from backend to frontend, ensuring efficient and scalable solutions."
+      },
+      {
+        "title": "Software Developer",
+        "desc": "I create innovative and functional solutions, delivering high-quality software that enhances the user experience."
+      },
+      {
+        "title": "Web Designer",
+        "desc": "Specialized in custom applications, I use Python, JavaScript, and C++ to develop efficient and scalable solutions, always focused on meeting the client's needs."
+      },
+      {
+        "title": "IT Support Specialist",
+        "desc": "As an experienced IT Support Specialist, I offer troubleshooting, system maintenance, and network management. Whether you're dealing with hardware issues or software configuration, I provide fast, reliable solutions to keep your systems running smoothly."
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Technologies"
+  }
+}
