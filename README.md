@@ -1,41 +1,12 @@
-## Portfolio using React.js and Styled-Components in 2023
+# React + Vite
 
-Hello! This is my portfolio created with React.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This repository contains my portfolio website, which utilizes React.js, Styled-Components, and the react-awesome-reveal library. It takes advantage of React Hooks, the React-Slick library, and has a responsive design. It showcases my projects, skills, and experience. Feel free to explore and learn more about my work.
+Currently, two official plugins are available:
 
-## Technologies Used
-- React.js
-- HTML
-- CSS
-- JavaScript
-- [React JS](https://reactjs.org/docs/getting-started.html)
-- [Styled-Components](https://styled-components.com)
-- [React Slick](https://react-slick.neostack.com)
-- [React Awesome Reveal](https://react-awesome-reveal.morello.dev/)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Features
-- Responsive design for various screen sizes
-- Project showcase with detailed information
-- Skills and experience section
-- Contact information
-- Animated navbar
-- Slider
-- Animation on scroll
+## Expanding the ESLint configuration
 
-## How to Run
-1. Clone this repository.
-2. Navigate to the project directory.
-3. Run `npm install` to install the dependencies.
-4. Run `npm start` to start the development server.
-5. Open `http://localhost:3000` in your browser.
-
-## Contact
-You can reach out to me on [LinkedIn](https://www.linkedin.com/in/franco-jones/).
-
-## License
-This project is licensed under the [MIT License](LICENSE).
-
-Feel free to fork and modify this project to create your own portfolio website. If you have any questions or suggestions, please feel free to reach out.
-
-Enjoy exploring my portfolio!
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
