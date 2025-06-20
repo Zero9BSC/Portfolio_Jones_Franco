@@ -1,153 +1,154 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { SiInformatica } from "react-icons/si";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from "../LanguageSelector";
-
+import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
 const Header = () => {
-    const [bar, setBar] = useState(false);
-    const { t } = useTranslation();
+  const [bar, setBar] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const { t } = useTranslation();
 
-    const handleLinkClick = () => {
-        setBar(false);
+  const handleLinkClick = () => setBar(false);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentY = window.scrollY;
+      setIsVisible(currentY < 50 || currentY < lastScrollY);
+      setLastScrollY(currentY);
     };
 
-    return (
-        <Container bar={bar}>
-            <Logo>
-                <span className='green'><SiInformatica /></span>
-                <h1>Portfolio</h1>
-            </Logo>
-            <Nav bar={bar}>
-                <span><a href="#home" onClick={handleLinkClick}>{t('nav.home')}</a></span>
-                <span><a href="#service" onClick={handleLinkClick}>{t('nav.services')}</a></span>
-                <span><a href="#technologies" onClick={handleLinkClick}>{t('nav.technologies')}</a></span>
-                <span><a href="#project" onClick={handleLinkClick}>{t('nav.projects')}</a></span>
-                <span><a href="#footer" onClick={handleLinkClick}>{t('nav.contact')}</a></span>
-                <span>
-                    <LanguageSelector menu/>
-                </span>
-            </Nav>
-            <div onClick={() => setBar(!bar)} className="bars">
-                <div className="bar"></div>
-            </div>
-        </Container>
-    );
+    window.addEventListener("scroll", controlNavbar);
+    return () => window.removeEventListener("scroll", controlNavbar);
+  }, [lastScrollY]);
+
+  return (
+    <Container $isVisible={isVisible}>
+      <Logo>
+        <span className='green'><SiInformatica /></span>
+        <h1>Portfolio</h1>
+      </Logo>
+
+      <Nav $bar={bar}>
+        <span><a href="#home" onClick={handleLinkClick}>{t('nav.home')}</a></span>
+        <span><a href="#service" onClick={handleLinkClick}>{t('nav.services')}</a></span>
+        <span><a href="#technologies" onClick={handleLinkClick}>{t('nav.technologies')}</a></span>
+        <span><a href="#project" onClick={handleLinkClick}>{t('nav.projects')}</a></span>
+        <span><a href="#footer" onClick={handleLinkClick}>{t('nav.contact')}</a></span>
+        <span>
+          <LanguageSelector menu />
+        </span>
+      </Nav>
+
+      <MobileMenuIcon onClick={() => setBar(!bar)}>
+        {bar ? <HiX /> : <HiOutlineMenuAlt3 />}
+      </MobileMenuIcon>
+    </Container>
+  );
 };
 
 export default Header;
 
+// --- Styled Components ---
 
 const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1280px;
-    width: 80%;
-    margin: 0 auto;
-    padding: 1.5rem 0;
-    position: relative;
-    animation: header 500ms ease-in-out;
-    @media(max-width: 840px){
-        width: 90%;
-    }
-    .bars{
-        display: none;
-    }
-    @media(max-width:640px){
-        .bars{
-            width: 40px;
-            height: 40px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.5rem;
-            z-index: 100;
-            .bar{
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                background-color: ${props => props.bar ? "transparent" : "#fff"};
-                transition: all 400ms ease-in-out;
-                :before, :after{
-                    content: "";
-                    width: 100%;
-                    height: 2px;
-                    background-color: #fff;
-                    position: absolute;
-                }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1f2533;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 10%;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: ${({ $isVisible }) => ($isVisible ? 'translateY(0)' : 'translateY(-100%)')};
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
-                :before{
-                    transform: ${props => props.bar ? "rotate(45deg)" : "translateY(10px)"};
-                    transition: all 400ms ease-in-out;
-                }
+  @media (max-width: 840px) {
+    padding: 1.2rem 5%;
+  }
+`;
 
-                :after{
-                    transform: ${props => props.bar ? "rotate(-45deg)" : "translateY(-10px)"};
-                    transition: all 400ms ease-in-out;
-                }
-            }
-        }
-    }
-`
 const Logo = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    span{
-        font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  span {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+`;
+
+const Nav = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  span a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -5px;
+      height: 2px;
+      background-color: #fff;
+      transform: scale(0);
+      transform-origin: right;
+      transition: transform 400ms ease-in-out;
     }
 
-    h1{
-        font-weight: 600;
-        font-size: 1.2rem;
+    &:hover:before {
+      transform: scale(1);
+      transform-origin: left;
     }
-`
-const Nav = styled.div`
-    @media(max-width:640px){
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        background-color: #01be96;
-        inset: 0;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        gap: 2rem;
-        font-weight: 700;
-        height: ${props => props.bar ? "100vh" : 0};
-        transition: height 400ms ease-in-out;
-        overflow: hidden;
-        z-index: 100;
+
+    &:hover {
+      opacity: 0.7;
     }
-    span{
-        margin-left: 1rem;
-        a{
-            color: #fff;
-            text-decoration: none;
-            font-weight: 400;
-            position: relative;
-            :before{
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: -5px;
-                height: 2px;
-                background-color: #fff;
-                transform: scale(0);
-                transform-origin: right;
-                transition: transform 400ms ease-in-out;
-            }
-            :hover:before{
-                transform: scale(1);
-                transform-origin: left;
-            }
-            :hover{
-                opacity: 0.7;
-            }
-        }
-    }
-`
+  }
+
+  @media (max-width: 640px) {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: #01be96;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    max-height: ${({ $bar }) => ($bar ? "500px" : "0")};
+    padding: ${({ $bar }) => ($bar ? "2rem 1rem" : "0")};
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    z-index: 999;
+  }
+`;
+
+const MobileMenuIcon = styled.div`
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+
+  @media (max-width: 640px) {
+    display: block;
+  }
+`;

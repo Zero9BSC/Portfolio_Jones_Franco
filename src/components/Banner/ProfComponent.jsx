@@ -24,7 +24,11 @@ const ProfComponent = () => {
           </h4>
           <h1 className="green">Franco Nicolas Jones</h1>
           <h3>{t("intro.roles")}</h3>
-          <p>{t("intro.description")}</p>
+          {t("intro.description").split('\n\n').map((paragraph, index) => (
+              <p key={index} style={{ marginBottom: "1rem", lineHeight: "1.6" }}>
+                {paragraph}
+              </p>
+            ))}
           <ButtonContainer>
             <button>
               <DownloadButton href="https://drive.google.com/file/d/1CDcqIlfbSJ9qRBSw4nQb38DzFxHqXQQn/view?usp=sharing" target="_blank" rel="noopener noreferrer" download onClick={toggleResume}>
@@ -73,7 +77,7 @@ export default ProfComponent;
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  padding-top: 3rem;
+  padding-top: 120px;
   width: 80%;
   max-width: 1280px;
   margin: 0 auto;
@@ -87,6 +91,7 @@ const Container = styled.div`
     flex-direction: column;
   }
 `;
+
 
 const Texts = styled.div`
   flex: 1;
@@ -118,8 +123,11 @@ const Texts = styled.div`
     color: #fff;
     font-weight: 500;
     filter: drop-shadow(0px 10px 10px #01be9551);
-    :hover {
-      filter: drop-shadow(0px 10px 10px #01be9570);
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    &:hover {
+      filter: drop-shadow(0px 10px 12px #01be95cc);
+      transform: translateY(-6px);
     }
   }
 `;
@@ -155,30 +163,37 @@ const Social = styled.div`
   }
 
   .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  span {
+    width: 2.3rem;
+    height: 1.9rem;
+
+    background-color: #01be96;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    
-    span {
-      width: 2.3rem;
-      height: 2rem;
-      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      background-color: #01be96;
-      position: relative;
-      transition: transform 400ms ease-in-out;
-      
-      :hover {
-        transform: rotate(360deg);
-      }
+    justify-content: center;
+    transition: transform 0.6s ease-in-out;
+
+    &:hover {
+      transform: rotate(360deg);
     }
 
     a {
-      color: #fff;
-      position: absolute;
-      top: 55%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
+      color: white;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+  
+
+
   }
 `;
 

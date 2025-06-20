@@ -18,14 +18,14 @@ const Footer = () => {
     e.preventDefault();
 
     emailjs.send(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       {
         from_name: e.target.from_name.value,
         from_email: e.target.from_email.value,
         message: e.target.message.value,
       },
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then(
       (result) => {
@@ -164,7 +164,6 @@ const Profile = styled.div`
       a {
         text-decoration: none;
         color: lightgray;
-        :hover { color: orange; }
       }
     }
   }
@@ -183,13 +182,40 @@ const Profile = styled.div`
       align-items: center;
       justify-content: center;
       margin-right: 0.5rem;
-      :hover { background-color: orange; }
+      transition: background-color 0.3s ease;
 
-      a { color: #fff; }
-      svg { font-size: 2rem; }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        color: #fff;
+        text-decoration: none;
+
+        svg {
+          font-size: 1.6rem;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover svg {
+          transform: scale(1.2);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &:hover {
+        background-color: #01be96;
+      }
     }
   }
+
 `;
+
 const LanguageWrapper = styled.div`
   margin-top: 2rem;
   text-align: center;
@@ -268,9 +294,15 @@ const Form = styled.div`
       background-color: #01be96;
       border: none;
       border-radius: 5px;
-      filter: drop-shadow(0px 4px 5px #01be9551);
       cursor: pointer;
-      :hover { filter: drop-shadow(0px 6px 9px #01be9551); }
+
+      filter: drop-shadow(0px 4px 5px #01be9551);
+      transition: transform 0.3s ease, filter 0.3s ease;
+
+      &:hover {
+        filter: drop-shadow(0px 6px 7px #01be95cc);
+        transform: translateY(-3px);
+      }
     }
   }
 `;

@@ -1,4 +1,18 @@
-# Logs
+# === Node dependencies ===
+/node_modules
+/.pnp
+.pnp.js
+
+# === Testing ===
+/lib-cov
+/coverage
+
+# === Vite output ===
+/dist
+/dist-ssr
+/.vite
+
+# === Logs ===
 logs
 *.log
 npm-debug.log*
@@ -7,18 +21,46 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# === Runtime data ===
+/pids
+*.pid
+*.seed
+*.pid.lock
 
-# Editor directories and files
+# === Dev tools and package managers ===
+/.grunt/
+/bower_components/
+/jspm_packages/
+*.tsbuildinfo
+
+# === Linting cache ===
+/.eslintcache
+/.stylelintcache
+
+# === dotenv environment variables ===
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# === Editor / IDE configs ===
+.vscode/
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
+.history/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*.tmp
+
+# === System files (macOS, Windows, Linux) ===
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~

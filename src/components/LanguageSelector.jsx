@@ -10,7 +10,7 @@ const LanguageSelector = ({ menu }) => {
   };
 
   return (
-    <Select menu={menu} onChange={handleLanguageChange} value={i18n.language}>
+    <Select $menu={menu} onChange={handleLanguageChange} value={i18n.language}>
       <option value="en">🇺🇸 EN</option>
       <option value="es">🇪🇸 ES</option>
       <option value="de">🇩🇪 DE</option>
@@ -42,10 +42,9 @@ const Select = styled.select`
     color: #fff;
   }
 
-  /* Solo si está dentro del menú */
-  ${({ menu }) =>
-    menu &&
-    `
+  ${({ $menu }) =>
+  $menu &&
+  `
     @media (max-width: 640px) {
       font-size: 1.2rem;
       padding: 0.5rem 1rem;
