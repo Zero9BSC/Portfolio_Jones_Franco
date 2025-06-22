@@ -245,7 +245,7 @@ const ProfComponent = () => {
             ))}
           <ButtonContainer>
             <button>
-              <DownloadButton href="https://drive.google.com/file/d/1CDcqIlfbSJ9qRBSw4nQb38DzFxHqXQQn/view?usp=sharing" target="_blank" rel="noopener noreferrer" download onClick={toggleResume}>
+              <DownloadButton href="https://drive.google.com/file/d/1MTGfGg1PAFqbDZFFNUI7zwb442BTErjt/view?usp=sharing" target="_blank" rel="noopener noreferrer" download onClick={toggleResume}>
                 {t("intro.resumeBtn")}
               </DownloadButton>
             </button>
