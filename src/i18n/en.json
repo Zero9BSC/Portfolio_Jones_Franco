@@ -28,7 +28,11 @@
     "errorMsg": "An error occurred. Please try again."
   },
   "project": {
-    "description": "Description"
+    "description": "Description",
+    "link": {
+      "view": "View Project",
+      "github": "View on GitHub"
+    }
   },
   "projects": {
     "title": "Recent",

@@ -6,6 +6,38 @@ import Card from "./Card";
 import { Slide } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
 
+
+// --- Styled Components ---
+const Container = styled.div`
+  width: clamp(80%, 85vw, 1440px);
+  margin: 0 auto;
+  padding: 3rem 1rem;
+
+  @media (min-width: 1920px) {
+    padding: 4rem 2rem;
+  }
+
+  @media (min-width: 2560px) {
+    padding: 5rem 2rem;
+  }
+
+  @media (max-width: 840px) {
+    width: 90%;
+  }
+
+  h1 {
+    padding-top: 1rem;
+  }
+`;
+
+const Cards = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 4rem;
+  gap: 1rem;
+`;
+
+
 const Services = () => {
   const { t } = useTranslation();
 
@@ -52,24 +84,3 @@ const Services = () => {
 };
 
 export default Services;
-
-const Container = styled.div`
-  width: 80%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 3rem 0;
-  @media (max-width: 840px) {
-    width: 90%;
-  }
-
-  h1 {
-    padding-top: 1rem;
-  }
-`;
-
-const Cards = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-top: 4rem;
-  gap: 1rem;
-`;

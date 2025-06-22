@@ -28,7 +28,11 @@
     "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuche es erneut."
   },
   "project": {
-    "description": "Beschreibung"
+    "description": "Beschreibung",
+    "link": {
+      "view": "Projekt ansehen",
+      "github": "Auf GitHub ansehen"
+    }
   },
   "projects": {
     "title": "Neueste",

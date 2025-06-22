@@ -9,6 +9,38 @@ import Services from "./components/Service/Services";
 import ITSupport from "./components/Service/ITSupport";
 
 
+// --- Styled Components ---
+const Container = styled.div``;
+
+const Banner = styled.div`
+  background: linear-gradient(159deg, #303C55 0%, #1F2533 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  @media (min-width: 1440px) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 1920px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @media (min-width: 2560px) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+`;
+
+const LightColor = styled.div`
+  background: linear-gradient(159deg, #303C55 0%, #1F2533 100%);
+`;
+
+
 function App() {
   return (
     <Container>
@@ -31,18 +63,3 @@ function App() {
 }
 
 export default App;
-
-const Container = styled.div``;
-
-  const Banner = styled.div`
-    background: linear-gradient(159deg, #303C55 0%, #1F2533 100%); /* Colores azules oscuros */
-    height: 100vh;
-    @media (max-width: 640px) {
-      height: 100%;
-      padding-bottom: 2rem;
-    }
-  `;
-
-  const LightColor = styled.div`
-    background: linear-gradient(159deg, #303C55 0%, #1F2533 100%); /* Colores azules oscuros */
-  `;

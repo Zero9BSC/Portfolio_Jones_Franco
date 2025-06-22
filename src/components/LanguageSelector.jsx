@@ -2,25 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
-const LanguageSelector = ({ menu }) => {
-  const { i18n } = useTranslation();
 
-  const handleLanguageChange = (e) => {
-    i18n.changeLanguage(e.target.value);
-  };
-
-  return (
-    <Select $menu={menu} onChange={handleLanguageChange} value={i18n.language}>
-      <option value="en">🇺🇸 EN</option>
-      <option value="es">🇪🇸 ES</option>
-      <option value="de">🇩🇪 DE</option>
-    </Select>
-  );
-};
-
-
-export default LanguageSelector;
-
+// --- Styled Components ---
 const Select = styled.select`
   padding: 0.3rem 0.8rem;
   background-color: transparent;
@@ -51,3 +34,23 @@ const Select = styled.select`
     }
   `}
 `;
+
+
+const LanguageSelector = ({ menu }) => {
+  const { i18n } = useTranslation();
+
+  const handleLanguageChange = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
+
+  return (
+    <Select $menu={menu} onChange={handleLanguageChange} value={i18n.language}>
+      <option value="en">🇺🇸 EN</option>
+      <option value="es">🇪🇸 ES</option>
+      <option value="de">🇩🇪 DE</option>
+    </Select>
+  );
+};
+
+
+export default LanguageSelector;

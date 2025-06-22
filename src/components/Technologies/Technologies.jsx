@@ -16,45 +16,20 @@ import {
 import { BiLogoVuejs } from "react-icons/bi";
 import { FaDocker } from "react-icons/fa6";
 
-const Technologies = ({ id = 'technologies' }) => {
-  const { t } = useTranslation();
 
-  return (
-    <Container id={id}>
-      <Slide direction="left">
-        <h2>{t("technologies.title")}</h2>
-      </Slide>
-
-      <IconGrid>
-        <IconItem><DiPython /><span>Python</span></IconItem>
-        <IconItem><DiJavascript1 /><span>JavaScript</span></IconItem>
-        <IconItem><SiCplusplus /><span>C++</span></IconItem>
-        <IconItem><DiReact /><span>React</span></IconItem>
-        <IconItem><SiDjango /><span>Django</span></IconItem>
-        <IconItem><SiFlask /><span>Flask</span></IconItem>
-        <IconItem><BiLogoVuejs /><span>Vue</span></IconItem>
-        <IconItem><DiNodejsSmall /><span>Node.js</span></IconItem>
-        <IconItem><DiHtml5 /><span>HTML5</span></IconItem>
-        <IconItem><DiCss3 /><span>CSS3</span></IconItem>
-        <IconItem><SiBootstrap /><span>Bootstrap</span></IconItem>
-        <IconItem><DiSqllite /><span>SQLite</span></IconItem>
-        <IconItem><DiMysql /><span>MySQL</span></IconItem>
-        <IconItem><SiMongodb /><span>MongoDB</span></IconItem>
-        <IconItem><SiArduino /><span>Arduino</span></IconItem>
-        <IconItem><SiGit /><span>Git</span></IconItem>
-        <IconItem><SiGithub /><span>GitHub</span></IconItem>
-        <IconItem><FaDocker /><span>Docker</span></IconItem>
-      </IconGrid>
-    </Container>
-  );
-};
-
-export default Technologies;
-
+// --- Styled Components ---
 const Container = styled.div`
-  width: 80%;
-  max-width: 1280px;
+  width: clamp(80%, 85vw, 1440px);
   margin: 0 auto 3rem;
+  padding: 3rem 1rem;
+
+  @media (min-width: 1920px) {
+    padding: 4rem 2rem;
+  }
+
+  @media (min-width: 2560px) {
+    padding: 5rem 2rem;
+  }
 
   @media (max-width: 840px) {
     width: 90%;
@@ -93,3 +68,39 @@ const IconItem = styled.div`
     font-size: 0.9rem;
   }
 `;
+
+
+const Technologies = ({ id = 'technologies' }) => {
+  const { t } = useTranslation();
+
+  return (
+    <Container id={id}>
+      <Slide direction="left">
+        <h2>{t("technologies.title")}</h2>
+      </Slide>
+
+      <IconGrid>
+        <IconItem><DiPython /><span>Python</span></IconItem>
+        <IconItem><DiJavascript1 /><span>JavaScript</span></IconItem>
+        <IconItem><SiCplusplus /><span>C++</span></IconItem>
+        <IconItem><DiReact /><span>React</span></IconItem>
+        <IconItem><SiDjango /><span>Django</span></IconItem>
+        <IconItem><SiFlask /><span>Flask</span></IconItem>
+        <IconItem><BiLogoVuejs /><span>Vue</span></IconItem>
+        <IconItem><DiNodejsSmall /><span>Node.js</span></IconItem>
+        <IconItem><DiHtml5 /><span>HTML5</span></IconItem>
+        <IconItem><DiCss3 /><span>CSS3</span></IconItem>
+        <IconItem><SiBootstrap /><span>Bootstrap</span></IconItem>
+        <IconItem><DiSqllite /><span>SQLite</span></IconItem>
+        <IconItem><DiMysql /><span>MySQL</span></IconItem>
+        <IconItem><SiMongodb /><span>MongoDB</span></IconItem>
+        <IconItem><SiArduino /><span>Arduino</span></IconItem>
+        <IconItem><SiGit /><span>Git</span></IconItem>
+        <IconItem><SiGithub /><span>GitHub</span></IconItem>
+        <IconItem><FaDocker /><span>Docker</span></IconItem>
+      </IconGrid>
+    </Container>
+  );
+};
+
+export default Technologies;

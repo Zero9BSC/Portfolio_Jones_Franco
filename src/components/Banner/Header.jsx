@@ -1,58 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { SiInformatica } from "react-icons/si";
+import { FaTerminal } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from "../LanguageSelector";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
-const Header = () => {
-  const [bar, setBar] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const { t } = useTranslation();
-
-  const handleLinkClick = () => setBar(false);
-
-  useEffect(() => {
-    const controlNavbar = () => {
-      const currentY = window.scrollY;
-      setIsVisible(currentY < 50 || currentY < lastScrollY);
-      setLastScrollY(currentY);
-    };
-
-    window.addEventListener("scroll", controlNavbar);
-    return () => window.removeEventListener("scroll", controlNavbar);
-  }, [lastScrollY]);
-
-  return (
-    <Container $isVisible={isVisible}>
-      <Logo>
-        <span className='green'><SiInformatica /></span>
-        <h1>Portfolio</h1>
-      </Logo>
-
-      <Nav $bar={bar}>
-        <span><a href="#home" onClick={handleLinkClick}>{t('nav.home')}</a></span>
-        <span><a href="#service" onClick={handleLinkClick}>{t('nav.services')}</a></span>
-        <span><a href="#technologies" onClick={handleLinkClick}>{t('nav.technologies')}</a></span>
-        <span><a href="#project" onClick={handleLinkClick}>{t('nav.projects')}</a></span>
-        <span><a href="#footer" onClick={handleLinkClick}>{t('nav.contact')}</a></span>
-        <span>
-          <LanguageSelector menu />
-        </span>
-      </Nav>
-
-      <MobileMenuIcon onClick={() => setBar(!bar)}>
-        {bar ? <HiX /> : <HiOutlineMenuAlt3 />}
-      </MobileMenuIcon>
-    </Container>
-  );
-};
-
-export default Header;
 
 // --- Styled Components ---
-
 const Container = styled.div`
   position: fixed;
   top: 0;
@@ -67,8 +21,8 @@ const Container = styled.div`
   transform: ${({ $isVisible }) => ($isVisible ? 'translateY(0)' : 'translateY(-100%)')};
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
-  @media (max-width: 840px) {
-    padding: 1.2rem 5%;
+  @media (max-width: 1024px) {
+    padding: 1.2rem 3%;
   }
 `;
 
@@ -76,14 +30,23 @@ const Logo = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  white-space: nowrap;
+  min-width: 140px;
 
   span {
     font-size: 1.8rem;
+    flex-shrink: 0;
   }
 
   h1 {
     font-weight: 600;
     font-size: 1.2rem;
+  }
+
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -121,7 +84,7 @@ const Nav = styled.div`
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 880px) {
     position: absolute;
     top: 100%;
     right: 0;
@@ -138,8 +101,11 @@ const Nav = styled.div`
     gap: 1.5rem;
     font-size: 1.5rem;
     z-index: 999;
+    display: ${({ $bar }) => ($bar ? "flex" : "none")};
   }
 `;
+
+
 
 const MobileMenuIcon = styled.div`
   display: none;
@@ -148,7 +114,54 @@ const MobileMenuIcon = styled.div`
   cursor: pointer;
   z-index: 1001;
 
-  @media (max-width: 640px) {
+  @media (max-width: 880px) {
     display: block;
   }
 `;
+
+
+const Header = () => {
+  const [bar, setBar] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const { t } = useTranslation();
+
+  const handleLinkClick = () => setBar(false);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentY = window.scrollY;
+      setIsVisible(currentY < 50 || currentY < lastScrollY);
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener("scroll", controlNavbar);
+    return () => window.removeEventListener("scroll", controlNavbar);
+  }, [lastScrollY]);
+
+  return (
+    <Container $isVisible={isVisible}>
+      <Logo>
+        <span className='green'><FaTerminal /></span>
+        <h1>Franco Jones</h1>
+      </Logo>
+
+      <Nav $bar={bar}>
+        <span><a href="#home" onClick={handleLinkClick}>{t('nav.home')}</a></span>
+        <span><a href="#service" onClick={handleLinkClick}>{t('nav.services')}</a></span>
+        <span><a href="#technologies" onClick={handleLinkClick}>{t('nav.technologies')}</a></span>
+        <span><a href="#project" onClick={handleLinkClick}>{t('nav.projects')}</a></span>
+        <span><a href="#footer" onClick={handleLinkClick}>{t('nav.contact')}</a></span>
+        <span>
+          <LanguageSelector menu />
+        </span>
+      </Nav>
+
+      <MobileMenuIcon onClick={() => setBar(!bar)}>
+        {bar ? <HiX /> : <HiOutlineMenuAlt3 />}
+      </MobileMenuIcon>
+    </Container>
+  );
+};
+
+export default Header;

@@ -11,141 +11,32 @@ import { useTranslation } from 'react-i18next';
 import LanguageSelector from "../LanguageSelector";
 
 
-const Footer = () => {
-  const { t } = useTranslation();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      {
-        from_name: e.target.from_name.value,
-        from_email: e.target.from_email.value,
-        message: e.target.message.value,
-      },
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    )
-    .then(
-      (result) => {
-        console.log('Email sent:', result.text);
-        alert('✅ ' + t('footer.successMsg'));
-      },
-      (error) => {
-        console.error('EmailJS error:', error);
-        alert('❌ ' + t('footer.errorMsg'));
-      }
-    );
-
-    e.target.reset();
-  };
-
-  const scrollUp = () => {
-    window.scroll({ top: 0, behavior: "smooth" });
-  };
-
-  return (
-    <Container id="footer">
-      <Profile>
-        <Slide direction="left" delay={1}>
-          <h1>{t('footer.title')}</h1>
-        </Slide>
-        <div className="links">
-          <Slide direction="left">
-            <h1>{t('footer.directContact')}</h1>
-          </Slide>
-          <div>
-            <span><FiPhoneCall /></span>
-            <Slide direction="left">
-              <a href="https://wa.me/4915252491730">+49 0152 5249 1730</a>
-            </Slide>
-          </div>
-          <div>
-            <Slide direction="left">
-              <span><HiOutlineMailOpen /></span>
-            </Slide>
-            <Slide>
-              <a href="mailto:franconicolasjones@gmail.com">franconicolasjones@gmail.com</a>
-            </Slide>
-          </div>
-        </div>
-
-        <div className="profiles">
-          <Slide direction="left">
-            <h1>{t('footer.checkProfiles')}</h1>
-          </Slide>
-          <div className="icons">
-            <Zoom>
-              <span>
-                <a href="https://github.com/Zero9BSC" target="_blank" rel="noopener noreferrer">
-                  <AiFillGithub />
-                </a>
-              </span>
-            </Zoom>
-            <Zoom>
-              <span>
-                <a href="https://www.linkedin.com/in/franco-jones/" target="_blank" rel="noopener noreferrer">
-                  <AiFillLinkedin />
-                </a>
-              </span>
-            </Zoom>
-          </div>
-        </div>
-
-        <Fade>
-          <ArrowUp onClick={scrollUp}>
-            <AiOutlineArrowUp />
-          </ArrowUp>
-        </Fade>
-      </Profile>
-
-      <Form>
-        <Slide direction="right">
-          <form onSubmit={sendEmail}>
-            <div className="name">
-              <span><CgProfile /></span>
-              <input type="text" name="from_name" placeholder={t('footer.namePlaceholder')} required />
-            </div>
-            <div className="email">
-              <span><MdAlternateEmail /></span>
-              <input type="email" name="from_email" placeholder={t('footer.emailPlaceholder')} required />
-            </div>
-            <div className="message">
-              <span className="messageIcon"><FiMail /></span>
-              <textarea name="message" cols="30" rows="10" placeholder={t('footer.messagePlaceholder')} required></textarea>
-            </div>
-            <button type="submit">{t('footer.submit')}</button>
-          </form>
-        </Slide>
-        <LanguageWrapper>
-          <LanguageSelector />
-        </LanguageWrapper>
-      </Form>
-    </Container>
-  );
-};
-
-export default Footer;
-
 // --- Styled Components ---
 const Container = styled.div`
-  margin-top: 2rem;
+  width: clamp(80%, 85vw, 1440px);
+  margin: 2rem auto;
   padding: 2rem 0;
-  width: 80%;
-  max-width: 1280px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 
   @media (max-width: 840px) {
     width: 90%;
   }
+
   @media (max-width: 650px) {
     flex-direction: column;
     gap: 3rem;
   }
+
+  @media (min-width: 1920px) {
+    padding: 3rem 0;
+  }
+
+  @media (min-width: 2560px) {
+    padding: 4rem 0;
+  }
 `;
+
 
 const Profile = styled.div`
   flex: 1;
@@ -306,3 +197,121 @@ const Form = styled.div`
     }
   }
 `;
+
+
+const Footer = () => {
+  const { t } = useTranslation();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: e.target.from_name.value,
+        from_email: e.target.from_email.value,
+        message: e.target.message.value,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
+        console.log('Email sent:', result.text);
+        alert('✅ ' + t('footer.successMsg'));
+      },
+      (error) => {
+        console.error('EmailJS error:', error);
+        alert('❌ ' + t('footer.errorMsg'));
+      }
+    );
+
+    e.target.reset();
+  };
+
+  const scrollUp = () => {
+    window.scroll({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <Container id="footer">
+      <Profile>
+        <Slide direction="left" delay={1}>
+          <h1>{t('footer.title')}</h1>
+        </Slide>
+        <div className="links">
+          <Slide direction="left">
+            <h1>{t('footer.directContact')}</h1>
+          </Slide>
+          <div>
+            <span><FiPhoneCall /></span>
+            <Slide direction="left">
+              <a href="https://wa.me/4915252491730">+49 0152 5249 1730</a>
+            </Slide>
+          </div>
+          <div>
+            <Slide direction="left">
+              <span><HiOutlineMailOpen /></span>
+            </Slide>
+            <Slide>
+              <a href="mailto:franconicolasjones@gmail.com">franconicolasjones@gmail.com</a>
+            </Slide>
+          </div>
+        </div>
+
+        <div className="profiles">
+          <Slide direction="left">
+            <h1>{t('footer.checkProfiles')}</h1>
+          </Slide>
+          <div className="icons">
+            <Zoom>
+              <span>
+                <a href="https://github.com/Zero9BSC" target="_blank" rel="noopener noreferrer">
+                  <AiFillGithub />
+                </a>
+              </span>
+            </Zoom>
+            <Zoom>
+              <span>
+                <a href="https://www.linkedin.com/in/franco-jones/" target="_blank" rel="noopener noreferrer">
+                  <AiFillLinkedin />
+                </a>
+              </span>
+            </Zoom>
+          </div>
+        </div>
+
+        <Fade>
+          <ArrowUp onClick={scrollUp}>
+            <AiOutlineArrowUp />
+          </ArrowUp>
+        </Fade>
+      </Profile>
+
+      <Form>
+        <Slide direction="right">
+          <form onSubmit={sendEmail}>
+            <div className="name">
+              <span><CgProfile /></span>
+              <input type="text" name="from_name" placeholder={t('footer.namePlaceholder')} required />
+            </div>
+            <div className="email">
+              <span><MdAlternateEmail /></span>
+              <input type="email" name="from_email" placeholder={t('footer.emailPlaceholder')} required />
+            </div>
+            <div className="message">
+              <span className="messageIcon"><FiMail /></span>
+              <textarea name="message" cols="30" rows="10" placeholder={t('footer.messagePlaceholder')} required></textarea>
+            </div>
+            <button type="submit">{t('footer.submit')}</button>
+          </form>
+        </Slide>
+        <LanguageWrapper>
+          <LanguageSelector />
+        </LanguageWrapper>
+      </Form>
+    </Container>
+  );
+};
+
+export default Footer;
