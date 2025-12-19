@@ -18,14 +18,15 @@
   },
   "footer": {
     "title": "Kontakt",
-    "directContact": "Kontaktiere mich direkt:",
-    "checkProfiles": "Meine Profile ansehen",
+    "directContact": "Kontaktieren Sie mich direkt:",
+    "checkProfiles": "Mein Profil ansehen",
     "namePlaceholder": "Vollständiger Name...",
-    "emailPlaceholder": "E-Mail...",
+    "emailPlaceholder": "E-Mail-Adresse...",
     "messagePlaceholder": "Nachricht...",
     "submit": "Senden",
+    "sending": "Nachricht wird gesendet...",
     "successMsg": "Nachricht erfolgreich gesendet!",
-    "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuche es erneut."
+    "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
   },
   "project": {
     "description": "Beschreibung",

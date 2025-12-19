@@ -24,6 +24,7 @@
     "emailPlaceholder": "Correo electrónico...",
     "messagePlaceholder": "Mensaje...",
     "submit": "Enviar",
+    "sending": "Enviando mensaje...",
     "successMsg": "¡Mensaje enviado con éxito!",
     "errorMsg": "Ocurrió un error. Intenta nuevamente."
   },
