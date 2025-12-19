@@ -3,7 +3,7 @@ import Header from "./components/Banner/Header";
 import ProfComponent from "./components/Banner/ProfComponent";
 // import Clients from "./components/Clients/Clients";
 import Footer from "./components/Footer/Footer";
-import Projects from "./components/Projects/Projects";
+import ProjectsGrid from "./components/Projects/ProjectsGrid";
 import Technologies from "./components/Technologies/Technologies";
 import Services from "./components/Service/Services";
 import ITSupport from "./components/Service/ITSupport";
@@ -52,7 +52,7 @@ function App() {
       <ITSupport />
       <Technologies />
       <LightColor>
-        <Projects />
+        <ProjectsGrid />
       </LightColor>
       {/* <Clients /> */}
       <LightColor>
