@@ -5,17 +5,19 @@ import { useTranslation } from 'react-i18next';
 
 import {
   DiReact, DiJavascript1, DiPython, DiHtml5, DiCss3,
-  DiNodejsSmall, DiSqllite, DiMysql
+  DiNodejsSmall, DiSqllite, DiMysql, DiPostgresql, DiLinux
 } from "react-icons/di";
 
 import {
   SiDjango, SiCplusplus, SiFlask, SiMongodb,
-  SiArduino, SiGit, SiGithub, SiBootstrap
+  SiArduino, SiGit, SiGithub, SiBootstrap,
+  SiVite, SiTailwindcss, SiTypescript, SiSwagger
 } from "react-icons/si";
 
 import { BiLogoVuejs } from "react-icons/bi";
 import { FaDocker } from "react-icons/fa6";
 
+import { SiJsonwebtokens } from "react-icons/si";
 
 // --- Styled Components ---
 const Container = styled.div`
@@ -83,18 +85,25 @@ const Technologies = ({ id = 'technologies' }) => {
         <IconItem><DiPython /><span>Python</span></IconItem>
         <IconItem><DiJavascript1 /><span>JavaScript</span></IconItem>
         <IconItem><SiCplusplus /><span>C++</span></IconItem>
+        <IconItem><SiTypescript /><span>TypeScript</span></IconItem>
         <IconItem><DiReact /><span>React</span></IconItem>
+        <IconItem><SiVite /><span>Vite</span></IconItem>
+        <IconItem><BiLogoVuejs /><span>Vue</span></IconItem>
         <IconItem><SiDjango /><span>Django</span></IconItem>
         <IconItem><SiFlask /><span>Flask</span></IconItem>
-        <IconItem><BiLogoVuejs /><span>Vue</span></IconItem>
         <IconItem><DiNodejsSmall /><span>Node.js</span></IconItem>
         <IconItem><DiHtml5 /><span>HTML5</span></IconItem>
         <IconItem><DiCss3 /><span>CSS3</span></IconItem>
+        <IconItem><SiTailwindcss /><span>Tailwind</span></IconItem>
         <IconItem><SiBootstrap /><span>Bootstrap</span></IconItem>
-        <IconItem><DiSqllite /><span>SQLite</span></IconItem>
+        <IconItem><DiPostgresql /><span>PostgreSQL</span></IconItem>
         <IconItem><DiMysql /><span>MySQL</span></IconItem>
+        <IconItem><DiSqllite /><span>SQLite</span></IconItem>
         <IconItem><SiMongodb /><span>MongoDB</span></IconItem>
+        <IconItem><SiJsonwebtokens /><span>JWT</span></IconItem>
+        <IconItem><SiSwagger /><span>Swagger</span></IconItem>
         <IconItem><SiArduino /><span>Arduino</span></IconItem>
+        <IconItem><DiLinux /><span>Linux</span></IconItem>
         <IconItem><SiGit /><span>Git</span></IconItem>
         <IconItem><SiGithub /><span>GitHub</span></IconItem>
         <IconItem><FaDocker /><span>Docker</span></IconItem>

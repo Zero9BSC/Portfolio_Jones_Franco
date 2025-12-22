@@ -8,13 +8,13 @@
     "contact": "Contact"
   },
   "intro": {
-    "greeting": "Hello",
+    "greeting": "Hi",
     "im": "I'm",
-    "roles": "Full Stack Developer | Software Developer | IT Support Specialist | Web Designer",
-    "description": "A highly motivated software developer with proven expertise in Python, JavaScript, and C++. What sets me apart? A relentless passion for technology, daily commitment to learning, and the ability to deliver real results under any circumstance.\n\nFrom solving complex problems to contributing clean, scalable code, I adapt quickly and thrive both in independent projects and collaborative teams. I combine strong technical skills with soft skills: punctuality, integrity, and an eye for detail—qualities that make a difference in any project.\n\nIf you are looking for someone who not only gets the job done but exceeds expectations with dedication and creativity, let's connect! I’m available for immediate relocation and open to remote or on-site opportunities across Europe. Thank you for visiting my portfolio.",
-    "resumeBtn": "Download Resume",
+    "roles": "IT Systems Engineer / Software Engineer",
+    "description": "IT Systems Engineer and Software Engineer with a strong background in full-stack development, DevOps, and IT support.\n\nI work with Python, JavaScript, and C++, focusing on building robust, scalable, and maintainable solutions for real-world production environments.\n\nI adapt quickly to new challenges, whether solving complex problems, optimizing infrastructure, or developing clean and efficient applications. I value teamwork, professional responsibility, and continuous improvement.\n\nAvailable for relocation and open to remote or on-site opportunities across Europe and New Zealand.",
+    "resumeBtn": "Download CV",
     "contactBtn": "Let's talk",
-    "checkOut": "Check out my"
+    "checkOut": "Check out my profiles"
   },
   "footer": {
     "title": "Contact",
