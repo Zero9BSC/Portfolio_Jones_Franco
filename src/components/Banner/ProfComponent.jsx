@@ -1,10 +1,8 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
-import { useTranslation } from 'react-i18next';
-
+import { useTranslation } from "react-i18next";
 
 // --- Styled Components ---
 const Container = styled.div`
@@ -27,27 +25,31 @@ const Container = styled.div`
   }
 
   @media (min-width: 1920px) {
-    padding-top: 10rem; /* más aire para pantallas 2K/4K si lo ves necesario */
+    padding-top: 10rem;
   }
 `;
 
 const Texts = styled.div`
   flex: 1;
+
   h4 {
     padding: 1rem 0;
     font-weight: 500;
   }
+
   h1 {
     font-size: 2rem;
     font-family: "Secular One", sans-serif;
     letter-spacing: 2px;
   }
+
   h3 {
     font-weight: 500;
     font-size: 1.2rem;
     padding-bottom: 1.2rem;
     text-transform: capitalize;
   }
+
   p {
     font-weight: 300;
   }
@@ -70,7 +72,6 @@ const Texts = styled.div`
   }
 
   @media (max-width: 840px) and (min-width: 641px) {
-    font-size: 0.92rem;
     h1 {
       font-size: 1.6rem;
     }
@@ -93,8 +94,6 @@ const Texts = styled.div`
       font-size: 1.1rem;
     }
   }
-
-
 `;
 
 const ButtonContainer = styled.div`
@@ -107,16 +106,20 @@ const ButtonContainer = styled.div`
 
     button {
       flex: 1 1 120px;
-      min-width: 120px;
-      max-width: 100%;
     }
   }
 
   @media (max-width: 640px) {
     flex-direction: column;
     align-items: center;
+
     button {
       width: 100%;
+      margin-top: 1rem;
+    }
+
+    button:first-child {
+      margin-top: 1.5rem;
     }
   }
 `;
@@ -125,35 +128,30 @@ const ButtonContainer = styled.div`
 const DownloadButton = styled.a`
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
 `;
 
 const LinkButton = styled.a`
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
 `;
 
 const Social = styled.div`
   margin-top: 3rem;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
 
   p {
     font-size: 0.9rem;
-    white-space: nowrap;
 
-    @media (max-width: 690px) {
-      font-size: 0.7rem;
+    @media (max-width: 640px) {
+      font-size: 0.8rem;
     }
   }
 
   .social-icons {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     gap: 1rem;
 
     span {
@@ -161,7 +159,6 @@ const Social = styled.div`
       height: 1.9rem;
       background-color: #01be96;
       clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -171,44 +168,62 @@ const Social = styled.div`
         transform: rotate(360deg);
       }
 
+      @media (max-width: 640px) {
+        width: 3rem;
+        height: 2.6rem;
+      }
+
       a {
-        position: relative;
         color: white;
-        font-size: 1.2rem;
+        width: 100%;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 1.2rem;
+
+        @media (max-width: 640px) {
+          font-size: 1.6rem;
+        }
       }
     }
   }
-
-  @media (max-width: 840px) and (min-width: 641px) {
-    justify-content: center;
-  }
 `;
 
+
 const Profile = styled.div`
+  display: flex;
+  justify-content: center;
+
   img {
     width: 25rem;
     border-radius: 50%;
     box-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88;
     animation: pulse 2.5s infinite;
     transition: transform 400ms ease-in-out;
+  }
 
-    @media (max-width: 790px) {
+  @media (max-width: 790px) {
+    img {
       width: 20rem;
-    }
-
-    @media (max-width: 660px) {
-      width: 18rem;
-    }
-
-    @media (max-width: 640px) {
-      width: 100%;
     }
   }
 
-  :hover img {
+  @media (max-width: 660px) {
+    img {
+      width: 18rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    justify-content: center;
+
+    img {
+      width: 15rem;
+    }
+  }
+
+  &:hover img {
     transform: translateY(-10px);
   }
 
@@ -219,15 +234,8 @@ const Profile = styled.div`
   }
 `;
 
-
 const ProfComponent = () => {
-  const [showResume, setShowResume] = useState(false);
-  
   const { t } = useTranslation();
-
-  const toggleResume = () => {
-    setShowResume(!showResume);
-  };
 
   return (
     <Container id="home">
@@ -238,14 +246,20 @@ const ProfComponent = () => {
           </h4>
           <h1 className="green">Franco Nicolas Jones</h1>
           <h3>{t("intro.roles")}</h3>
-          {t("intro.description").split('\n\n').map((paragraph, index) => (
-              <p key={index} style={{ marginBottom: "1rem", lineHeight: "1.6" }}>
-                {paragraph}
-              </p>
-            ))}
+
+          {t("intro.description").split("\n\n").map((p, i) => (
+            <p key={i} style={{ marginBottom: "1rem", lineHeight: "1.6" }}>
+              {p}
+            </p>
+          ))}
+
           <ButtonContainer>
             <button>
-              <DownloadButton href="https://drive.google.com/file/d/1MTGfGg1PAFqbDZFFNUI7zwb442BTErjt/view?usp=sharing" target="_blank" rel="noopener noreferrer" download onClick={toggleResume}>
+              <DownloadButton
+                href="https://drive.google.com/file/d/1tZOtR5RcOJ4fMTdijIpq2ZFpkQdKE-6s/view"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {t("intro.resumeBtn")}
               </DownloadButton>
             </button>
@@ -255,6 +269,7 @@ const ProfComponent = () => {
               </LinkButton>
             </button>
           </ButtonContainer>
+
           <Social>
             <p>{t("intro.checkOut")}</p>
             <div className="social-icons">
@@ -275,9 +290,8 @@ const ProfComponent = () => {
 
       <Slide direction="right">
         <Profile>
-          <img 
-            className="person"
-            src="https://res.cloudinary.com/dtyz1nutj/image/upload/profile-pic_4_dhwbg7.png" 
+          <img
+            src="https://res.cloudinary.com/dtyz1nutj/image/upload/profile-pic_4_dhwbg7.png"
             alt="profile"
           />
         </Profile>

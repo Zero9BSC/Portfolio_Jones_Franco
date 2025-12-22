@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaExternalLinkAlt, FaCode, FaRocket, FaLaptopCode, FaDatabase, FaMobileAlt, FaChartBar, FaHourglassHalf, FaBuilding, FaBriefcase } from "react-icons/fa";
 
-const SLANT_SIZE = 80;
+const SLANT_SIZE = 220;
 const GREEN_COLOR = "#01be96";
 const PRIMARY_DARK = "#0b0b0b";
 
@@ -178,13 +178,14 @@ const ProjectsGrid = () => {
   const [activeCard, setActiveCard] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [isTouchInteracting, setIsTouchInteracting] = useState(false);
   const scrollRef = useRef(null);
 
   const projects = [
     { id: 1, key: "0", img: "https://imgur.com/Ul6eOrI.png", demo: "http://francoj.pythonanywhere.com/", Icon: FaCode },
     { id: 2, key: "1", img: "https://imgur.com/ES34Qfj.png", demo: "https://consultorakaisen.com.ar/", Icon: FaBuilding },
     { id: 3, key: "2", img: "https://imgur.com/gOtUd1t.png", demo: "", Icon: FaBriefcase },
-    { id: 4, key: "3", img: "https://imgur.com/yTFIlGC.png", demo: "", Icon: FaChartBar }, // Nueva tarjeta Chubutex
+    { id: 4, key: "3", img: "https://imgur.com/yTFIlGC.png", demo: "", Icon: FaChartBar },
     { id: 5, key: "4", img: "https://imgur.com/GsgHJsz.png", demo: "https://estudiokaisen.netlify.app/", Icon: FaRocket },
     { id: 6, key: "5", img: "https://imgur.com/ceiJGpn.png", demo: "https://github.com/Zero9BSC/FirstPrintWizard.git", Icon: FaLaptopCode },
     { id: 7, key: "6", img: "https://imgur.com/ZL6QL3R.png", demo: "https://dolcericco.netlify.app/", Icon: FaDatabase },
@@ -195,12 +196,12 @@ const ProjectsGrid = () => {
 
   // LÓGICA DE AUTO-PLAY
   useEffect(() => {
-    if (isPaused) return; // Pausa si el mouse está arriba
+    if (isPaused || isTouchInteracting) return;
     const timer = setInterval(() => {
       setActiveCard(prev => (prev === projects.length - 1 ? 0 : prev + 1));
     }, 5000);
     return () => clearInterval(timer);
-  }, [isPaused, projects.length]);
+  }, [isPaused, isTouchInteracting, projects.length]);
 
   useEffect(() => {
     setIsAnimating(true);
@@ -208,22 +209,56 @@ const ProjectsGrid = () => {
     return () => clearTimeout(timeout);
   }, [activeCard]);
 
-  // SINCRONIZACIÓN SCROLL MÓVIL
+  // DETECTAR SCROLL MANUAL EN MÓVIL
   useEffect(() => {
-    if (scrollRef.current) {
+    const handleScroll = () => {
+      if (scrollRef.current) {
+        const scrollLeft = scrollRef.current.scrollLeft;
+        const width = scrollRef.current.offsetWidth;
+        const newActiveCard = Math.round(scrollLeft / width);
+        
+        if (newActiveCard !== activeCard) {
+          setActiveCard(newActiveCard);
+          setIsTouchInteracting(true);
+        }
+      }
+    };
+
+    const wrapper = scrollRef.current;
+    if (wrapper) {
+      wrapper.addEventListener('scroll', handleScroll);
+      return () => wrapper.removeEventListener('scroll', handleScroll);
+    }
+  }, [activeCard]);
+
+  // SINCRONIZACIÓN SCROLL MÓVIL (solo cuando no hay interacción táctil)
+  useEffect(() => {
+    if (scrollRef.current && !isTouchInteracting) {
       const width = scrollRef.current.offsetWidth;
       scrollRef.current.scrollTo({ left: width * activeCard, behavior: 'smooth' });
     }
-  }, [activeCard]);
+  }, [activeCard, isTouchInteracting]);
+
+  const handleTouchStart = () => {
+    setIsTouchInteracting(true);
+  };
+
+  const handleTouchEnd = () => {
+    setTimeout(() => setIsTouchInteracting(false), 3000);
+  };
 
   return (
     <Section 
       id="project"
-      onMouseEnter={() => setIsPaused(true)} // Activa pausa
-      onMouseLeave={() => setIsPaused(false)} // Quita pausa
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
     >
       {/* MÓVIL */}
-      <MobileWrapper ref={scrollRef}>
+      <MobileWrapper 
+        ref={scrollRef}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         {projects.map((p, i) => (
           <ProjectSlide key={`mob-${p.id}-${i}`} $active={true}>
             <ImageContainer>
