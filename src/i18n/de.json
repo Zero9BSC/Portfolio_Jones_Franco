@@ -36,28 +36,49 @@
     }
   },
   "projects": {
-    "title": "Neueste",
-    "highlight": "Projekte",
-    "subtitle": "Hier sind einige der Projekte, an denen ich gearbeitet habe",
-    "slider": [
-      { "desc": "Gaming Zone, ein Gamer-Blog von Gamern für Gamer!" },
-      {
-        "desc": "Moderne und responsive Firmenwebsite in React für Kaisen Accounting, mit Effekten, Google Maps und Kontaktformular."
+  "title": "Neueste",
+  "highlight": "Projekte",
+  "subtitle": "Hier sind einige der Projekte, an denen ich gearbeitet habe",
+  "slider": [
+      { 
+        "title": "Gaming Zone",
+        "desc": "Ein Gamer-Blog von Gamern für Gamer, entwickelt mit Python und Django." 
       },
       {
-        "desc": "FirstPrintWizard ermöglicht das Drucken von PDFs auf einem ausgewählten Drucker. Einfach und benutzerfreundlich."
+        "title": "Kaisen Buchhaltungsstudio",
+        "desc": "Endgültige Website für das Kaisen Buchhaltungsstudio, entwickelt mit React + Vite und Tailwind CSS v4."
       },
       {
-        "desc": "Dolce&Ricco ist eine Bäckerei-Webseite mit hausgemachten Rezepten und Bestelloptionen."
+        "title": "IT-Dienstleistungen",
+        "desc": "Unternehmenswebplattform für IT-Dienstleistungen, entwickelt mit React + Vite und Tailwind CSS v4."
       },
       {
-        "desc": "HealthyHearts ist eine Gesundheitsseite, erstellt mit Flask."
+        "title": "Chubutex ERP",
+        "desc": "Unternehmensverwaltungssystem mit React, Node.js, PostgreSQL und Docker für Vertrieb, Inventar und Nachschubverwaltung."
       },
       {
-        "desc": "ARCA-Viewer für Steuerberichte (AFIP) in Argentinien."
+        "title": "Kaisen Studio - Prototyp",
+        "desc": "Erster Prototyp für Kundenpräsentation, mit modernem Design und grundlegenden React-Funktionen."
       },
       {
-        "desc": "Neues Projekt kommt bald!"
+        "title": "FirstPrintWizard",
+        "desc": "Anwendung zum Drucken von PDF-Dateien auf einen bestimmten Drucker, schnell und einfach."
+      },
+      {
+        "title": "Dolce&Ricco",
+        "desc": "Handwerksbäckerei-Website mit hausgemachten Rezepten und Produktverkauf."
+      },
+      {
+        "title": "HealthyHearts",
+        "desc": "Gesundheits- und Wellness-Website, entwickelt mit Flask."
+      },
+      {
+        "title": "AFIP-Viewer",
+        "desc": "Werkzeug zur Anzeige und Analyse von ARCA (AFIP)-Berichten in Argentinien."
+      },
+      {
+        "title": "Demnächst",
+        "desc": "Neues Projekt in Entwicklung!"
       }
     ]
   },
