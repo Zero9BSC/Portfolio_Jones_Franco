@@ -40,24 +40,45 @@
     "highlight": "Projects",
     "subtitle": "Here are some of the projects I have worked on",
     "slider": [
-      { "desc": "Gaming Zone, a Gamer blog for Gamers!" },
-      {
-        "desc": "Modern and responsive corporate website in React for Kaisen Accounting. Includes dynamic effects, Google Maps, and contact form."
+      { 
+        "title": "Gaming Zone",
+        "desc": "A gamer blog made by gamers, developed with Python and Django." 
       },
       {
-        "desc": "FirstPrintWizard allows printing PDF files directly to a selected printer. Simple and user-friendly."
+        "title": "Kaisen Accounting Studio",
+        "desc": "Final website for Kaisen accounting firm, developed with React + Vite and Tailwind CSS v4."
       },
       {
-        "desc": "Dolce&Ricco is a bakery website offering homemade recipes and product ordering."
+        "title": "IT Services",
+        "desc": "Corporate web platform for IT services company, developed with React + Vite and Tailwind CSS v4."
       },
       {
-        "desc": "HealthyHearts is a health-themed website built with Flask."
+        "title": "Chubutex ERP",
+        "desc": "Business management system with React, Node.js, PostgreSQL and Docker for sales, inventory and replenishment management."
       },
       {
-        "desc": "ARCA Viewer for public revenue reports in Argentina (AFIP)."
+        "title": "Kaisen Studio - Prototype",
+        "desc": "Initial prototype for client presentation, with modern design and basic React functionalities."
       },
       {
-        "desc": "New project coming soon!"
+        "title": "FirstPrintWizard",
+        "desc": "Application for printing PDF files to a specific printer, fast and simple."
+      },
+      {
+        "title": "Dolce&Ricco",
+        "desc": "Artisanal bakery website with homemade recipes and product sales."
+      },
+      {
+        "title": "HealthyHearts",
+        "desc": "Health and wellness website developed with Flask."
+      },
+      {
+        "title": "AFIP Viewer",
+        "desc": "Tool for viewing and analyzing ARCA (AFIP) reports in Argentina."
+      },
+      {
+        "title": "Coming Soon",
+        "desc": "New project in development!"
       }
     ]
   },

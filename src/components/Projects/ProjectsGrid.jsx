@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaExternalLinkAlt, FaCode, FaRocket, FaLaptopCode, FaDatabase, FaMobileAlt, FaChartBar, FaHourglassHalf } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaCode, FaRocket, FaLaptopCode, FaDatabase, FaMobileAlt, FaChartBar, FaHourglassHalf, FaBuilding, FaBriefcase } from "react-icons/fa";
 
 const SLANT_SIZE = 80;
 const GREEN_COLOR = "#01be96";
@@ -177,17 +177,20 @@ const ProjectsGrid = () => {
   const { t } = useTranslation();
   const [activeCard, setActiveCard] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [isPaused, setIsPaused] = useState(false); // <--- NUEVO ESTADO
+  const [isPaused, setIsPaused] = useState(false);
   const scrollRef = useRef(null);
 
   const projects = [
     { id: 1, key: "0", img: "https://imgur.com/Ul6eOrI.png", demo: "http://francoj.pythonanywhere.com/", Icon: FaCode },
-    { id: 2, key: "1", img: "https://imgur.com/GsgHJsz.png", demo: "https://estudiokaisen.netlify.app/", Icon: FaRocket },
-    { id: 3, key: "2", img: "https://imgur.com/ceiJGpn.png", demo: "https://github.com/Zero9BSC/FirstPrintWizard.git", Icon: FaLaptopCode },
-    { id: 4, key: "3", img: "https://imgur.com/ZL6QL3R.png", demo: "https://dolcericco.netlify.app/", Icon: FaDatabase },
-    { id: 5, key: "4", img: "https://imgur.com/hjPdVOC.png", demo: "https://healthyhearts.netlify.app/", Icon: FaMobileAlt },
-    { id: 6, key: "5", img: "https://imgur.com/sxvSvfR.png", demo: "https://afipreportviewer.netlify.app/", Icon: FaChartBar },
-    { id: 7, key: "coming", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070", demo: "", Icon: FaHourglassHalf },
+    { id: 2, key: "1", img: "https://imgur.com/ES34Qfj.png", demo: "https://consultorakaisen.com.ar/", Icon: FaBuilding },
+    { id: 3, key: "2", img: "https://imgur.com/gOtUd1t.png", demo: "", Icon: FaBriefcase },
+    { id: 4, key: "3", img: "https://imgur.com/yTFIlGC.png", demo: "", Icon: FaChartBar }, // Nueva tarjeta Chubutex
+    { id: 5, key: "4", img: "https://imgur.com/GsgHJsz.png", demo: "https://estudiokaisen.netlify.app/", Icon: FaRocket },
+    { id: 6, key: "5", img: "https://imgur.com/ceiJGpn.png", demo: "https://github.com/Zero9BSC/FirstPrintWizard.git", Icon: FaLaptopCode },
+    { id: 7, key: "6", img: "https://imgur.com/ZL6QL3R.png", demo: "https://dolcericco.netlify.app/", Icon: FaDatabase },
+    { id: 8, key: "7", img: "https://imgur.com/hjPdVOC.png", demo: "https://healthyhearts.netlify.app/", Icon: FaMobileAlt },
+    { id: 9, key: "8", img: "https://imgur.com/sxvSvfR.png", demo: "https://afipreportviewer.netlify.app/", Icon: FaChartBar },
+    { id: 10, key: "9", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070", demo: "", Icon: FaHourglassHalf },
   ];
 
   // LÓGICA DE AUTO-PLAY
@@ -228,8 +231,8 @@ const ProjectsGrid = () => {
             </ImageContainer>
             <Content $active={true}>
               <IconWrapper><p.Icon color="white" size={20} /></IconWrapper>
-              <h3>{p.key === "coming" ? "Próximamente" : t(`projects.slider.${p.key}.desc`).split(' ')[0]}</h3>
-              <p>{p.key === "coming" ? "Nuevas soluciones digitales." : t(`projects.slider.${p.key}.desc`)}</p>
+              <h3>{t(`projects.slider.${p.key}.title`)}</h3>
+              <p>{t(`projects.slider.${p.key}.desc`)}</p>
               {p.demo && <ActionLink href={p.demo} target="_blank">{t("project.link.view")}</ActionLink>}
             </Content>
           </ProjectSlide>
@@ -255,8 +258,8 @@ const ProjectsGrid = () => {
               $first={i === 0}
             >
               <IconWrapper><p.Icon color="white" size={24} /></IconWrapper>
-              <h3>{p.key === "coming" ? "Próximamente" : t(`projects.slider.${p.key}.desc`).split(' ')[0]}</h3>
-              <p>{p.key === "coming" ? "Trabajando en algo nuevo." : t(`projects.slider.${p.key}.desc`)}</p>
+              <h3>{t(`projects.slider.${p.key}.title`)}</h3>
+              <p>{t(`projects.slider.${p.key}.desc`)}</p>
               {p.demo && (
                 <ActionLink href={p.demo} target="_blank" onClick={(e) => e.stopPropagation()}>
                    {p.demo.includes("github") ? <FaGithub /> : <FaExternalLinkAlt />}

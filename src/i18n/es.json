@@ -36,30 +36,51 @@
     }
   },
   "projects": {
-    "title": "Proyectos",
-    "highlight": "Recientes",
-    "subtitle": "Aquí tienes algunos de los proyectos en los que he trabajado",
-    "slider": [
-      { "desc": "Gaming Zone, un blog para gamers hecho por gamers." },
-      {
-        "desc": "Sitio corporativo moderno y responsivo en React para Kaisen Accounting, con efectos dinámicos, Google Maps y formulario de contacto."
-      },
-      {
-        "desc": "FirstPrintWizard permite imprimir archivos PDF en una impresora específica de forma rápida y sencilla."
-      },
-      {
-        "desc": "Dolce&Ricco es una web de panadería artesanal con recetas caseras y venta de productos."
-      },
-      {
-        "desc": "HealthyHearts es un sitio de salud hecho con Flask."
-      },
-      {
-        "desc": "Visor de reportes ARCA (AFIP) en Argentina."
-      },
-      {
-        "desc": "¡Nuevo proyecto próximamente!"
-      }
-    ]
+  "title": "Proyectos",
+  "highlight": "Recientes",
+  "subtitle": "Aquí tienes algunos de los proyectos en los que he trabajado",
+  "slider": [
+    { 
+      "title": "Gaming Zone",
+      "desc": "Blog para gamers hecho por gamers, desarrollado con Python y Django."
+    },
+    {
+      "title": "Estudio Kaisen",
+      "desc": "Sitio web definitivo del estudio contable Kaisen, desarrollado con React + Vite y Tailwind CSS v4."
+    },
+    {
+      "title": "IT Servicios Informáticos",
+      "desc": "Plataforma web para empresa de servicios informáticos, desarrollada con React + Vite y Tailwind CSS v4."
+    },
+    {
+      "title": "Chubutex ERP",
+      "desc": "Sistema de gestión empresarial con React, Node.js, PostgreSQL y Docker para administración de ventas, inventario y reposición."
+    },
+    {
+      "title": "Estudio Kaisen - Prototipo",
+      "desc": "Prototipo inicial para presentación al cliente, con diseño moderno y funcionalidades básicas en React."
+    },
+    {
+      "title": "FirstPrintWizard",
+      "desc": "Aplicación para imprimir archivos PDF en una impresora específica de forma rápida y sencilla."
+    },
+    {
+      "title": "Dolce&Ricco",
+      "desc": "Sitio web de panadería artesanal con recetas caseras y venta de productos."
+    },
+    {
+      "title": "HealthyHearts",
+      "desc": "Sitio de salud y bienestar desarrollado con Flask."
+    },
+    {
+      "title": "Visor AFIP",
+      "desc": "Herramienta para visualización y análisis de reportes ARCA (AFIP) en Argentina."
+    },
+    {
+      "title": "Próximamente",
+      "desc": "¡Nuevo proyecto en desarrollo!"
+    }
+  ]
   },
   "itsupport": {
     "header": "Mi experiencia en",
