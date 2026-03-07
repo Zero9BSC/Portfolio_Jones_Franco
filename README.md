@@ -2,7 +2,7 @@
 
 Portfolio personal de **Franco Nicolas Jones** (IT Systems Engineer / Software Engineer). Pensado para reclutadores, empresas y clientes (empleo o freelance).
 
-**Sitio en vivo:** [francojones.netlify.app](https://francojones.netlify.app)
+**Sitio en vivo:** [franconicolasjones.com](https://franconicolasjones.com) · [franconicolasjones.dev](https://franconicolasjones.dev)
 
 ---
 
@@ -102,7 +102,7 @@ Más detalle en [docs/AUDIT.md](docs/AUDIT.md).
 
 - **LinkedIn:** [linkedin.com/in/franco-jones](https://www.linkedin.com/in/franco-jones/)
 - **GitHub:** [github.com/Zero9BSC](https://github.com/Zero9BSC)
-- **Portfolio:** [francojones.netlify.app](https://francojones.netlify.app)
+- **Portfolio:** [franconicolasjones.com](https://franconicolasjones.com)
 
 ---
 

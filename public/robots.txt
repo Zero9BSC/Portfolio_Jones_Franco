@@ -2,5 +2,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap (replace with your production URL if different)
-Sitemap: https://francojones.netlify.app/sitemap.xml
+# Primary domain — sitemap
+Sitemap: https://franconicolasjones.com/sitemap.xml
