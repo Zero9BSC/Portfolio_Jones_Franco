@@ -1,0 +1,92 @@
+{
+  "welcome": "مرحباً بكم في معرض أعمالي",
+  "nav": {
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "technologies": "التقنيات",
+    "projects": "المشاريع",
+    "contact": "اتصل"
+  },
+  "intro": {
+    "greeting": "مرحباً",
+    "im": "أنا",
+    "roles": "مهندس أنظمة IT / مهندس برمجيات",
+    "tagline": "متاح للعمل بدوام كامل أو بعقد أو كمستقل.",
+    "description": "مهندس أنظمة IT ومهندس برمجيات بخبرة في التطوير الشامل، DevOps ودعم IT.\n\nأعمل بـ Python وJavaScript وC++ لبناء حلول قوية وقابلة للتوسع لبيئات الإنتاج.\n\nأتكيف بسرعة مع التحديات الجديدة، سواء في حل المشكلات المعقدة أو تحسين البنية أو تطوير تطبيقات فعالة. أقدّر العمل الجماعي والمسؤولية والتحسين المستمر.\n\nمتاح للنقل ومرن للعمل عن بُعد أو حضورياً: دوام كامل أو عقد أو مشاريع مستقلة في أوروبا ونيوزيلندا.",
+    "resumeBtn": "تحميل السيرة الذاتية",
+    "contactBtn": "تواصل معي",
+    "checkOut": "شاهد ملفاتي"
+  },
+  "ctaStrip": {
+    "title": "لديك مشروع في بالك؟",
+    "subtitle": "دوام كامل، عقد، أو مستقل — تواصل معي ونكمل من هناك.",
+    "button": "تواصل الآن"
+  },
+  "footer": {
+    "title": "اتصل",
+    "directContact": "تواصل معي مباشرة:",
+    "checkProfiles": "شاهد ملفاتي",
+    "alsoOn": "أيضاً على",
+    "workana": "Workana",
+    "upwork": "Upwork",
+    "namePlaceholder": "الاسم الكامل...",
+    "emailPlaceholder": "البريد الإلكتروني...",
+    "messagePlaceholder": "أخبرني عن مشروعك أو استفسارك...",
+    "submit": "إرسال الرسالة",
+    "sending": "جاري الإرسال...",
+    "successMsg": "تم إرسال الرسالة بنجاح.",
+    "errorMsg": "حدث خطأ. يرجى المحاولة مرة أخرى."
+  },
+  "project": {
+    "description": "الوصف",
+    "link": {
+      "view": "عرض المشروع",
+      "github": "عرض على GitHub"
+    }
+  },
+  "projects": {
+    "title": "المشاريع",
+    "highlight": "مميزة",
+    "featuredTitle": "مشاريع مميزة",
+    "allTitle": "جميع المشاريع",
+    "subtitle": "بعض المشاريع التي عملت عليها",
+    "slider": [
+      { "title": "Kaisen Gestión", "desc": "تطبيق ويب B2B متعدد المستأجرين: إدارة العملاء والجهات المصدرة والمهام والفوترة الإلكترونية (AFIP/ARCA) والذمم المدينة. واجهة REST مع Express وPostgreSQL، وتطبيق React مع سمات وصلاحيات." },
+      { "title": "Buran Tattoo", "desc": "موقع إنتاجي بـ Next.js وReact، Supabase (PostgreSQL والتخزين)، مستضاف على Vercel." },
+      { "title": "Vos y Solo Vos", "desc": "منصة ويب شاملة بـ React (Vite) وNode.js (Express) وSupabase PostgreSQL وCloudinary، وواجهة متجاوبة مع TailwindCSS." },
+      { "title": "IT-Services Informáticos", "desc": "منصة ويب مؤسسية بـ React وTailwind CSS مع إدارة العملاء." },
+      { "title": "Chubutex ERP", "desc": "منصة ERP بـ React وNode.js وPostgreSQL وJWT وDocker للمخزون والمبيعات." },
+      { "title": "Estudio Kaisen", "desc": "موقع إنتاجي بـ React وVite وTailwind CSS." },
+      { "title": "Gaming Zone Blog", "desc": "مدونة CRUD بـ Django مع مصادقة المستخدمين وإدارة المحتوى." },
+      { "title": "FirstPrintWizard", "desc": "أداة سطح مكتب بـ Python (Tkinter) لطباعة PDF دفعات مع اختيار الطابعة." },
+      { "title": "Estudio Kaisen - Prototype", "desc": "نموذج أولي للعرض على العميل، بتصميم حديث ووظائف React أساسية." },
+      { "title": "Dolce&Ricco", "desc": "موقع مخبز حرفي مع وصفات منزلية وبيع منتجات." },
+      { "title": "HealthyHearts", "desc": "موقع صحة وعافية مطوّر بـ Flask." },
+      { "title": "AFIP Viewer", "desc": "أداة لعرض وتحليل تقارير ARCA (AFIP) في الأرجنتين." }
+    ]
+  },
+  "itsupport": {
+    "header": "خبرتي في",
+    "highlight": "دعم IT",
+    "subheader": "ما أقدمه لك",
+    "cards": [
+      { "title": "دعم الأجهزة", "desc": "تشخيص وإصلاح وترقية أجهزة سطح المكتب والأجهزة المحمولة والخوادم. أضمن أداء معداتك بأفضل شكل." },
+      { "title": "حل مشكلات البرمجيات", "desc": "من أعطال نظام التشغيل إلى أخطاء التطبيقات، أقدم حلولاً لتشغيل برمجياتك بسلاسة وأمان." },
+      { "title": "إدارة الشبكات", "desc": "الدعم في إعداد وصيانة الشبكات، بما فيها الموجهات والجدران النارية وVPN، لضمان اتصال آمن ومستقر." }
+    ]
+  },
+  "services": {
+    "header": "خدماتي",
+    "highlight": "",
+    "subheader": "ما أقدمه",
+    "cards": [
+      { "title": "مطوّر Full Stack", "desc": "مطوّر Full Stack بخبرة في Python وJavaScript وأطر مثل Django وFlask وReact. أبني تطبيقات ويب كاملة من الخلفية إلى الواجهة، ضمان حلول فعالة وقابلة للتوسع." },
+      { "title": "مطوّر برمجيات", "desc": "أبتكر حلولاً مبتكرة وعملية، وأقدّم برمجيات عالية الجودة تحسّن تجربة المستخدم." },
+      { "title": "مصمم ويب", "desc": "متخصص في تطبيقات مخصصة، أستخدم Python وJavaScript وC++ لتطوير حلول فعالة وقابلة للتوسع، مركزاً على احتياجات العميل." },
+      { "title": "أخصائي دعم IT", "desc": "كأخصائي دعم IT ذي خبرة، أقدم استكشاف الأخطاء وصيانة الأنظمة وإدارة الشبكات. سواء مشكلات أجهزة أو إعداد برمجيات، أقدم حلولاً سريعة وموثوقة." }
+    ]
+  },
+  "technologies": {
+    "title": "التقنيات"
+  }
+}

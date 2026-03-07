@@ -11,13 +11,12 @@ import {
 import {
   SiDjango, SiCplusplus, SiFlask, SiMongodb,
   SiArduino, SiGit, SiGithub, SiBootstrap,
-  SiVite, SiTailwindcss, SiTypescript, SiSwagger
+  SiVite, SiTailwindcss, SiTypescript, SiSwagger,
+  SiNextdotjs, SiSupabase, SiFirebase, SiAmazonwebservices, SiJsonwebtokens
 } from "react-icons/si";
 
 import { BiLogoVuejs } from "react-icons/bi";
 import { FaDocker } from "react-icons/fa6";
-
-import { SiJsonwebtokens } from "react-icons/si";
 
 // --- Styled Components ---
 const Container = styled.div`
@@ -87,6 +86,7 @@ const Technologies = ({ id = 'technologies' }) => {
         <IconItem><SiCplusplus /><span>C++</span></IconItem>
         <IconItem><SiTypescript /><span>TypeScript</span></IconItem>
         <IconItem><DiReact /><span>React</span></IconItem>
+        <IconItem><SiNextdotjs /><span>Next.js</span></IconItem>
         <IconItem><SiVite /><span>Vite</span></IconItem>
         <IconItem><BiLogoVuejs /><span>Vue</span></IconItem>
         <IconItem><SiDjango /><span>Django</span></IconItem>
@@ -100,10 +100,13 @@ const Technologies = ({ id = 'technologies' }) => {
         <IconItem><DiMysql /><span>MySQL</span></IconItem>
         <IconItem><DiSqllite /><span>SQLite</span></IconItem>
         <IconItem><SiMongodb /><span>MongoDB</span></IconItem>
+        <IconItem><SiSupabase /><span>Supabase</span></IconItem>
+        <IconItem><SiFirebase /><span>Firebase</span></IconItem>
         <IconItem><SiJsonwebtokens /><span>JWT</span></IconItem>
         <IconItem><SiSwagger /><span>Swagger</span></IconItem>
         <IconItem><SiArduino /><span>Arduino</span></IconItem>
         <IconItem><DiLinux /><span>Linux</span></IconItem>
+        <IconItem><SiAmazonwebservices /><span>AWS</span></IconItem>
         <IconItem><SiGit /><span>Git</span></IconItem>
         <IconItem><SiGithub /><span>GitHub</span></IconItem>
         <IconItem><FaDocker /><span>Docker</span></IconItem>

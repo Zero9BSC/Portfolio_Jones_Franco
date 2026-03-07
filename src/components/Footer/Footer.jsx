@@ -80,8 +80,8 @@ const Form = styled.div`
       .messageIcon { align-items: flex-start; padding-top: 0.5rem; }
     }
     button {
-      width: 5rem; height: 1.8rem; background-color: #01be96; border: none;
-      border-radius: 5px; cursor: pointer; color: white; font-weight: bold;
+      width: 100%; max-width: 220px; height: 2.25rem; background-color: #01be96; border: none;
+      border-radius: 6px; cursor: pointer; color: white; font-weight: 600; font-size: 0.95rem;
       filter: drop-shadow(0px 4px 5px #01be9551);
       transition: transform 0.3s ease, filter 0.3s ease;
       &:hover { filter: drop-shadow(0px 6px 7px #01be95cc); transform: translateY(-3px); }
@@ -183,6 +183,16 @@ const Footer = () => {
                 </a>
               </span>
             </Zoom>
+          </div>
+        </div>
+        <div className="profiles" style={{ marginTop: '1.25rem' }}>
+          <Slide direction="left">
+            <h1>{t('footer.alsoOn')}</h1>
+          </Slide>
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+            {/* Replace with your profile URLs when ready: e.g. https://www.workana.com/freelancer/your-username */}
+            <a href="https://www.workana.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#01be96', textDecoration: 'none', fontSize: '0.95rem' }}>{t('footer.workana')}</a>
+            <a href="https://www.upwork.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#01be96', textDecoration: 'none', fontSize: '0.95rem' }}>{t('footer.upwork')}</a>
           </div>
         </div>
 

@@ -11,19 +11,28 @@
     "greeting": "Hallo",
     "im": "Ich bin",
     "roles": "IT Systems Engineer / Software Engineer",
-    "description": "IT-Systemingenieur und Softwareentwickler mit fundiertem Hintergrund in Full-Stack-Entwicklung, DevOps und IT-Support.\n\nIch arbeite mit Python, JavaScript und C++ und konzentriere mich auf die Entwicklung robuster, skalierbarer und wartbarer Lösungen für produktive Umgebungen.\n\nIch passe mich schnell an neue Herausforderungen an – sei es bei der Lösung komplexer Probleme, der Optimierung von Infrastrukturen oder der Entwicklung sauberer und effizienter Anwendungen. Teamarbeit, professionelle Verantwortung und kontinuierliche Weiterentwicklung sind mir besonders wichtig.\n\nBereit zur Relocation und offen für Remote- oder Vor-Ort-Positionen in Europa und Neuseeland.",
+    "tagline": "Verfügbar für Festanstellung, Vertrag oder Freelance-Projekte.",
+    "description": "IT-Systemingenieur und Softwareentwickler mit fundiertem Hintergrund in Full-Stack-Entwicklung, DevOps und IT-Support.\n\nIch arbeite mit Python, JavaScript und C++ und konzentriere mich auf die Entwicklung robuster, skalierbarer und wartbarer Lösungen für produktive Umgebungen.\n\nIch passe mich schnell an neue Herausforderungen an – sei es bei der Lösung komplexer Probleme, der Optimierung von Infrastrukturen oder der Entwicklung sauberer und effizienter Anwendungen. Teamarbeit, professionelle Verantwortung und kontinuierliche Weiterentwicklung sind mir besonders wichtig.\n\nBereit zur Relocation und offen für Remote- oder Vor-Ort-Arbeit: Festanstellung, Vertrag oder Freelance in Europa und Neuseeland.",
     "resumeBtn": "Lebenslauf herunterladen",
     "contactBtn": "Kontakt aufnehmen",
     "checkOut": "Meine Profile ansehen"
+  },
+  "ctaStrip": {
+    "title": "Haben Sie ein Projekt im Sinn?",
+    "subtitle": "Festanstellung, Vertrag oder Freelance — schreiben Sie mir, wir finden eine Lösung.",
+    "button": "Jetzt schreiben"
   },
   "footer": {
     "title": "Kontakt",
     "directContact": "Kontaktieren Sie mich direkt:",
     "checkProfiles": "Mein Profil ansehen",
+    "alsoOn": "Auch auf",
+    "workana": "Workana",
+    "upwork": "Upwork",
     "namePlaceholder": "Vollständiger Name...",
     "emailPlaceholder": "E-Mail-Adresse...",
-    "messagePlaceholder": "Nachricht...",
-    "submit": "Senden",
+    "messagePlaceholder": "Erzählen Sie von Ihrem Projekt oder Ihrer Anfrage...",
+    "submit": "Nachricht senden",
     "sending": "Nachricht wird gesendet...",
     "successMsg": "Nachricht erfolgreich gesendet!",
     "errorMsg": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
@@ -36,33 +45,47 @@
     }
   },
   "projects": {
-  "title": "Neueste",
-  "highlight": "Projekte",
-  "subtitle": "Hier sind einige der Projekte, an denen ich gearbeitet habe",
-  "slider": [
-      { 
-        "title": "Gaming Zone",
-        "desc": "Ein Gamer-Blog von Gamern für Gamer, entwickelt mit Python und Django." 
+    "title": "Projekte",
+    "highlight": "ausgewählt",
+    "featuredTitle": "Ausgewählte Projekte",
+    "allTitle": "Alle Projekte",
+    "subtitle": "Einige der Projekte, an denen ich gearbeitet habe",
+    "slider": [
+      {
+        "title": "Kaisen Gestión",
+        "desc": "Multi-Mandanten-B2B-Webapp für Kunden- und Emittentenverwaltung, Aufgaben, E-Rechnung (AFIP/ARCA) und Forderungen. REST-API mit Express und PostgreSQL, React-SPA mit Themes und rollenbasierter Zugriff."
       },
       {
-        "title": "Kaisen Buchhaltungsstudio",
-        "desc": "Endgültige Website für das Kaisen Buchhaltungsstudio, entwickelt mit React + Vite und Tailwind CSS v4."
+        "title": "Buran Tattoo",
+        "desc": "Produktions-Website mit Next.js und React, Supabase PostgreSQL und Storage, optimiert und auf Vercel gehostet."
       },
       {
-        "title": "IT-Dienstleistungen",
-        "desc": "Unternehmenswebplattform für IT-Dienstleistungen, entwickelt mit React + Vite und Tailwind CSS v4."
+        "title": "Vos y Solo Vos",
+        "desc": "Full-Stack-Webplattform mit React (Vite) und Node.js (Express), Supabase PostgreSQL und Cloudinary, responsive UI mit TailwindCSS."
+      },
+      {
+        "title": "IT-Services Informáticos",
+        "desc": "Unternehmenswebplattform mit React und Tailwind CSS inkl. Kundenverwaltung."
       },
       {
         "title": "Chubutex ERP",
-        "desc": "Unternehmensverwaltungssystem mit React, Node.js, PostgreSQL und Docker für Vertrieb, Inventar und Nachschubverwaltung."
+        "desc": "ERP-Plattform mit React, Node.js, PostgreSQL, JWT und Docker für Inventar und Vertrieb."
       },
       {
-        "title": "Kaisen Studio - Prototyp",
-        "desc": "Erster Prototyp für Kundenpräsentation, mit modernem Design und grundlegenden React-Funktionen."
+        "title": "Estudio Kaisen",
+        "desc": "Produktions-Website für das Kaisen Buchhaltungsstudio mit React, Vite und Tailwind CSS."
+      },
+      {
+        "title": "Gaming Zone Blog",
+        "desc": "Django-Blog mit CRUD, Benutzerauthentifizierung und Content-Management."
       },
       {
         "title": "FirstPrintWizard",
-        "desc": "Anwendung zum Drucken von PDF-Dateien auf einen bestimmten Drucker, schnell und einfach."
+        "desc": "Python-(Tkinter-)Desktop-Tool für Stapel-PDF-Druck mit Druckerauswahl."
+      },
+      {
+        "title": "Estudio Kaisen - Prototyp",
+        "desc": "Erster Prototyp für Kundenpräsentation mit modernem Design und grundlegenden React-Funktionen."
       },
       {
         "title": "Dolce&Ricco",
@@ -75,10 +98,6 @@
       {
         "title": "AFIP-Viewer",
         "desc": "Werkzeug zur Anzeige und Analyse von ARCA (AFIP)-Berichten in Argentinien."
-      },
-      {
-        "title": "Demnächst",
-        "desc": "Neues Projekt in Entwicklung!"
       }
     ]
   },

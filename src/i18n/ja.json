@@ -1,0 +1,92 @@
+{
+  "welcome": "ポートフォリオへようこそ",
+  "nav": {
+    "home": "ホーム",
+    "services": "サービス",
+    "technologies": "技術",
+    "projects": "プロジェクト",
+    "contact": "お問い合わせ"
+  },
+  "intro": {
+    "greeting": "こんにちは",
+    "im": "私は",
+    "roles": "ITシステムエンジニア / ソフトウェアエンジニア",
+    "tagline": "正社員・契約・フリーランス対応可能です。",
+    "description": "フルスタック開発、DevOps、ITサポートの経験を持つITシステムエンジニア兼ソフトウェアエンジニアです。\n\nPython、JavaScript、C++を用い、本番環境向けの堅牢でスケーラブルなソリューションの構築に注力しています。\n\n複雑な問題の解決、インフラの最適化、クリーンで効率的なアプリケーションの開発など、新しい課題に素早く適応します。チームワーク、専門性、継続的な改善を重視しています。\n\nヨーロッパおよびニュージーランドでのリモート・現地勤務、正社員・契約・フリーランスプロジェクトに対応可能です。",
+    "resumeBtn": "履歴書をダウンロード",
+    "contactBtn": "お問い合わせ",
+    "checkOut": "プロフィールを見る"
+  },
+  "ctaStrip": {
+    "title": "ご依頼・ご相談はありますか？",
+    "subtitle": "正社員・契約・フリーランス — お気軽にご連絡ください。",
+    "button": "お問い合わせ"
+  },
+  "footer": {
+    "title": "お問い合わせ",
+    "directContact": "直接連絡先：",
+    "checkProfiles": "プロフィール",
+    "alsoOn": "その他",
+    "workana": "Workana",
+    "upwork": "Upwork",
+    "namePlaceholder": "お名前...",
+    "emailPlaceholder": "メールアドレス...",
+    "messagePlaceholder": "プロジェクトやご質問をご記入ください...",
+    "submit": "送信",
+    "sending": "送信中...",
+    "successMsg": "送信されました。",
+    "errorMsg": "エラーが発生しました。もう一度お試しください。"
+  },
+  "project": {
+    "description": "説明",
+    "link": {
+      "view": "プロジェクトを見る",
+      "github": "GitHubで見る"
+    }
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "highlight": "注目",
+    "featuredTitle": "注目プロジェクト",
+    "allTitle": "すべてのプロジェクト",
+    "subtitle": "担当したプロジェクトの一部です",
+    "slider": [
+      { "title": "Kaisen Gestión", "desc": "マルチテナントB2Bウェブアプリ。クライアント・発行元管理、タスク、電子請求（AFIP/ARCA）、売掛金。Express・PostgreSQLのREST API、テーマとロール対応のReact SPA。" },
+      { "title": "Buran Tattoo", "desc": "Next.jsとReactで構築した本番サイト。Supabase（PostgreSQL・Storage）、Vercelでホスティング。" },
+      { "title": "Vos y Solo Vos", "desc": "React（Vite）とNode.js（Express）、Supabase PostgreSQL、Cloudinaryによるフルスタックプラットフォーム。TailwindCSSのレスポンシブUI。" },
+      { "title": "IT-Services Informáticos", "desc": "ReactとTailwind CSSによる企業向けウェブプラットフォーム。クライアント管理機能付き。" },
+      { "title": "Chubutex ERP", "desc": "React、Node.js、PostgreSQL、JWT、Dockerによる在庫・販売管理のERPプラットフォーム。" },
+      { "title": "Estudio Kaisen", "desc": "React、Vite、Tailwind CSSによる本番サイト。" },
+      { "title": "Gaming Zone Blog", "desc": "DjangoベースのCRUDブログ。認証とコンテンツ管理。" },
+      { "title": "FirstPrintWizard", "desc": "Python（Tkinter）のデスクトップツール。PDFの一括印刷とプリンター選択。" },
+      { "title": "Estudio Kaisen - Prototype", "desc": "クライアント提案用の初期プロトタイプ。モダンなデザインと基本的なReact機能。" },
+      { "title": "Dolce&Ricco", "desc": "手作りパン屋のウェブサイト。レシピと商品販売。" },
+      { "title": "HealthyHearts", "desc": "Flaskで開発した健康・ウェルネスサイト。" },
+      { "title": "AFIP Viewer", "desc": "アルゼンチンのARCA（AFIP）レポート閲覧・分析ツール。" }
+    ]
+  },
+  "itsupport": {
+    "header": "私の",
+    "highlight": "ITサポート",
+    "subheader": "ご提供できること",
+    "cards": [
+      { "title": "ハードウェアサポート", "desc": "デスクトップ、ノートPC、サーバーの診断・修理・アップグレード。機器の最高の動作を保ちます。" },
+      { "title": "ソフトウェアトラブルシューティング", "desc": "OSの不具合からアプリのバグまで、ソフトウェアが安全にスムーズに動作するようサポートします。" },
+      { "title": "ネットワーク管理", "desc": "ルーター、ファイアウォール、VPNの設定・保守。安全で安定した接続を確保します。" }
+    ]
+  },
+  "services": {
+    "header": "私の",
+    "highlight": "サービス",
+    "subheader": "提供内容",
+    "cards": [
+      { "title": "フルスタック開発", "desc": "Python、JavaScript、Django、Flask、Reactを用いたフルスタック開発。バックエンドからフロントエンドまで、効率的でスケーラブルなウェブアプリを構築します。" },
+      { "title": "ソフトウェア開発", "desc": "革新的で実用的なソリューションを提供し、高品質なソフトウェアでユーザー体験を向上させます。" },
+      { "title": "ウェブデザイン", "desc": "カスタムアプリに特化。Python、JavaScript、C++で効率的でスケーラブルなソリューションを開発し、クライアントのニーズに応えます。" },
+      { "title": "ITサポートスペシャリスト", "desc": "トラブルシューティング、システム保守、ネットワーク管理。ハードウェア・ソフトウェアの設定まで、迅速で信頼性の高いサポートを提供します。" }
+    ]
+  },
+  "technologies": {
+    "title": "技術"
+  }
+}

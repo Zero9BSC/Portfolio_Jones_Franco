@@ -1,79 +1,111 @@
-## 💼 Portfolio using React.js, Vite and Styled-Components (Update 2025!)
+# Franco Nicolas Jones — Portfolio
 
-Hello! This is my personal portfolio built with **React.js** and **Vite**.
+Portfolio personal de **Franco Nicolas Jones** (IT Systems Engineer / Software Engineer). Pensado para reclutadores, empresas y clientes (empleo o freelance).
 
-This repository contains my portfolio website, showcasing my skills, projects and experience. It uses modern frontend tools like Styled-Components, React Awesome Reveal, and is fully responsive. Form submissions are powered by EmailJS and configured via environment variables.
-
-> Originally built with CRA and **migrated to Vite in 2025** for improved speed, modern build tools, and developer experience.
+**Sitio en vivo:** [francojones.netlify.app](https://francojones.netlify.app)
 
 ---
 
-## 🚀 Technologies Used
+## Stack
 
-- [Vite](https://vitejs.dev/)
-- [React.js](https://reactjs.org/)
-- [Styled-Components](https://styled-components.com/)
+- [Vite](https://vitejs.dev/) + [React](https://reactjs.org/) 19
+- [Styled Components](https://styled-components.com/)
 - [React Awesome Reveal](https://react-awesome-reveal.morello.dev/)
-- [React Slick](https://react-slick.neostack.com/)
-- JavaScript (ES6+)
-- HTML5 + CSS3
-- EmailJS for contact form
+- [i18next](https://www.i18next.com/) (ES / EN / DE)
+- [EmailJS](https://www.emailjs.com/) para el formulario de contacto
+- [React Hot Toast](https://react-hot-toast.com/)
 
 ---
 
-## ✨ Features
+## Características
 
-- ⚡ Super fast build and hot-reload with Vite
-- 📱 Responsive design across all screen sizes
-- 🎞️ Animations on scroll
-- 🎯 Project showcase with live demos
-- 📚 Skills and experience sections
-- 📬 Contact form with EmailJS integration
-- 🌐 Language selector (i18n support)
-- 🧭 Smooth scroll & animated navigation
+- Build y HMR rápidos con Vite
+- Diseño responsive
+- Animaciones al scroll
+- **Proyectos destacados** en carousel y **todos los proyectos** en grid
+- Secciones: Servicios, Soporte IT, Tecnologías, Contacto
+- Formulario de contacto con EmailJS
+- Selector de idioma (ES / EN / DE)
+- Navegación por anclas y header que se oculta al bajar
 
 ---
 
-## 🛠 How to Run Locally
+## Cómo ejecutarlo en local
 
-1. Clone the repository:
+1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/Zero9BSC/Portfolio_Jones_Franco.git
+   cd Portfolio_Jones_Franco
    ```
 
-2. Install dependencies:
+2. Instalar dependencias:
    ```bash
    npm install
    ```
 
-3. Create a `.env` file in the root directory with the following variables:
+3. Crear `.env` en la raíz (ver `.env.example`):
    ```env
-   VITE_EMAILJS_SERVICE_ID=your_service_id
-   VITE_EMAILJS_TEMPLATE_ID=your_template_id
-   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   VITE_EMAILJS_SERVICE_ID=tu_service_id
+   VITE_EMAILJS_TEMPLATE_ID=tu_template_id
+   VITE_EMAILJS_PUBLIC_KEY=tu_public_key
    ```
 
-4. Start the development server:
+4. Arrancar el servidor de desarrollo:
    ```bash
    npm run dev
    ```
 
-5. Visit `http://localhost:5173` in your browser.
+5. Abrir [http://localhost:5173](http://localhost:5173).
 
 ---
 
-## 📫 Contact
+## Scripts
 
-You can reach me on [LinkedIn](https://www.linkedin.com/in/franco-jones/)  
-Or contact me directly through the portfolio form.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
+| Comando       | Descripción              |
+|---------------|--------------------------|
+| `npm run dev` | Servidor de desarrollo   |
+| `npm run build` | Build de producción    |
+| `npm run preview` | Vista previa del build |
+| `npm run lint` | Ejecutar ESLint         |
 
 ---
 
-> Feel free to fork and customize this project to build your own portfolio. Contributions and feedback are always welcome! 🚀
+## Estructura del proyecto
+
+```
+src/
+├── components/
+│   ├── Banner/       # Header, Hero (ProfComponent)
+│   ├── Footer/       # Contacto + formulario
+│   ├── Projects/     # Carousel destacados + grid todos
+│   ├── Service/      # Servicios, Soporte IT
+│   └── Technologies/
+├── i18n/             # es.json, en.json, de.json
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+Más detalle en [docs/AUDIT.md](docs/AUDIT.md).
+
+---
+
+## Despliegue (Netlify)
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Variables de entorno: configurar las mismas `VITE_*` que en `.env` en el panel de Netlify.
+
+---
+
+## Contacto
+
+- **LinkedIn:** [linkedin.com/in/franco-jones](https://www.linkedin.com/in/franco-jones/)
+- **GitHub:** [github.com/Zero9BSC](https://github.com/Zero9BSC)
+- **Portfolio:** [francojones.netlify.app](https://francojones.netlify.app)
+
+---
+
+## Licencia
+
+[MIT](LICENSE).

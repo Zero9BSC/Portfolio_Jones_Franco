@@ -1,12 +1,14 @@
+import { useEffect } from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 import Header from "./components/Banner/Header";
 import ProfComponent from "./components/Banner/ProfComponent";
-// import Clients from "./components/Clients/Clients";
 import Footer from "./components/Footer/Footer";
 import ProjectsGrid from "./components/Projects/ProjectsGrid";
 import Technologies from "./components/Technologies/Technologies";
 import Services from "./components/Service/Services";
 import ITSupport from "./components/Service/ITSupport";
+import CtaStrip from "./components/CtaStrip/CtaStrip";
 
 
 // --- Styled Components ---
@@ -42,6 +44,15 @@ const LightColor = styled.div`
 
 
 function App() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const lang = (i18n.language || "en").split("-")[0].toLowerCase();
+    const isRtl = lang === "ar";
+    document.documentElement.dir = isRtl ? "rtl" : "ltr";
+    document.documentElement.lang = lang;
+  }, [i18n.language]);
+
   return (
     <Container>
       <Banner>
@@ -54,7 +65,7 @@ function App() {
       <LightColor>
         <ProjectsGrid />
       </LightColor>
-      {/* <Clients /> */}
+      <CtaStrip />
       <LightColor>
         <Footer />
       </LightColor>

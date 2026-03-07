@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap (replace with your production URL if different)
+Sitemap: https://francojones.netlify.app/sitemap.xml

@@ -43,16 +43,35 @@ const Logo = styled.div`
   }
 `;
 
-const Nav = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-
-  span a {
+const NavLink = styled.span`
+  a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
   }
+`;
+
+const NavCta = styled.span`
+  a {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    background-color: #01be96;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: filter 0.2s ease, transform 0.2s ease;
+    &:hover { filter: brightness(1.1); transform: translateY(-1px); }
+  }
+  @media (max-width: 880px) {
+    a { background-color: rgba(0,0,0,0.2); }
+  }
+`;
+
+const Nav = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 
   @media (max-width: 880px) {
     position: absolute;
@@ -70,6 +89,7 @@ const Nav = styled.div`
     padding: ${({ $bar }) => ($bar ? "2rem 1rem" : "0")};
     display: ${({ $bar }) => ($bar ? "flex" : "none")};
   }
+  ${NavLink} a, ${NavCta} a { color: #fff; }
 `;
 
 const MobileMenuIcon = styled.div`
@@ -145,12 +165,12 @@ const Header = () => {
       </Logo>
 
       <Nav ref={navRef} $bar={bar}>
-        <span><a href="#home" onClick={handleLinkClick}>{t('nav.home')}</a></span>
-        <span><a href="#service" onClick={handleLinkClick}>{t('nav.services')}</a></span>
-        <span><a href="#technologies" onClick={handleLinkClick}>{t('nav.technologies')}</a></span>
-        <span><a href="#project" onClick={handleLinkClick}>{t('nav.projects')}</a></span>
-        <span><a href="#footer" onClick={handleLinkClick}>{t('nav.contact')}</a></span>
-        <span><LanguageSelector menu /></span>
+        <NavLink><a href="#home" onClick={handleLinkClick}>{t('nav.home')}</a></NavLink>
+        <NavLink><a href="#service" onClick={handleLinkClick}>{t('nav.services')}</a></NavLink>
+        <NavLink><a href="#technologies" onClick={handleLinkClick}>{t('nav.technologies')}</a></NavLink>
+        <NavLink><a href="#project" onClick={handleLinkClick}>{t('nav.projects')}</a></NavLink>
+        <NavCta><a href="#footer" onClick={handleLinkClick}>{t('nav.contact')}</a></NavCta>
+        <NavLink><LanguageSelector menu /></NavLink>
       </Nav>
 
       <MobileMenuIcon ref={buttonRef} onClick={() => setBar(!bar)}>

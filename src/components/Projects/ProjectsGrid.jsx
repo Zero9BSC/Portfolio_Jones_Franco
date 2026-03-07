@@ -1,11 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaExternalLinkAlt, FaCode, FaRocket, FaLaptopCode, FaDatabase, FaMobileAlt, FaChartBar, FaHourglassHalf, FaBuilding, FaBriefcase } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaCode, FaRocket, FaLaptopCode, FaDatabase, FaMobileAlt, FaChartBar, FaBuilding, FaBriefcase } from "react-icons/fa";
 
 const SLANT_SIZE = 220;
 const GREEN_COLOR = "#01be96";
 const PRIMARY_DARK = "#0b0b0b";
+const FEATURED_COUNT = 8;
+
+// All projects: first FEATURED_COUNT = carousel, rest appear in "All projects" grid
+const ALL_PROJECTS_DATA = [
+  { id: 1, key: "0", img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800", demo: "", Icon: FaRocket },
+  { id: 2, key: "1", img: "https://i.imgur.com/V810M8I.png", demo: "https://burantattoo.com/", Icon: FaBuilding },
+  { id: 3, key: "2", img: "https://i.imgur.com/4rMpjjj.png", demo: "https://vos-y-solo-vos.pages.dev/", Icon: FaDatabase },
+  { id: 4, key: "3", img: "https://imgur.com/gOtUd1t.png", demo: "https://www.itsi.com.ar/", Icon: FaBriefcase },
+  { id: 5, key: "4", img: "https://imgur.com/yTFIlGC.png", demo: "", Icon: FaChartBar },
+  { id: 6, key: "5", img: "https://imgur.com/ES34Qfj.png", demo: "https://consultorakaisen.com.ar/", Icon: FaBuilding },
+  { id: 7, key: "6", img: "https://imgur.com/Ul6eOrI.png", demo: "http://francoj.pythonanywhere.com/", Icon: FaCode },
+  { id: 8, key: "7", img: "https://imgur.com/ceiJGpn.png", demo: "https://github.com/Zero9BSC/FirstPrintWizard", Icon: FaLaptopCode },
+  { id: 9, key: "8", img: "https://imgur.com/GsgHJsz.png", demo: "https://estudiokaisen.netlify.app/", Icon: FaRocket },
+  { id: 10, key: "9", img: "https://i.imgur.com/vhB5SYf.png", demo: "https://dolcericco.netlify.app/", Icon: FaDatabase },
+  { id: 11, key: "10", img: "https://imgur.com/hjPdVOC.png", demo: "https://healthyhearts.netlify.app/", Icon: FaMobileAlt },
+  { id: 12, key: "11", img: "https://i.imgur.com/Kj2wxE4.png", demo: "https://afipreportviewer.netlify.app/", Icon: FaChartBar },
+];
 
 const Section = styled.section`
   position: relative;
@@ -14,6 +31,18 @@ const Section = styled.section`
   background-color: ${PRIMARY_DARK};
   overflow: hidden;
   @media (max-width: 768px) { height: 500px; }
+`;
+
+const SectionTitle = styled.h2`
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  .green { color: ${GREEN_COLOR}; }
+  @media (max-width: 768px) { top: 1rem; font-size: 1.2rem; }
 `;
 
 const MobileWrapper = styled.div`
@@ -173,6 +202,77 @@ const Dot = styled.div`
   cursor: pointer;
 `;
 
+/* --- All Projects Grid --- */
+const AllSection = styled.section`
+  width: 100%;
+  padding: 3rem clamp(1rem, 5vw, 4rem);
+  background-color: ${PRIMARY_DARK};
+`;
+
+const AllTitle = styled.h2`
+  width: clamp(80%, 85vw, 1440px);
+  margin: 0 auto 2rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  .green { color: ${GREEN_COLOR}; }
+  @media (max-width: 768px) { font-size: 1.4rem; margin-bottom: 1.5rem; }
+`;
+
+const Grid = styled.div`
+  width: clamp(80%, 85vw, 1440px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+`;
+
+const Card = styled.article`
+  background: #191923;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  &:hover { border-color: ${GREEN_COLOR}; transform: translateY(-4px); }
+`;
+
+const CardImage = styled.div`
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  flex-shrink: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  ${Card}:hover & img { transform: scale(1.05); }
+`;
+
+const CardContent = styled.div`
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  p { font-size: 0.9rem; color: #b0b0b0; line-height: 1.5; flex: 1; }
+`;
+
+const CardLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  color: ${GREEN_COLOR};
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+`;
+
 const ProjectsGrid = () => {
   const { t } = useTranslation();
   const [activeCard, setActiveCard] = useState(0);
@@ -181,27 +281,17 @@ const ProjectsGrid = () => {
   const [isTouchInteracting, setIsTouchInteracting] = useState(false);
   const scrollRef = useRef(null);
 
-  const projects = [
-    { id: 1, key: "0", img: "https://imgur.com/Ul6eOrI.png", demo: "http://francoj.pythonanywhere.com/", Icon: FaCode },
-    { id: 2, key: "1", img: "https://imgur.com/ES34Qfj.png", demo: "https://consultorakaisen.com.ar/", Icon: FaBuilding },
-    { id: 3, key: "2", img: "https://imgur.com/gOtUd1t.png", demo: "", Icon: FaBriefcase },
-    { id: 4, key: "3", img: "https://imgur.com/yTFIlGC.png", demo: "", Icon: FaChartBar },
-    { id: 5, key: "4", img: "https://imgur.com/GsgHJsz.png", demo: "https://estudiokaisen.netlify.app/", Icon: FaRocket },
-    { id: 6, key: "5", img: "https://imgur.com/ceiJGpn.png", demo: "https://github.com/Zero9BSC/FirstPrintWizard.git", Icon: FaLaptopCode },
-    { id: 7, key: "6", img: "https://imgur.com/ZL6QL3R.png", demo: "https://dolcericco.netlify.app/", Icon: FaDatabase },
-    { id: 8, key: "7", img: "https://imgur.com/hjPdVOC.png", demo: "https://healthyhearts.netlify.app/", Icon: FaMobileAlt },
-    { id: 9, key: "8", img: "https://imgur.com/sxvSvfR.png", demo: "https://afipreportviewer.netlify.app/", Icon: FaChartBar },
-    { id: 10, key: "9", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070", demo: "", Icon: FaHourglassHalf },
-  ];
+  const featuredProjects = ALL_PROJECTS_DATA.slice(0, FEATURED_COUNT);
+  const allProjects = ALL_PROJECTS_DATA;
 
-  // LÓGICA DE AUTO-PLAY
+  // LÓGICA DE AUTO-PLAY (solo para los destacados)
   useEffect(() => {
     if (isPaused || isTouchInteracting) return;
     const timer = setInterval(() => {
-      setActiveCard(prev => (prev === projects.length - 1 ? 0 : prev + 1));
+      setActiveCard(prev => (prev === featuredProjects.length - 1 ? 0 : prev + 1));
     }, 5000);
     return () => clearInterval(timer);
-  }, [isPaused, isTouchInteracting, projects.length]);
+  }, [isPaused, isTouchInteracting, featuredProjects.length]);
 
   useEffect(() => {
     setIsAnimating(true);
@@ -216,14 +306,12 @@ const ProjectsGrid = () => {
         const scrollLeft = scrollRef.current.scrollLeft;
         const width = scrollRef.current.offsetWidth;
         const newActiveCard = Math.round(scrollLeft / width);
-        
         if (newActiveCard !== activeCard) {
           setActiveCard(newActiveCard);
           setIsTouchInteracting(true);
         }
       }
     };
-
     const wrapper = scrollRef.current;
     if (wrapper) {
       wrapper.addEventListener('scroll', handleScroll);
@@ -239,6 +327,16 @@ const ProjectsGrid = () => {
     }
   }, [activeCard, isTouchInteracting]);
 
+  const renderProjectIcon = (p) => {
+    const Icon = p.Icon;
+    return <Icon color="white" size={20} />;
+  };
+
+  const renderProjectIconDesktop = (p) => {
+    const Icon = p.Icon;
+    return <Icon color="white" size={24} />;
+  };
+
   const handleTouchStart = () => {
     setIsTouchInteracting(true);
   };
@@ -248,70 +346,96 @@ const ProjectsGrid = () => {
   };
 
   return (
-    <Section 
-      id="project"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
-      {/* MÓVIL */}
-      <MobileWrapper 
-        ref={scrollRef}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
+    <>
+      <Section 
+        id="project"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
       >
-        {projects.map((p, i) => (
-          <ProjectSlide key={`mob-${p.id}-${i}`} $active={true}>
-            <ImageContainer>
-              <Image src={p.img} $active={true} />
-            </ImageContainer>
-            <Content $active={true}>
-              <IconWrapper><p.Icon color="white" size={20} /></IconWrapper>
-              <h3>{t(`projects.slider.${p.key}.title`)}</h3>
-              <p>{t(`projects.slider.${p.key}.desc`)}</p>
-              {p.demo && <ActionLink href={p.demo} target="_blank">{t("project.link.view")}</ActionLink>}
-            </Content>
-          </ProjectSlide>
-        ))}
-      </MobileWrapper>
+        <SectionTitle>{t("projects.featuredTitle")}</SectionTitle>
+        {/* MÓVIL — solo destacados */}
+        <MobileWrapper 
+          ref={scrollRef}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          {featuredProjects.map((p, i) => (
+            <ProjectSlide key={`mob-${p.id}-${i}`} $active={true}>
+              <ImageContainer>
+                <Image src={p.img} $active={true} alt="" />
+              </ImageContainer>
+              <Content $active={true}>
+                <IconWrapper>{renderProjectIcon(p)}</IconWrapper>
+                <h3>{t(`projects.slider.${p.key}.title`)}</h3>
+                <p>{t(`projects.slider.${p.key}.desc`)}</p>
+                {p.demo && <ActionLink href={p.demo} target="_blank" rel="noopener noreferrer">{t("project.link.view")}</ActionLink>}
+              </Content>
+            </ProjectSlide>
+          ))}
+        </MobileWrapper>
 
-      {/* DESKTOP */}
-      <DesktopWrapper>
-        {projects.map((p, i) => (
-          <ProjectSlide 
-            key={p.id}
-            $active={activeCard === i}
-            $first={i === 0}
-            $last={i === projects.length - 1}
-            onMouseEnter={() => activeCard !== i && setActiveCard(i)}
-          >
-            <ImageContainer>
-              <Image src={p.img} $active={activeCard === i} />
-            </ImageContainer>
-            <Content 
-              $active={activeCard === i} 
-              $isAnimating={isAnimating} 
+        {/* DESKTOP — solo destacados */}
+        <DesktopWrapper>
+          {featuredProjects.map((p, i) => (
+            <ProjectSlide 
+              key={p.id}
+              $active={activeCard === i}
               $first={i === 0}
+              $last={i === featuredProjects.length - 1}
+              onMouseEnter={() => activeCard !== i && setActiveCard(i)}
             >
-              <IconWrapper><p.Icon color="white" size={24} /></IconWrapper>
-              <h3>{t(`projects.slider.${p.key}.title`)}</h3>
-              <p>{t(`projects.slider.${p.key}.desc`)}</p>
-              {p.demo && (
-                <ActionLink href={p.demo} target="_blank" onClick={(e) => e.stopPropagation()}>
-                   {p.demo.includes("github") ? <FaGithub /> : <FaExternalLinkAlt />}
-                   {t("project.link.view")}
-                </ActionLink>
-              )}
-            </Content>
-          </ProjectSlide>
-        ))}
-      </DesktopWrapper>
+              <ImageContainer>
+                <Image src={p.img} $active={activeCard === i} alt="" />
+              </ImageContainer>
+              <Content 
+                $active={activeCard === i} 
+                $isAnimating={isAnimating} 
+                $first={i === 0}
+              >
+                <IconWrapper>{renderProjectIconDesktop(p)}</IconWrapper>
+                <h3>{t(`projects.slider.${p.key}.title`)}</h3>
+                <p>{t(`projects.slider.${p.key}.desc`)}</p>
+                {p.demo && (
+                  <ActionLink href={p.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    {p.demo.includes("github") ? <FaGithub /> : <FaExternalLinkAlt />}
+                    {t("project.link.view")}
+                  </ActionLink>
+                )}
+              </Content>
+            </ProjectSlide>
+          ))}
+        </DesktopWrapper>
 
-      <DotsIndicator>
-        {projects.map((_, i) => (
-          <Dot key={i} $active={activeCard === i} onClick={() => setActiveCard(i)} />
-        ))}
-      </DotsIndicator>
-    </Section>
+        <DotsIndicator>
+          {featuredProjects.map((_, i) => (
+            <Dot key={i} $active={activeCard === i} onClick={() => setActiveCard(i)} />
+          ))}
+        </DotsIndicator>
+      </Section>
+
+      <AllSection id="all-projects">
+        <AllTitle>{t("projects.allTitle")}</AllTitle>
+        <Grid>
+          {allProjects.map((p) => (
+            <Card key={p.id}>
+              <CardImage>
+                <img src={p.img} alt="" loading="lazy" />
+              </CardImage>
+              <CardContent>
+                <h3>{t(`projects.slider.${p.key}.title`)}</h3>
+                <p>{t(`projects.slider.${p.key}.desc`)}</p>
+                {p.demo && (
+                  <CardLink href={p.demo} target="_blank" rel="noopener noreferrer">
+                    {p.demo.includes("github") ? <FaGithub /> : <FaExternalLinkAlt />}
+                    {t("project.link.view")}
+                  </CardLink>
+                )}
+              </CardContent>
+            </Card>
+          ))}
+        </Grid>
+      </AllSection>
+    </>
   );
 };
 

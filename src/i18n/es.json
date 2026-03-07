@@ -11,19 +11,28 @@
     "greeting": "Hola",
     "im": "Soy",
     "roles": "IT Systems Engineer / Software Engineer",
-    "description": "Ingeniero de sistemas y desarrollador de software con experiencia en desarrollo full-stack, DevOps y soporte IT.\n\nTrabajo con Python, JavaScript y C++, enfocado en construir soluciones robustas, escalables y mantenibles para entornos reales de producción.\n\nMe adapto rápidamente a nuevos desafíos, ya sea resolviendo problemas complejos, optimizando infraestructura o desarrollando aplicaciones limpias y eficientes. Valoro el trabajo en equipo, la responsabilidad profesional y la mejora continua.\n\nEstoy disponible para reubicación y abierto a oportunidades remotas o presenciales en Europa y Nueva Zelanda.",
+    "tagline": "Disponible para contrato, empleo o proyectos freelance.",
+    "description": "Ingeniero de sistemas y desarrollador de software con experiencia en desarrollo full-stack, DevOps y soporte IT.\n\nTrabajo con Python, JavaScript y C++, enfocado en construir soluciones robustas, escalables y mantenibles para entornos reales de producción.\n\nMe adapto rápidamente a nuevos desafíos, ya sea resolviendo problemas complejos, optimizando infraestructura o desarrollando aplicaciones limpias y eficientes. Valoro el trabajo en equipo, la responsabilidad profesional y la mejora continua.\n\nEstoy disponible para reubicación y abierto a oportunidades remotas o presenciales: empleo, contrato o proyectos freelance en Europa y Nueva Zelanda.",
     "resumeBtn": "Descargar CV",
-    "contactBtn": "Hablemos",
+    "contactBtn": "Contactar",
     "checkOut": "Mirá mis perfiles"
+  },
+  "ctaStrip": {
+    "title": "¿Tenés un proyecto en mente?",
+    "subtitle": "Contrato, empleo o trabajo freelance — escribime y coordinamos.",
+    "button": "Escribir ahora"
   },
   "footer": {
     "title": "Contacto",
     "directContact": "Contáctame directamente:",
     "checkProfiles": "Mirá mis perfiles",
+    "alsoOn": "También en",
+    "workana": "Workana",
+    "upwork": "Upwork",
     "namePlaceholder": "Nombre completo...",
     "emailPlaceholder": "Correo electrónico...",
-    "messagePlaceholder": "Mensaje...",
-    "submit": "Enviar",
+    "messagePlaceholder": "Cuéntame tu proyecto o consulta...",
+    "submit": "Enviar mensaje",
     "sending": "Enviando mensaje...",
     "successMsg": "¡Mensaje enviado con éxito!",
     "errorMsg": "Ocurrió un error. Intenta nuevamente."
@@ -36,51 +45,61 @@
     }
   },
   "projects": {
-  "title": "Proyectos",
-  "highlight": "Recientes",
-  "subtitle": "Aquí tienes algunos de los proyectos en los que he trabajado",
-  "slider": [
-    { 
-      "title": "Gaming Zone",
-      "desc": "Blog para gamers hecho por gamers, desarrollado con Python y Django."
-    },
-    {
-      "title": "Estudio Kaisen",
-      "desc": "Sitio web definitivo del estudio contable Kaisen, desarrollado con React + Vite y Tailwind CSS v4."
-    },
-    {
-      "title": "IT Servicios Informáticos",
-      "desc": "Plataforma web para empresa de servicios informáticos, desarrollada con React + Vite y Tailwind CSS v4."
-    },
-    {
-      "title": "Chubutex ERP",
-      "desc": "Sistema de gestión empresarial con React, Node.js, PostgreSQL y Docker para administración de ventas, inventario y reposición."
-    },
-    {
-      "title": "Estudio Kaisen - Prototipo",
-      "desc": "Prototipo inicial para presentación al cliente, con diseño moderno y funcionalidades básicas en React."
-    },
-    {
-      "title": "FirstPrintWizard",
-      "desc": "Aplicación para imprimir archivos PDF en una impresora específica de forma rápida y sencilla."
-    },
-    {
-      "title": "Dolce&Ricco",
-      "desc": "Sitio web de panadería artesanal con recetas caseras y venta de productos."
-    },
-    {
-      "title": "HealthyHearts",
-      "desc": "Sitio de salud y bienestar desarrollado con Flask."
-    },
-    {
-      "title": "Visor AFIP",
-      "desc": "Herramienta para visualización y análisis de reportes ARCA (AFIP) en Argentina."
-    },
-    {
-      "title": "Próximamente",
-      "desc": "¡Nuevo proyecto en desarrollo!"
-    }
-  ]
+    "title": "Proyectos",
+    "highlight": "destacados",
+    "featuredTitle": "Proyectos destacados",
+    "allTitle": "Todos los proyectos",
+    "subtitle": "Algunos de los proyectos en los que he trabajado",
+    "slider": [
+      {
+        "title": "Kaisen Gestión",
+        "desc": "App B2B multi-tenant: gestión de clientes, emisores, tareas, facturación electrónica (AFIP/ARCA) y cuentas por cobrar. API REST con Express y PostgreSQL, SPA en React con temas y roles."
+      },
+      {
+        "title": "Buran Tattoo",
+        "desc": "Sitio oficial en producción con Next.js y React, Supabase (PostgreSQL y Storage), optimizado y desplegado en Vercel."
+      },
+      {
+        "title": "Vos y Solo Vos",
+        "desc": "Plataforma full-stack con React (Vite) y Node.js (Express), Supabase PostgreSQL y Cloudinary, UI responsive con TailwindCSS."
+      },
+      {
+        "title": "IT Servicios Informáticos",
+        "desc": "Plataforma web corporativa con React, Vite y Tailwind CSS v4, con gestión de clientes."
+      },
+      {
+        "title": "Chubutex ERP",
+        "desc": "Sistema ERP con React, Node.js, PostgreSQL, JWT y Docker para inventario y ventas."
+      },
+      {
+        "title": "Estudio Kaisen",
+        "desc": "Sitio web en producción para el estudio contable Kaisen, React + Vite y Tailwind CSS v4."
+      },
+      {
+        "title": "Gaming Zone",
+        "desc": "Blog CRUD con Django: autenticación de usuarios y gestión de contenido."
+      },
+      {
+        "title": "FirstPrintWizard",
+        "desc": "Herramienta de escritorio en Python (Tkinter) para imprimir PDF en lote con selección de impresora."
+      },
+      {
+        "title": "Estudio Kaisen - Prototipo",
+        "desc": "Prototipo inicial para presentación al cliente, con diseño moderno y funcionalidades básicas en React."
+      },
+      {
+        "title": "Dolce&Ricco",
+        "desc": "Sitio web de panadería artesanal con recetas caseras y venta de productos."
+      },
+      {
+        "title": "HealthyHearts",
+        "desc": "Sitio de salud y bienestar desarrollado con Flask."
+      },
+      {
+        "title": "Visor AFIP",
+        "desc": "Herramienta para visualización y análisis de reportes ARCA (AFIP) en Argentina."
+      }
+    ]
   },
   "itsupport": {
     "header": "Mi experiencia en",

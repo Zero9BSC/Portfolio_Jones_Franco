@@ -246,6 +246,7 @@ const ProfComponent = () => {
           </h4>
           <h1 className="green">Franco Nicolas Jones</h1>
           <h3>{t("intro.roles")}</h3>
+          <p style={{ marginBottom: "1rem", fontSize: "0.95rem", opacity: 0.95 }}>{t("intro.tagline")}</p>
 
           {t("intro.description").split("\n\n").map((p, i) => (
             <p key={i} style={{ marginBottom: "1rem", lineHeight: "1.6" }}>

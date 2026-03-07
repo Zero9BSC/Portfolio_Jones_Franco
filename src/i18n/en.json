@@ -11,19 +11,28 @@
     "greeting": "Hi",
     "im": "I'm",
     "roles": "IT Systems Engineer / Software Engineer",
-    "description": "IT Systems Engineer and Software Engineer with a strong background in full-stack development, DevOps, and IT support.\n\nI work with Python, JavaScript, and C++, focusing on building robust, scalable, and maintainable solutions for real-world production environments.\n\nI adapt quickly to new challenges, whether solving complex problems, optimizing infrastructure, or developing clean and efficient applications. I value teamwork, professional responsibility, and continuous improvement.\n\nAvailable for relocation and open to remote or on-site opportunities across Europe and New Zealand.",
+    "tagline": "Available for full-time, contract, or freelance projects.",
+    "description": "IT Systems Engineer and Software Engineer with a strong background in full-stack development, DevOps, and IT support.\n\nI work with Python, JavaScript, and C++, focusing on building robust, scalable, and maintainable solutions for real-world production environments.\n\nI adapt quickly to new challenges, whether solving complex problems, optimizing infrastructure, or developing clean and efficient applications. I value teamwork, professional responsibility, and continuous improvement.\n\nAvailable for relocation and open to remote or on-site work: full-time, contract, or freelance projects across Europe and New Zealand.",
     "resumeBtn": "Download CV",
-    "contactBtn": "Let's talk",
+    "contactBtn": "Get in touch",
     "checkOut": "Check out my profiles"
+  },
+  "ctaStrip": {
+    "title": "Have a project in mind?",
+    "subtitle": "Full-time, contract, or freelance — get in touch and we'll take it from there.",
+    "button": "Get in touch"
   },
   "footer": {
     "title": "Contact",
     "directContact": "Contact me directly:",
     "checkProfiles": "Check my profiles",
+    "alsoOn": "Also on",
+    "workana": "Workana",
+    "upwork": "Upwork",
     "namePlaceholder": "Full name...",
     "emailPlaceholder": "Email address...",
-    "messagePlaceholder": "Message...",
-    "submit": "Send",
+    "messagePlaceholder": "Tell me about your project or enquiry...",
+    "submit": "Send message",
     "sending": "Sending message...",
     "successMsg": "Message sent successfully!",
     "errorMsg": "An error occurred. Please try again."
@@ -36,33 +45,47 @@
     }
   },
   "projects": {
-    "title": "Recent",
-    "highlight": "Projects",
-    "subtitle": "Here are some of the projects I have worked on",
+    "title": "Projects",
+    "highlight": "featured",
+    "featuredTitle": "Featured projects",
+    "allTitle": "All projects",
+    "subtitle": "Some of the projects I have worked on",
     "slider": [
-      { 
-        "title": "Gaming Zone",
-        "desc": "A gamer blog made by gamers, developed with Python and Django." 
+      {
+        "title": "Kaisen Gestión",
+        "desc": "Multi-tenant B2B web app for client and issuer management, tasks, e-invoicing (AFIP/ARCA), and accounts receivable. REST API with Express and PostgreSQL, React SPA with themes and role-based access."
       },
       {
-        "title": "Kaisen Accounting Studio",
-        "desc": "Final website for Kaisen accounting firm, developed with React + Vite and Tailwind CSS v4."
+        "title": "Buran Tattoo",
+        "desc": "Production website built with Next.js and React, Supabase PostgreSQL and Storage, optimised for performance and hosted on Vercel."
       },
       {
-        "title": "IT Services",
-        "desc": "Corporate web platform for IT services company, developed with React + Vite and Tailwind CSS v4."
+        "title": "Vos y Solo Vos",
+        "desc": "Full-stack web platform with React (Vite) and Node.js (Express), Supabase PostgreSQL and Cloudinary, responsive UI with TailwindCSS."
+      },
+      {
+        "title": "IT-Services Informáticos",
+        "desc": "Corporate web platform using React and Tailwind CSS with client management functionality."
       },
       {
         "title": "Chubutex ERP",
-        "desc": "Business management system with React, Node.js, PostgreSQL and Docker for sales, inventory and replenishment management."
+        "desc": "ERP platform with React, Node.js, PostgreSQL, JWT, and Docker for inventory and sales management."
       },
       {
-        "title": "Kaisen Studio - Prototype",
-        "desc": "Initial prototype for client presentation, with modern design and basic React functionalities."
+        "title": "Estudio Kaisen",
+        "desc": "Production website using React, Vite, and Tailwind CSS with optimised performance."
+      },
+      {
+        "title": "Gaming Zone Blog",
+        "desc": "Django-based CRUD blog platform with user authentication and content management."
       },
       {
         "title": "FirstPrintWizard",
-        "desc": "Application for printing PDF files to a specific printer, fast and simple."
+        "desc": "Python (Tkinter) desktop tool to automate batch PDF printing with printer selection logic."
+      },
+      {
+        "title": "Estudio Kaisen - Prototype",
+        "desc": "Initial prototype for client presentation, with modern design and basic React functionalities."
       },
       {
         "title": "Dolce&Ricco",
@@ -75,10 +98,6 @@
       {
         "title": "AFIP Viewer",
         "desc": "Tool for viewing and analyzing ARCA (AFIP) reports in Argentina."
-      },
-      {
-        "title": "Coming Soon",
-        "desc": "New project in development!"
       }
     ]
   },
