@@ -13,8 +13,10 @@
     "im": "Soy",
     "roles": "IT Systems Engineer / Software Engineer",
     "tagline": "Disponible para contrato, empleo o proyectos freelance.",
+    "valuePhrase": "Ayudo a equipos a entregar software confiable y mantener sus sistemas en marcha.",
     "yearsExp": "Más de 5 años de experiencia",
     "location": "Resido en Alemania · Abierto a reubicación en Nueva Zelanda",
+    "sectors": "Experiencia en salud, servicios profesionales y B2B.",
     "description": "Ingeniero de sistemas y desarrollador de software con experiencia en desarrollo full-stack, DevOps y soporte IT.\n\nTrabajo con Python, JavaScript y C++, enfocado en construir soluciones robustas, escalables y mantenibles para entornos reales de producción.\n\nMe adapto rápidamente a nuevos desafíos, ya sea resolviendo problemas complejos, optimizando infraestructura o desarrollando aplicaciones limpias y eficientes. Valoro el trabajo en equipo, la responsabilidad profesional y la mejora continua.\n\nEstoy disponible para reubicación y abierto a oportunidades remotas o presenciales: empleo, contrato o proyectos freelance en Europa y Nueva Zelanda.",
     "resumeBtn": "Descargar CV",
     "contactBtn": "Contactar",
@@ -56,51 +58,63 @@
     "slider": [
       {
         "title": "Kaisen Gestión",
-        "desc": "App B2B multi-tenant: gestión de clientes, emisores, tareas, facturación electrónica (AFIP/ARCA) y cuentas por cobrar. API REST con Express y PostgreSQL, SPA en React con temas y roles."
+        "desc": "App B2B multi-tenant: gestión de clientes, emisores, tareas, facturación electrónica (AFIP/ARCA) y cuentas por cobrar. API REST con Express y PostgreSQL, SPA en React con temas y roles.",
+        "result": "En uso por estudios contables y equipos de clientes."
       },
       {
         "title": "Buran Tattoo",
-        "desc": "Sitio oficial en producción con Next.js y React, Supabase (PostgreSQL y Storage), optimizado y desplegado en Vercel."
+        "desc": "Sitio oficial en producción con Next.js y React, Supabase (PostgreSQL y Storage), optimizado y desplegado en Vercel.",
+        "result": "Sitio en producción para un estudio de tatuajes."
       },
       {
         "title": "Vos y Solo Vos",
-        "desc": "Plataforma full-stack con React (Vite) y Node.js (Express), Supabase PostgreSQL y Cloudinary, UI responsive con TailwindCSS."
+        "desc": "Plataforma full-stack con React (Vite) y Node.js (Express), Supabase PostgreSQL y Cloudinary, UI responsive con TailwindCSS.",
+        "result": ""
       },
       {
         "title": "IT Servicios Informáticos",
-        "desc": "Plataforma web corporativa con React, Vite y Tailwind CSS v4, con gestión de clientes."
+        "desc": "Plataforma web corporativa con React, Vite y Tailwind CSS v4, con gestión de clientes.",
+        "result": "Sitio corporativo para una empresa de servicios IT."
       },
       {
         "title": "Chubutex ERP",
-        "desc": "Sistema ERP con React, Node.js, PostgreSQL, JWT y Docker para inventario y ventas."
+        "desc": "Sistema ERP con React, Node.js, PostgreSQL, JWT y Docker para inventario y ventas.",
+        "result": ""
       },
       {
         "title": "Estudio Kaisen",
-        "desc": "Sitio web en producción para el estudio contable Kaisen, React + Vite y Tailwind CSS v4."
+        "desc": "Sitio web en producción para el estudio contable Kaisen, React + Vite y Tailwind CSS v4.",
+        "result": "Sitio en producción para un estudio contable."
       },
       {
         "title": "Gaming Zone",
-        "desc": "Blog CRUD con Django: autenticación de usuarios y gestión de contenido."
+        "desc": "Blog CRUD con Django: autenticación de usuarios y gestión de contenido.",
+        "result": ""
       },
       {
         "title": "FirstPrintWizard",
-        "desc": "Herramienta de escritorio en Python (Tkinter) para imprimir PDF en lote con selección de impresora."
+        "desc": "Herramienta de escritorio en Python (Tkinter) para imprimir PDF en lote con selección de impresora.",
+        "result": "Reduce el trabajo manual en impresión por lotes."
       },
       {
         "title": "Estudio Kaisen - Prototipo",
-        "desc": "Prototipo inicial para presentación al cliente, con diseño moderno y funcionalidades básicas en React."
+        "desc": "Prototipo inicial para presentación al cliente, con diseño moderno y funcionalidades básicas en React.",
+        "result": ""
       },
       {
         "title": "Dolce&Ricco",
-        "desc": "Sitio web de panadería artesanal con recetas caseras y venta de productos."
+        "desc": "Sitio web de panadería artesanal con recetas caseras y venta de productos.",
+        "result": ""
       },
       {
         "title": "HealthyHearts",
-        "desc": "Sitio de salud y bienestar desarrollado con Flask."
+        "desc": "Sitio de salud y bienestar desarrollado con Flask.",
+        "result": ""
       },
       {
         "title": "Visor AFIP",
-        "desc": "Herramienta para visualización y análisis de reportes ARCA (AFIP) en Argentina."
+        "desc": "Herramienta para visualización y análisis de reportes ARCA (AFIP) en Argentina.",
+        "result": "Facilita el análisis de reportes para profesionales."
       }
     ]
   },
@@ -111,15 +125,18 @@
     "cards": [
       {
         "title": "Soporte de Hardware",
-        "desc": "Diagnóstico, reparación y actualización de computadoras de escritorio, laptops y servidores. Aseguro que tu equipo funcione al máximo rendimiento."
+        "desc": "Diagnóstico, reparación y actualización de computadoras de escritorio, laptops y servidores. Aseguro que tu equipo funcione al máximo rendimiento.",
+        "benefit": "Menos tiempo de inactividad y mayor vida útil del equipo."
       },
       {
         "title": "Solución de Problemas de Software",
-        "desc": "Desde errores del sistema operativo hasta fallos en aplicaciones, brindo soluciones para que tu software funcione de forma segura y estable."
+        "desc": "Desde errores del sistema operativo hasta fallos en aplicaciones, brindo soluciones para que tu software funcione de forma segura y estable.",
+        "benefit": "Menos tickets de soporte y resolución más rápida."
       },
       {
         "title": "Gestión de Redes",
-        "desc": "Soporte para configurar y mantener redes, incluyendo routers, firewalls y VPNs, asegurando una conexión segura y estable."
+        "desc": "Soporte para configurar y mantener redes, incluyendo routers, firewalls y VPNs, asegurando una conexión segura y estable.",
+        "benefit": "Conectividad estable y segura para tu equipo."
       }
     ]
   },
@@ -130,19 +147,23 @@
     "cards": [
       {
         "title": "Desarrollador Full Stack",
-        "desc": "Desarrollador Full Stack con experiencia en Python, JavaScript y frameworks como Django, Flask y React. Desarrollo aplicaciones web completas, desde el backend al frontend, asegurando soluciones eficientes y escalables."
+        "desc": "Desarrollador Full Stack con experiencia en Python, JavaScript y frameworks como Django, Flask y React. Desarrollo aplicaciones web completas, desde el backend al frontend, asegurando soluciones eficientes y escalables.",
+        "benefit": "Menor tiempo al mercado y menos fallos en producción."
       },
       {
         "title": "Desarrollador de Software",
-        "desc": "Creo soluciones innovadoras y funcionales, entregando software de alta calidad que mejora la experiencia del usuario."
+        "desc": "Creo soluciones innovadoras y funcionales, entregando software de alta calidad que mejora la experiencia del usuario.",
+        "benefit": "Menos trabajo manual y herramientas más confiables para tu equipo."
       },
       {
         "title": "Diseñador Web",
-        "desc": "Especializado en aplicaciones personalizadas, utilizo Python, JavaScript y C++ para desarrollar soluciones eficientes y escalables, siempre enfocado en las necesidades del cliente."
+        "desc": "Especializado en aplicaciones personalizadas, utilizo Python, JavaScript y C++ para desarrollar soluciones eficientes y escalables, siempre enfocado en las necesidades del cliente.",
+        "benefit": "Soluciones escalables que crecen con tu negocio."
       },
       {
         "title": "Especialista en Soporte IT",
-        "desc": "Como especialista en soporte IT, ofrezco resolución de problemas, mantenimiento de sistemas y gestión de redes. Ya sea hardware o software, ofrezco soluciones rápidas y confiables para que todo funcione sin interrupciones."
+        "desc": "Como especialista en soporte IT, ofrezco resolución de problemas, mantenimiento de sistemas y gestión de redes. Ya sea hardware o software, ofrezco soluciones rápidas y confiables para que todo funcione sin interrupciones.",
+        "benefit": "Menos tiempo de inactividad y menores costos de soporte."
       }
     ]
   },
@@ -174,6 +195,13 @@
         "date": "Jul 2023",
         "hours": "208 horas",
         "badge": ""
+      },
+      {
+        "name": "CCNA (Cisco Certified Network Associate)",
+        "issuer": "Cisco",
+        "date": "En curso",
+        "hours": "",
+        "badge": "En curso"
       }
     ]
   }

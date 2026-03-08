@@ -7,6 +7,7 @@ import { HiExternalLink, HiX } from "react-icons/hi";
 import coderhouseImg from "../../assets/certificates/Coderhouse_Python.jpg";
 import freeCodeCampImg from "../../assets/certificates/FreeCodeCamp_JavaScript.png";
 import codoACodoImg from "../../assets/certificates/Jones_Franco_FullStack.jpg";
+import ccnaImg from "../../assets/certificates/ccna.png";
 
 const GREEN = "#01be96";
 const CARDS = [
@@ -17,6 +18,7 @@ const CARDS = [
     verifyUrl: "https://www.freecodecamp.org/espanol/certification/Franco_Nicolas_Jones/javascript-algorithms-and-data-structures",
   },
   { key: "2", img: codoACodoImg, verifyUrl: "" },
+  { key: "3", img: ccnaImg, verifyUrl: "" },
 ];
 
 const Section = styled.section`
@@ -89,6 +91,11 @@ const ImageWrap = styled.div`
   ${Card}:hover img {
     transform: scale(1.03);
   }
+`;
+
+/* Light background for logos with transparent PNG (e.g. CCNA) so dark/light-gray text is visible */
+const ImageWrapLight = styled(ImageWrap)`
+  background: #f0f0f0;
 `;
 
 const Badge = styled.span`
@@ -211,6 +218,7 @@ const ModalImageWrap = styled.div`
   align-items: center;
   justify-content: center;
   padding: 3rem 1.5rem 1.5rem;
+  background: ${(p) => (p.$light ? "#f0f0f0" : "transparent")};
   @media (max-width: 640px) {
     padding: 2.5rem 0.75rem 1rem;
   }
@@ -295,14 +303,25 @@ const Certifications = () => {
                   onKeyDown={(e) => e.key === "Enter" && setOpenKey(card.key)}
                   aria-label={t(`certifications.cards.${card.key}.name`)}
                 >
-                  <ImageWrap>
-                    <img
-                      src={card.img}
-                      alt={`${t(`certifications.cards.${card.key}.name`)} — ${t(`certifications.cards.${card.key}.issuer`)}`}
-                      loading="lazy"
-                    />
-                    {badgeText && <Badge>{badgeText}</Badge>}
-                  </ImageWrap>
+                  {card.key === "3" ? (
+                    <ImageWrapLight>
+                      <img
+                        src={card.img}
+                        alt={`${t(`certifications.cards.${card.key}.name`)} — ${t(`certifications.cards.${card.key}.issuer`)}`}
+                        loading="lazy"
+                      />
+                      {badgeText && <Badge>{badgeText}</Badge>}
+                    </ImageWrapLight>
+                  ) : (
+                    <ImageWrap>
+                      <img
+                        src={card.img}
+                        alt={`${t(`certifications.cards.${card.key}.name`)} — ${t(`certifications.cards.${card.key}.issuer`)}`}
+                        loading="lazy"
+                      />
+                      {badgeText && <Badge>{badgeText}</Badge>}
+                    </ImageWrap>
+                  )}
                   <Content onClick={(e) => e.stopPropagation()}>
                     <h3>{t(`certifications.cards.${card.key}.name`)}</h3>
                     <p className="issuer">{t(`certifications.cards.${card.key}.issuer`)}</p>
@@ -330,7 +349,7 @@ const Certifications = () => {
             <CloseBtn type="button" onClick={() => setOpenKey(null)} aria-label="Close">
               <HiX />
             </CloseBtn>
-            <ModalImageWrap>
+            <ModalImageWrap $light={openCard.key === "3"}>
               <img
                 src={openCard.img}
                 alt={`${t(`certifications.cards.${openCard.key}.name`)} — ${t(`certifications.cards.${openCard.key}.issuer`)}`}

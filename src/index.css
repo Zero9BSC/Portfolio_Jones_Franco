@@ -30,6 +30,14 @@ html, body {
   color: #01be96;
 }
 
+/* Focus visible for keyboard navigation (accessibility) */
+a:focus-visible,
+button:focus-visible,
+[tabindex="0"]:focus-visible {
+  outline: 2px solid #01be96;
+  outline-offset: 2px;
+}
+
 .slick-list, .slick-slider, .slick-track{
   padding: 1.5rem 0;
 }

@@ -17,19 +17,26 @@ const Container = styled.div`
         padding-bottom: 1rem;
     }
 
-    p{
-        font-size: 0.8rem;
-    }
+p{
+    font-size: 0.8rem;
+  }
+  p.benefit {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: #01be96;
+    font-weight: 500;
+  }
 `;
 
 
 const Card = (props) => {
-    const { Icon, disc, title } = props;
+    const { Icon, disc, title, benefit } = props;
   return (
     <Container>
         <span className='green'><Icon/></span>
         <h1>{title}</h1>
         <p>{disc}</p>
+        {benefit && <p className="benefit">{benefit}</p>}
     </Container>
   )
 }

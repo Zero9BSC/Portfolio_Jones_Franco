@@ -54,6 +54,7 @@ const ITSupport = () => {
             Icon={BsCpu}
             title={t("itsupport.cards.0.title")}
             disc={t("itsupport.cards.0.desc")}
+            benefit={t("itsupport.cards.0.benefit")}
           />
         </Slide>
         <Slide direction="up">
@@ -61,6 +62,7 @@ const ITSupport = () => {
             Icon={BsTools}
             title={t("itsupport.cards.1.title")}
             disc={t("itsupport.cards.1.desc")}
+            benefit={t("itsupport.cards.1.benefit")}
           />
         </Slide>
         <Slide direction="right">
@@ -68,6 +70,7 @@ const ITSupport = () => {
             Icon={BsWifi}
             title={t("itsupport.cards.2.title")}
             disc={t("itsupport.cards.2.desc")}
+            benefit={t("itsupport.cards.2.benefit")}
           />
         </Slide>
       </Cards>

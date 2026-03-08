@@ -13,14 +13,14 @@ const ALL_PROJECTS_DATA = [
   { id: 1, key: "0", img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800", demo: "", Icon: FaRocket },
   { id: 2, key: "1", img: "https://i.imgur.com/V810M8I.png", demo: "https://burantattoo.com/", Icon: FaBuilding },
   { id: 3, key: "2", img: "https://i.imgur.com/4rMpjjj.png", demo: "https://vos-y-solo-vos.pages.dev/", Icon: FaDatabase },
-  { id: 4, key: "3", img: "https://imgur.com/gOtUd1t.png", demo: "https://www.itsi.com.ar/", Icon: FaBriefcase },
-  { id: 5, key: "4", img: "https://imgur.com/yTFIlGC.png", demo: "", Icon: FaChartBar },
-  { id: 6, key: "5", img: "https://imgur.com/ES34Qfj.png", demo: "https://consultorakaisen.com.ar/", Icon: FaBuilding },
-  { id: 7, key: "6", img: "https://imgur.com/Ul6eOrI.png", demo: "http://francoj.pythonanywhere.com/", Icon: FaCode },
-  { id: 8, key: "7", img: "https://imgur.com/ceiJGpn.png", demo: "https://github.com/Zero9BSC/FirstPrintWizard", Icon: FaLaptopCode },
-  { id: 9, key: "8", img: "https://imgur.com/GsgHJsz.png", demo: "https://estudiokaisen.netlify.app/", Icon: FaRocket },
+  { id: 4, key: "3", img: "https://i.imgur.com/gOtUd1t.png", demo: "https://www.itsi.com.ar/", Icon: FaBriefcase },
+  { id: 5, key: "4", img: "https://i.imgur.com/yTFIlGC.png", demo: "", Icon: FaChartBar },
+  { id: 6, key: "5", img: "https://i.imgur.com/ES34Qfj.png", demo: "https://consultorakaisen.com.ar/", Icon: FaBuilding },
+  { id: 7, key: "6", img: "https://i.imgur.com/Ul6eOrI.png", demo: "http://francoj.pythonanywhere.com/", Icon: FaCode },
+  { id: 8, key: "7", img: "https://i.imgur.com/ceiJGpn.png", demo: "https://github.com/Zero9BSC/FirstPrintWizard", Icon: FaLaptopCode },
+  { id: 9, key: "8", img: "https://i.imgur.com/GsgHJsz.png", demo: "https://estudiokaisen.netlify.app/", Icon: FaRocket },
   { id: 10, key: "9", img: "https://i.imgur.com/vhB5SYf.png", demo: "https://dolcericco.netlify.app/", Icon: FaDatabase },
-  { id: 11, key: "10", img: "https://imgur.com/hjPdVOC.png", demo: "https://healthyhearts.netlify.app/", Icon: FaMobileAlt },
+  { id: 11, key: "10", img: "https://i.imgur.com/hjPdVOC.png", demo: "https://healthyhearts.netlify.app/", Icon: FaMobileAlt },
   { id: 12, key: "11", img: "https://i.imgur.com/Kj2wxE4.png", demo: "https://afipreportviewer.netlify.app/", Icon: FaChartBar },
 ];
 
@@ -362,12 +362,13 @@ const ProjectsGrid = () => {
           {featuredProjects.map((p, i) => (
             <ProjectSlide key={`mob-${p.id}-${i}`} $active={true}>
               <ImageContainer>
-                <Image src={p.img} $active={true} alt="" />
+                <Image src={p.img} $active={true} alt="" loading={i === 0 ? "eager" : "lazy"} />
               </ImageContainer>
               <Content $active={true}>
                 <IconWrapper>{renderProjectIcon(p)}</IconWrapper>
                 <h3>{t(`projects.slider.${p.key}.title`)}</h3>
                 <p>{t(`projects.slider.${p.key}.desc`)}</p>
+                {t(`projects.slider.${p.key}.result`, { defaultValue: "" }) && <p style={{ fontSize: "0.85rem", marginTop: "0.35rem", opacity: 0.9 }}>{t(`projects.slider.${p.key}.result`)}</p>}
                 {p.demo && <ActionLink href={p.demo} target="_blank" rel="noopener noreferrer">{t("project.link.view")}</ActionLink>}
               </Content>
             </ProjectSlide>
@@ -385,7 +386,7 @@ const ProjectsGrid = () => {
               onMouseEnter={() => activeCard !== i && setActiveCard(i)}
             >
               <ImageContainer>
-                <Image src={p.img} $active={activeCard === i} alt="" />
+                <Image src={p.img} $active={activeCard === i} alt="" loading={i === 0 ? "eager" : "lazy"} />
               </ImageContainer>
               <Content 
                 $active={activeCard === i} 
@@ -395,6 +396,7 @@ const ProjectsGrid = () => {
                 <IconWrapper>{renderProjectIconDesktop(p)}</IconWrapper>
                 <h3>{t(`projects.slider.${p.key}.title`)}</h3>
                 <p>{t(`projects.slider.${p.key}.desc`)}</p>
+                {t(`projects.slider.${p.key}.result`, { defaultValue: "" }) && <p style={{ fontSize: "0.95rem", marginTop: "0.4rem", opacity: 0.9 }}>{t(`projects.slider.${p.key}.result`)}</p>}
                 {p.demo && (
                   <ActionLink href={p.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                     {p.demo.includes("github") ? <FaGithub /> : <FaExternalLinkAlt />}
@@ -424,6 +426,7 @@ const ProjectsGrid = () => {
               <CardContent>
                 <h3>{t(`projects.slider.${p.key}.title`)}</h3>
                 <p>{t(`projects.slider.${p.key}.desc`)}</p>
+                {t(`projects.slider.${p.key}.result`, { defaultValue: "" }) && <p style={{ fontSize: "0.85rem", marginTop: "0.25rem", color: "#01be96" }}>{t(`projects.slider.${p.key}.result`)}</p>}
                 {p.demo && (
                   <CardLink href={p.demo} target="_blank" rel="noopener noreferrer">
                     {p.demo.includes("github") ? <FaGithub /> : <FaExternalLinkAlt />}

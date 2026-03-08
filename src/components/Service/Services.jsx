@@ -55,6 +55,7 @@ const Services = () => {
             Icon={BsStack}
             title={t("services.cards.0.title")}
             disc={t("services.cards.0.desc")}
+            benefit={t("services.cards.0.benefit")}
           />
         </Slide>
         <Slide direction="up">
@@ -62,6 +63,7 @@ const Services = () => {
             Icon={FiCodesandbox}
             title={t("services.cards.1.title")}
             disc={t("services.cards.1.desc")}
+            benefit={t("services.cards.1.benefit")}
           />
         </Slide>
         <Slide direction="right">
@@ -69,6 +71,7 @@ const Services = () => {
             Icon={BsLayoutTextWindow}
             title={t("services.cards.2.title")}
             disc={t("services.cards.2.desc")}
+            benefit={t("services.cards.2.benefit")}
           />
         </Slide>
         <Slide direction="right">
@@ -76,6 +79,7 @@ const Services = () => {
             Icon={BsLaptop}
             title={t("services.cards.3.title")}
             disc={t("services.cards.3.desc")}
+            benefit={t("services.cards.3.benefit")}
           />
         </Slide>
       </Cards>

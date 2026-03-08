@@ -200,4 +200,12 @@ Priorizando las mejoras rápidas de la sección 4, el sitio gana fuerza con poco
 - **Líneas de credibilidad en el hero** (i18n en los 6 idiomas):
   - `intro.yearsExp`: ej. "5+ years of experience" / "Más de 5 años de experiencia".
   - `intro.location`: ej. "Based in Germany · Open to New Zealand relocation" / "Resido en Alemania · Abierto a reubicación en Nueva Zelanda".
-- Puedes editar estos textos en `src/i18n/*.json` si quieres cambiar años, ubicación o redacción.
+- **Frase de valor** (`intro.valuePhrase`): ej. "I help teams ship reliable software and keep their systems running." en los 6 idiomas.
+- **Sectores / empresas** (`intro.sectors`): ej. "Experience in healthcare, professional services, and B2B." en los 6 idiomas.
+- **Certificación CCNA en progreso**: cuarta tarjeta en Certificaciones con imagen placeholder (sustituir por `src/assets/certificates/CCNA_in_progress.png` cuando tengas la imagen).
+- **Beneficio por tarjeta** en Servicios e IT Support: claves `services.cards[].benefit` e `itsupport.cards[].benefit` en los 6 idiomas.
+- **Línea de resultado/contexto en proyectos**: `projects.slider[].result` en EN y ES (y opcional en otros idiomas); se muestra en slider y grid cuando existe.
+- **URLs de Imgur** unificadas a `i.imgur.com` en `ProjectsGrid.jsx`.
+- **Lazy loading**: primera imagen del carrusel `eager`, resto `lazy`; grid de “Todos los proyectos” ya tenía `loading="lazy"`.
+- **Focus visible**: estilos `:focus-visible` en `index.css` para enlaces, botones y elementos con `tabindex="0"` (navegación por teclado).
+- Puedes editar todos estos textos en `src/i18n/*.json` si quieres cambiar años, ubicación, beneficios o redacción.

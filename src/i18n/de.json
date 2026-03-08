@@ -13,8 +13,10 @@
     "im": "Ich bin",
     "roles": "IT Systems Engineer / Software Engineer",
     "tagline": "Verfügbar für Festanstellung, Vertrag oder Freelance-Projekte.",
+    "valuePhrase": "Ich helfe Teams, zuverlässige Software auszuliefern und ihre Systeme am Laufen zu halten.",
     "yearsExp": "Über 5 Jahre Erfahrung",
     "location": "Wohnhaft in Deutschland · Offen für Relocation nach Neuseeland",
+    "sectors": "Erfahrung in Gesundheitswesen, Unternehmensberatung und B2B.",
     "description": "IT-Systemingenieur und Softwareentwickler mit fundiertem Hintergrund in Full-Stack-Entwicklung, DevOps und IT-Support.\n\nIch arbeite mit Python, JavaScript und C++ und konzentriere mich auf die Entwicklung robuster, skalierbarer und wartbarer Lösungen für produktive Umgebungen.\n\nIch passe mich schnell an neue Herausforderungen an – sei es bei der Lösung komplexer Probleme, der Optimierung von Infrastrukturen oder der Entwicklung sauberer und effizienter Anwendungen. Teamarbeit, professionelle Verantwortung und kontinuierliche Weiterentwicklung sind mir besonders wichtig.\n\nBereit zur Relocation und offen für Remote- oder Vor-Ort-Arbeit: Festanstellung, Vertrag oder Freelance in Europa und Neuseeland.",
     "resumeBtn": "Lebenslauf herunterladen",
     "contactBtn": "Kontakt aufnehmen",
@@ -111,15 +113,18 @@
     "cards": [
       {
         "title": "Hardware-Support",
-        "desc": "Diagnose, Reparatur und Aufrüstung von Desktops, Laptops und Servern. Ich sorge dafür, dass Ihre Geräte optimal laufen."
+        "desc": "Diagnose, Reparatur und Aufrüstung von Desktops, Laptops und Servern. Ich sorge dafür, dass Ihre Geräte optimal laufen.",
+        "benefit": "Weniger Ausfallzeiten und längere Gerätenutzung."
       },
       {
         "title": "Software-Fehlerbehebung",
-        "desc": "Von Betriebssystemproblemen bis hin zu Anwendungsfehlern – ich finde Lösungen, damit Ihre Software reibungslos und sicher läuft."
+        "desc": "Von Betriebssystemproblemen bis hin zu Anwendungsfehlern – ich finde Lösungen, damit Ihre Software reibungslos und sicher läuft.",
+        "benefit": "Weniger Support-Tickets und schnellere Lösung."
       },
       {
         "title": "Netzwerkverwaltung",
-        "desc": "Unterstützung bei der Einrichtung und Wartung von Netzwerken, einschließlich Router, Firewalls und VPNs, für eine sichere und stabile Verbindung."
+        "desc": "Unterstützung bei der Einrichtung und Wartung von Netzwerken, einschließlich Router, Firewalls und VPNs, für eine sichere und stabile Verbindung.",
+        "benefit": "Stabile, sichere Konnektivität für Ihr Team."
       }
     ]
   },
@@ -130,19 +135,23 @@
     "cards": [
       {
         "title": "Full Stack Entwickler",
-        "desc": "Erfahrener Full Stack Entwickler mit Kenntnissen in Python, JavaScript und Frameworks wie Django, Flask und React. Ich entwickle vollständige Webanwendungen vom Backend bis zum Frontend und sorge für effiziente und skalierbare Lösungen."
+        "desc": "Erfahrener Full Stack Entwickler mit Kenntnissen in Python, JavaScript und Frameworks wie Django, Flask und React. Ich entwickle vollständige Webanwendungen vom Backend bis zum Frontend und sorge für effiziente und skalierbare Lösungen.",
+        "benefit": "Schnellere Markteinführung und weniger Fehler in Produktion."
       },
       {
         "title": "Softwareentwickler",
-        "desc": "Ich entwickle innovative und funktionale Lösungen und liefere hochwertige Software, die das Benutzererlebnis verbessert."
+        "desc": "Ich entwickle innovative und funktionale Lösungen und liefere hochwertige Software, die das Benutzererlebnis verbessert.",
+        "benefit": "Weniger manuelle Arbeit und zuverlässigere Tools für Ihr Team."
       },
       {
         "title": "Webdesigner",
-        "desc": "Spezialisiert auf maßgeschneiderte Anwendungen, nutze ich Python, JavaScript und C++, um effiziente und skalierbare Lösungen zu entwickeln – stets mit Fokus auf die Bedürfnisse des Kunden."
+        "desc": "Spezialisiert auf maßgeschneiderte Anwendungen, nutze ich Python, JavaScript und C++, um effiziente und skalierbare Lösungen zu entwickeln – stets mit Fokus auf die Bedürfnisse des Kunden.",
+        "benefit": "Skalierbare Lösungen, die mit Ihrem Unternehmen wachsen."
       },
       {
         "title": "IT-Support-Spezialist",
-        "desc": "Als erfahrener IT-Support-Spezialist biete ich Fehlerbehebung, Systemwartung und Netzwerkmanagement. Ob Hardwareprobleme oder Softwarekonfiguration – ich liefere schnelle, zuverlässige Lösungen für einen reibungslosen Betrieb."
+        "desc": "Als erfahrener IT-Support-Spezialist biete ich Fehlerbehebung, Systemwartung und Netzwerkmanagement. Ob Hardwareprobleme oder Softwarekonfiguration – ich liefere schnelle, zuverlässige Lösungen für einen reibungslosen Betrieb.",
+        "benefit": "Weniger Ausfallzeiten und geringere Supportkosten."
       }
     ]
   },
@@ -156,7 +165,8 @@
     "cards": [
       { "name": "Python", "issuer": "Coderhouse", "date": "Nov 2022", "hours": "52 Stunden", "badge": "Top 10" },
       { "name": "JavaScript-Algorithmen und Datenstrukturen", "issuer": "freeCodeCamp", "date": "Jun 2023", "hours": "~300 Stunden", "badge": "" },
-      { "name": "Full Stack Python", "issuer": "Codo a Codo 4.0 (GCBA)", "date": "Jul 2023", "hours": "208 Stunden", "badge": "" }
+      { "name": "Full Stack Python", "issuer": "Codo a Codo 4.0 (GCBA)", "date": "Jul 2023", "hours": "208 Stunden", "badge": "" },
+      { "name": "CCNA (Cisco Certified Network Associate)", "issuer": "Cisco", "date": "In Bearbeitung", "hours": "", "badge": "In Bearbeitung" }
     ]
   }
 }

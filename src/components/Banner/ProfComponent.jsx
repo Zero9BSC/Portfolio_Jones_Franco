@@ -247,8 +247,14 @@ const ProfComponent = () => {
           <h1 className="green">Franco Nicolas Jones</h1>
           <h3>{t("intro.roles")}</h3>
           <p style={{ marginBottom: "0.5rem", fontSize: "0.95rem", opacity: 0.95 }}>{t("intro.tagline")}</p>
+          {t("intro.valuePhrase", { defaultValue: "" }) && (
+            <p style={{ marginBottom: "0.25rem", fontSize: "0.9rem", opacity: 0.95, fontStyle: "italic" }}>{t("intro.valuePhrase")}</p>
+          )}
           <p style={{ marginBottom: "0.25rem", fontSize: "0.9rem", opacity: 0.9 }}>{t("intro.yearsExp")}</p>
-          <p style={{ marginBottom: "1rem", fontSize: "0.85rem", opacity: 0.85 }}>{t("intro.location")}</p>
+          <p style={{ marginBottom: "0.25rem", fontSize: "0.85rem", opacity: 0.85 }}>{t("intro.location")}</p>
+          {t("intro.sectors", { defaultValue: "" }) && (
+            <p style={{ marginBottom: "1rem", fontSize: "0.85rem", opacity: 0.85 }}>{t("intro.sectors")}</p>
+          )}
 
           {t("intro.description").split("\n\n").map((p, i) => (
             <p key={i} style={{ marginBottom: "1rem", lineHeight: "1.6" }}>
