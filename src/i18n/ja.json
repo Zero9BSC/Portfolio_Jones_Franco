@@ -4,6 +4,7 @@
     "home": "ホーム",
     "services": "サービス",
     "technologies": "技術",
+    "certifications": "資格",
     "projects": "プロジェクト",
     "contact": "お問い合わせ"
   },
@@ -12,6 +13,8 @@
     "im": "私は",
     "roles": "ITシステムエンジニア / ソフトウェアエンジニア",
     "tagline": "正社員・契約・フリーランス対応可能です。",
+    "yearsExp": "5年以上の経験",
+    "location": "ドイツ在住・ニュージーランドへの移住希望",
     "description": "フルスタック開発、DevOps、ITサポートの経験を持つITシステムエンジニア兼ソフトウェアエンジニアです。\n\nPython、JavaScript、C++を用い、本番環境向けの堅牢でスケーラブルなソリューションの構築に注力しています。\n\n複雑な問題の解決、インフラの最適化、クリーンで効率的なアプリケーションの開発など、新しい課題に素早く適応します。チームワーク、専門性、継続的な改善を重視しています。\n\nヨーロッパおよびニュージーランドでのリモート・現地勤務、正社員・契約・フリーランスプロジェクトに対応可能です。",
     "resumeBtn": "履歴書をダウンロード",
     "contactBtn": "お問い合わせ",
@@ -88,5 +91,15 @@
   },
   "technologies": {
     "title": "技術"
+  },
+  "certifications": {
+    "title": "資格・認定",
+    "subtitle": "経験を裏付けるコースと資格",
+    "verify": "検証",
+    "cards": [
+      { "name": "Python", "issuer": "Coderhouse", "date": "2022年11月", "hours": "52時間", "badge": "Top 10" },
+      { "name": "JavaScript アルゴリズムとデータ構造", "issuer": "freeCodeCamp", "date": "2023年6月", "hours": "約300時間", "badge": "" },
+      { "name": "Full Stack Python", "issuer": "Codo a Codo 4.0 (GCBA)", "date": "2023年7月", "hours": "208時間", "badge": "" }
+    ]
   }
 }

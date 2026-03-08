@@ -4,6 +4,7 @@
     "home": "Startseite",
     "services": "Dienstleistungen",
     "technologies": "Technologien",
+    "certifications": "Zertifizierungen",
     "projects": "Projekte",
     "contact": "Kontakt"
   },
@@ -12,6 +13,8 @@
     "im": "Ich bin",
     "roles": "IT Systems Engineer / Software Engineer",
     "tagline": "Verfügbar für Festanstellung, Vertrag oder Freelance-Projekte.",
+    "yearsExp": "Über 5 Jahre Erfahrung",
+    "location": "Wohnhaft in Deutschland · Offen für Relocation nach Neuseeland",
     "description": "IT-Systemingenieur und Softwareentwickler mit fundiertem Hintergrund in Full-Stack-Entwicklung, DevOps und IT-Support.\n\nIch arbeite mit Python, JavaScript und C++ und konzentriere mich auf die Entwicklung robuster, skalierbarer und wartbarer Lösungen für produktive Umgebungen.\n\nIch passe mich schnell an neue Herausforderungen an – sei es bei der Lösung komplexer Probleme, der Optimierung von Infrastrukturen oder der Entwicklung sauberer und effizienter Anwendungen. Teamarbeit, professionelle Verantwortung und kontinuierliche Weiterentwicklung sind mir besonders wichtig.\n\nBereit zur Relocation und offen für Remote- oder Vor-Ort-Arbeit: Festanstellung, Vertrag oder Freelance in Europa und Neuseeland.",
     "resumeBtn": "Lebenslauf herunterladen",
     "contactBtn": "Kontakt aufnehmen",
@@ -145,5 +148,15 @@
   },
   "technologies": {
     "title": "Technologien"
+  },
+  "certifications": {
+    "title": "Zertifizierungen",
+    "subtitle": "Kurse und Zertifikate, die meine Erfahrung untermauern",
+    "verify": "Verifizieren",
+    "cards": [
+      { "name": "Python", "issuer": "Coderhouse", "date": "Nov 2022", "hours": "52 Stunden", "badge": "Top 10" },
+      { "name": "JavaScript-Algorithmen und Datenstrukturen", "issuer": "freeCodeCamp", "date": "Jun 2023", "hours": "~300 Stunden", "badge": "" },
+      { "name": "Full Stack Python", "issuer": "Codo a Codo 4.0 (GCBA)", "date": "Jul 2023", "hours": "208 Stunden", "badge": "" }
+    ]
   }
 }

@@ -168,6 +168,7 @@ const Header = () => {
         <NavLink><a href="#home" onClick={handleLinkClick}>{t('nav.home')}</a></NavLink>
         <NavLink><a href="#service" onClick={handleLinkClick}>{t('nav.services')}</a></NavLink>
         <NavLink><a href="#technologies" onClick={handleLinkClick}>{t('nav.technologies')}</a></NavLink>
+        <NavLink><a href="#certifications" onClick={handleLinkClick}>{t('nav.certifications')}</a></NavLink>
         <NavLink><a href="#project" onClick={handleLinkClick}>{t('nav.projects')}</a></NavLink>
         <NavCta><a href="#footer" onClick={handleLinkClick}>{t('nav.contact')}</a></NavCta>
         <NavLink><LanguageSelector menu /></NavLink>

@@ -4,6 +4,7 @@
     "home": "홈",
     "services": "서비스",
     "technologies": "기술",
+    "certifications": "자격증",
     "projects": "프로젝트",
     "contact": "연락처"
   },
@@ -12,6 +13,8 @@
     "im": "저는",
     "roles": "IT 시스템 엔지니어 / 소프트웨어 엔지니어",
     "tagline": "정규직, 계약직, 프리랜스 프로젝트 가능합니다.",
+    "yearsExp": "5년 이상 경력",
+    "location": "독일 거주 · 뉴질랜드 이전 희망",
     "description": "풀스택 개발, DevOps, IT 지원 경험이 있는 IT 시스템 엔지니어이자 소프트웨어 엔지니어입니다.\n\nPython, JavaScript, C++로 실무 환경에 맞는 견고하고 확장 가능한 솔루션을 구축합니다.\n\n복잡한 문제 해결, 인프라 최적화, 효율적인 애플리케이션 개발 등 새로운 과제에 빠르게 적응합니다. 팀워크, 전문성, 지속적 개선을 중시합니다.\n\n유럽 및 뉴질랜드에서 원격·현지 근무, 정규·계약·프리랜스 프로젝트 가능합니다.",
     "resumeBtn": "이력서 다운로드",
     "contactBtn": "연락하기",
@@ -88,5 +91,15 @@
   },
   "technologies": {
     "title": "기술"
+  },
+  "certifications": {
+    "title": "자격증",
+    "subtitle": "경력을 뒷받침하는 과정 및 자격증",
+    "verify": "검증",
+    "cards": [
+      { "name": "Python", "issuer": "Coderhouse", "date": "2022년 11월", "hours": "52시간", "badge": "Top 10" },
+      { "name": "JavaScript 알고리즘 및 자료 구조", "issuer": "freeCodeCamp", "date": "2023년 6월", "hours": "약 300시간", "badge": "" },
+      { "name": "Full Stack Python", "issuer": "Codo a Codo 4.0 (GCBA)", "date": "2023년 7월", "hours": "208시간", "badge": "" }
+    ]
   }
 }

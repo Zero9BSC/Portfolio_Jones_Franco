@@ -6,6 +6,7 @@ import ProfComponent from "./components/Banner/ProfComponent";
 import Footer from "./components/Footer/Footer";
 import ProjectsGrid from "./components/Projects/ProjectsGrid";
 import Technologies from "./components/Technologies/Technologies";
+import Certifications from "./components/Certifications/Certifications";
 import Services from "./components/Service/Services";
 import ITSupport from "./components/Service/ITSupport";
 import CtaStrip from "./components/CtaStrip/CtaStrip";
@@ -62,6 +63,7 @@ function App() {
       <Services />
       <ITSupport />
       <Technologies />
+      <Certifications />
       <LightColor>
         <ProjectsGrid />
       </LightColor>

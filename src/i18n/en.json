@@ -4,6 +4,7 @@
     "home": "Home",
     "services": "Services",
     "technologies": "Technologies",
+    "certifications": "Certifications",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -12,6 +13,8 @@
     "im": "I'm",
     "roles": "IT Systems Engineer / Software Engineer",
     "tagline": "Available for full-time, contract, or freelance projects.",
+    "yearsExp": "5+ years of experience",
+    "location": "Based in Germany · Open to New Zealand relocation",
     "description": "IT Systems Engineer and Software Engineer with a strong background in full-stack development, DevOps, and IT support.\n\nI work with Python, JavaScript, and C++, focusing on building robust, scalable, and maintainable solutions for real-world production environments.\n\nI adapt quickly to new challenges, whether solving complex problems, optimizing infrastructure, or developing clean and efficient applications. I value teamwork, professional responsibility, and continuous improvement.\n\nAvailable for relocation and open to remote or on-site work: full-time, contract, or freelance projects across Europe and New Zealand.",
     "resumeBtn": "Download CV",
     "contactBtn": "Get in touch",
@@ -145,5 +148,33 @@
   },
   "technologies": {
     "title": "Technologies"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "subtitle": "Courses and certifications that back my experience",
+    "verify": "Verify",
+    "cards": [
+      {
+        "name": "Python",
+        "issuer": "Coderhouse",
+        "date": "Nov 2022",
+        "hours": "52 hours",
+        "badge": "Top 10"
+      },
+      {
+        "name": "JavaScript Algorithms and Data Structures",
+        "issuer": "freeCodeCamp",
+        "date": "Jun 2023",
+        "hours": "~300 hours",
+        "badge": ""
+      },
+      {
+        "name": "Full Stack Python",
+        "issuer": "Codo a Codo 4.0 (GCBA)",
+        "date": "Jul 2023",
+        "hours": "208 hours",
+        "badge": ""
+      }
+    ]
   }
 }

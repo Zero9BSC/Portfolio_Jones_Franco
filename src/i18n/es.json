@@ -4,6 +4,7 @@
     "home": "Inicio",
     "services": "Servicios",
     "technologies": "Tecnologías",
+    "certifications": "Certificaciones",
     "projects": "Proyectos",
     "contact": "Contacto"
   },
@@ -12,6 +13,8 @@
     "im": "Soy",
     "roles": "IT Systems Engineer / Software Engineer",
     "tagline": "Disponible para contrato, empleo o proyectos freelance.",
+    "yearsExp": "Más de 5 años de experiencia",
+    "location": "Resido en Alemania · Abierto a reubicación en Nueva Zelanda",
     "description": "Ingeniero de sistemas y desarrollador de software con experiencia en desarrollo full-stack, DevOps y soporte IT.\n\nTrabajo con Python, JavaScript y C++, enfocado en construir soluciones robustas, escalables y mantenibles para entornos reales de producción.\n\nMe adapto rápidamente a nuevos desafíos, ya sea resolviendo problemas complejos, optimizando infraestructura o desarrollando aplicaciones limpias y eficientes. Valoro el trabajo en equipo, la responsabilidad profesional y la mejora continua.\n\nEstoy disponible para reubicación y abierto a oportunidades remotas o presenciales: empleo, contrato o proyectos freelance en Europa y Nueva Zelanda.",
     "resumeBtn": "Descargar CV",
     "contactBtn": "Contactar",
@@ -145,5 +148,33 @@
   },
   "technologies": {
     "title": "Tecnologías"
+  },
+  "certifications": {
+    "title": "Certificaciones",
+    "subtitle": "Cursos y certificaciones que respaldan mi experiencia",
+    "verify": "Verificar",
+    "cards": [
+      {
+        "name": "Python",
+        "issuer": "Coderhouse",
+        "date": "Nov 2022",
+        "hours": "52 horas",
+        "badge": "Top 10"
+      },
+      {
+        "name": "Algoritmos de JavaScript y Estructuras de Datos",
+        "issuer": "freeCodeCamp",
+        "date": "Jun 2023",
+        "hours": "~300 horas",
+        "badge": ""
+      },
+      {
+        "name": "Full Stack Python",
+        "issuer": "Codo a Codo 4.0 (GCBA)",
+        "date": "Jul 2023",
+        "hours": "208 horas",
+        "badge": ""
+      }
+    ]
   }
 }

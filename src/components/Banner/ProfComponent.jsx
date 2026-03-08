@@ -246,7 +246,9 @@ const ProfComponent = () => {
           </h4>
           <h1 className="green">Franco Nicolas Jones</h1>
           <h3>{t("intro.roles")}</h3>
-          <p style={{ marginBottom: "1rem", fontSize: "0.95rem", opacity: 0.95 }}>{t("intro.tagline")}</p>
+          <p style={{ marginBottom: "0.5rem", fontSize: "0.95rem", opacity: 0.95 }}>{t("intro.tagline")}</p>
+          <p style={{ marginBottom: "0.25rem", fontSize: "0.9rem", opacity: 0.9 }}>{t("intro.yearsExp")}</p>
+          <p style={{ marginBottom: "1rem", fontSize: "0.85rem", opacity: 0.85 }}>{t("intro.location")}</p>
 
           {t("intro.description").split("\n\n").map((p, i) => (
             <p key={i} style={{ marginBottom: "1rem", lineHeight: "1.6" }}>
@@ -293,7 +295,7 @@ const ProfComponent = () => {
         <Profile>
           <img
             src="https://res.cloudinary.com/dtyz1nutj/image/upload/profile-pic_4_dhwbg7.png"
-            alt="profile"
+            alt="Franco Nicolas Jones, Software Engineer and IT Systems Engineer"
           />
         </Profile>
       </Slide>
