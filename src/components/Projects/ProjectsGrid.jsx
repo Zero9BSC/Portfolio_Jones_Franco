@@ -1,27 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaExternalLinkAlt, FaCode, FaRocket, FaLaptopCode, FaDatabase, FaMobileAlt, FaChartBar, FaBuilding, FaBriefcase } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaCode, FaRocket, FaLaptopCode, FaDatabase, FaChartBar, FaBuilding, FaBriefcase, FaHospital, FaGlobe } from "react-icons/fa";
+import { HiX } from "react-icons/hi";
 
 const SLANT_SIZE = 220;
 const GREEN_COLOR = "#01be96";
 const PRIMARY_DARK = "#0b0b0b";
-const FEATURED_COUNT = 8;
+// Carousel order (independent of grid order below)
+const FEATURED_PROJECT_KEYS = ["13", "1", "10", "3", "2", "5", "4", "6"];
 
-// All projects: first FEATURED_COUNT = carousel, rest appear in "All projects" grid
+// All projects grid: TaiFlow, Kaisen Med, ITSI, Kaisen Gestión, then prior relative order for the rest
 const ALL_PROJECTS_DATA = [
-  { id: 1, key: "0", img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800", demo: "", Icon: FaRocket },
-  { id: 2, key: "1", img: "https://i.imgur.com/V810M8I.png", demo: "https://burantattoo.com/", Icon: FaBuilding },
-  { id: 3, key: "2", img: "https://i.imgur.com/4rMpjjj.png", demo: "https://vos-y-solo-vos.pages.dev/", Icon: FaDatabase },
-  { id: 4, key: "3", img: "https://i.imgur.com/gOtUd1t.png", demo: "https://www.itsi.com.ar/", Icon: FaBriefcase },
-  { id: 5, key: "4", img: "https://i.imgur.com/yTFIlGC.png", demo: "", Icon: FaChartBar },
-  { id: 6, key: "5", img: "https://i.imgur.com/ES34Qfj.png", demo: "https://consultorakaisen.com.ar/", Icon: FaBuilding },
-  { id: 7, key: "6", img: "https://i.imgur.com/Ul6eOrI.png", demo: "http://francoj.pythonanywhere.com/", Icon: FaCode },
-  { id: 8, key: "7", img: "https://i.imgur.com/ceiJGpn.png", demo: "https://github.com/Zero9BSC/FirstPrintWizard", Icon: FaLaptopCode },
-  { id: 9, key: "8", img: "https://i.imgur.com/GsgHJsz.png", demo: "https://estudiokaisen.netlify.app/", Icon: FaRocket },
-  { id: 10, key: "9", img: "https://i.imgur.com/vhB5SYf.png", demo: "https://dolcericco.netlify.app/", Icon: FaDatabase },
-  { id: 11, key: "10", img: "https://i.imgur.com/hjPdVOC.png", demo: "https://healthyhearts.netlify.app/", Icon: FaMobileAlt },
-  { id: 12, key: "11", img: "https://i.imgur.com/Kj2wxE4.png", demo: "https://afipreportviewer.netlify.app/", Icon: FaChartBar },
+  { id: 1, key: "13", img: "https://i.imgur.com/lZL4May.png", demo: "", Icon: FaGlobe },
+  { id: 2, key: "10", img: "https://i.imgur.com/qpjaD4o.png", demo: "", Icon: FaHospital },
+  { id: 3, key: "3", img: "https://i.imgur.com/gOtUd1t.png", demo: "https://www.itsi.com.ar/", Icon: FaBriefcase },
+  { id: 4, key: "0", img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800", demo: "", Icon: FaRocket },
+  { id: 5, key: "1", img: "https://i.imgur.com/V810M8I.png", demo: "https://burantattoo.com/", Icon: FaBuilding },
+  { id: 6, key: "2", img: "https://i.imgur.com/4rMpjjj.png", demo: "https://vos-y-solo-vos.pages.dev/", Icon: FaDatabase },
+  { id: 7, key: "12", img: "https://i.imgur.com/FEU1O4d.png", demo: "https://medintesur.netlify.app/", Icon: FaHospital },
+  { id: 8, key: "4", img: "https://i.imgur.com/yTFIlGC.png", demo: "", Icon: FaChartBar },
+  { id: 9, key: "5", img: "https://i.imgur.com/ES34Qfj.png", demo: "https://consultorakaisen.com.ar/", Icon: FaBuilding },
+  { id: 10, key: "6", img: "https://i.imgur.com/7uY5dkg.png", demo: "http://francoj.pythonanywhere.com/", Icon: FaCode },
+  { id: 11, key: "7", img: "https://i.imgur.com/ceiJGpn.png", demo: "https://github.com/Zero9BSC/FirstPrintWizard", Icon: FaLaptopCode },
+  { id: 12, key: "8", img: "https://i.imgur.com/GsgHJsz.png", demo: "https://estudiokaisen.netlify.app/", Icon: FaRocket },
+  { id: 13, key: "9", img: "https://i.imgur.com/vhB5SYf.png", demo: "https://dolcericco.netlify.app/", Icon: FaDatabase },
+  { id: 14, key: "11", img: "https://i.imgur.com/Kj2wxE4.png", demo: "https://afipreportviewer.netlify.app/", Icon: FaChartBar },
 ];
 
 const Section = styled.section`
@@ -234,6 +238,7 @@ const Card = styled.article`
   transition: border-color 0.3s ease, transform 0.3s ease;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   &:hover { border-color: ${GREEN_COLOR}; transform: translateY(-4px); }
 `;
 
@@ -257,7 +262,6 @@ const CardContent = styled.div`
   flex-direction: column;
   min-height: 0;
   h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-  p { font-size: 0.9rem; color: #b0b0b0; line-height: 1.5; flex: 1; }
 `;
 
 const CardLink = styled.a`
@@ -273,16 +277,175 @@ const CardLink = styled.a`
   &:hover { text-decoration: underline; }
 `;
 
+const CarouselDesc = styled.p`
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  @media (min-width: 769px) {
+    font-size: 1.1rem;
+    max-width: 85%;
+  }
+`;
+
+const CardPreview = styled.p`
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+`;
+
+const CardHint = styled.span`
+  font-size: 0.72rem;
+  color: #888;
+  margin-top: 0.4rem;
+  display: block;
+`;
+
+const ProjectOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2100;
+  padding: 1rem;
+  overflow: auto;
+  animation: projFadeIn 0.2s ease;
+  @keyframes projFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+`;
+
+const ProjectModalBox = styled.div`
+  position: relative;
+  background: #191923;
+  border-radius: 12px;
+  border: 1px solid rgba(1, 190, 150, 0.3);
+  max-width: 720px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: projScaleIn 0.25s ease;
+  @keyframes projScaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @media (max-width: 640px) {
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+`;
+
+const ProjectCloseBtn = styled.button`
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s ease;
+  &:hover {
+    background: ${GREEN_COLOR};
+    color: #0b0b0b;
+  }
+  svg { font-size: 1.4rem; }
+`;
+
+const ProjectModalImageWrap = styled.div`
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: #0b0b0b;
+  flex-shrink: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+const ProjectModalScroll = styled.div`
+  padding: 1rem 1.25rem 1.5rem;
+  overflow-y: auto;
+  max-height: min(48vh, 400px);
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    padding-right: 2.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+    color: #d0d0d0;
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+  }
+  .result {
+    color: ${GREEN_COLOR};
+    font-size: 0.88rem;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+`;
+
+const ModalActions = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: ${GREEN_COLOR};
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+`;
+
 const ProjectsGrid = () => {
   const { t } = useTranslation();
   const [activeCard, setActiveCard] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [isTouchInteracting, setIsTouchInteracting] = useState(false);
+  const [openProjectKey, setOpenProjectKey] = useState(null);
   const scrollRef = useRef(null);
 
-  const featuredProjects = ALL_PROJECTS_DATA.slice(0, FEATURED_COUNT);
+  const featuredProjects = FEATURED_PROJECT_KEYS.map((k) =>
+    ALL_PROJECTS_DATA.find((p) => p.key === k)
+  ).filter(Boolean);
   const allProjects = ALL_PROJECTS_DATA;
+  const openProject = openProjectKey ? ALL_PROJECTS_DATA.find((x) => x.key === openProjectKey) : null;
+
+  const getPreviewText = (key) => {
+    const summary = t(`projects.slider.${key}.summary`, { defaultValue: "" });
+    const desc = t(`projects.slider.${key}.desc`);
+    return summary || desc;
+  };
 
   // LÓGICA DE AUTO-PLAY (solo para los destacados)
   useEffect(() => {
@@ -327,6 +490,24 @@ const ProjectsGrid = () => {
     }
   }, [activeCard, isTouchInteracting]);
 
+  useEffect(() => {
+    const onEsc = (e) => {
+      if (e.key === "Escape") setOpenProjectKey(null);
+    };
+    if (openProjectKey) {
+      document.addEventListener("keydown", onEsc);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", onEsc);
+      document.body.style.overflow = "";
+    };
+  }, [openProjectKey]);
+
+  const handleProjectOverlayClick = (e) => {
+    if (e.target === e.currentTarget) setOpenProjectKey(null);
+  };
+
   const renderProjectIcon = (p) => {
     const Icon = p.Icon;
     return <Icon color="white" size={20} />;
@@ -360,16 +541,20 @@ const ProjectsGrid = () => {
           onTouchEnd={handleTouchEnd}
         >
           {featuredProjects.map((p, i) => (
-            <ProjectSlide key={`mob-${p.id}-${i}`} $active={true}>
+            <ProjectSlide key={`mob-${p.id}-${i}`} $active={true} onClick={() => setOpenProjectKey(p.key)}>
               <ImageContainer>
                 <Image src={p.img} $active={true} alt="" loading={i === 0 ? "eager" : "lazy"} />
               </ImageContainer>
               <Content $active={true}>
                 <IconWrapper>{renderProjectIcon(p)}</IconWrapper>
                 <h3>{t(`projects.slider.${p.key}.title`)}</h3>
-                <p>{t(`projects.slider.${p.key}.desc`)}</p>
-                {t(`projects.slider.${p.key}.result`, { defaultValue: "" }) && <p style={{ fontSize: "0.85rem", marginTop: "0.35rem", opacity: 0.9 }}>{t(`projects.slider.${p.key}.result`)}</p>}
-                {p.demo && <ActionLink href={p.demo} target="_blank" rel="noopener noreferrer">{t("project.link.view")}</ActionLink>}
+                <CarouselDesc>{getPreviewText(p.key)}</CarouselDesc>
+                {p.demo && (
+                  <ActionLink href={p.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    {p.demo.includes("github") ? <FaGithub /> : <FaExternalLinkAlt />}
+                    {t("project.link.view")}
+                  </ActionLink>
+                )}
               </Content>
             </ProjectSlide>
           ))}
@@ -384,6 +569,7 @@ const ProjectsGrid = () => {
               $first={i === 0}
               $last={i === featuredProjects.length - 1}
               onMouseEnter={() => activeCard !== i && setActiveCard(i)}
+              onClick={() => setOpenProjectKey(p.key)}
             >
               <ImageContainer>
                 <Image src={p.img} $active={activeCard === i} alt="" loading={i === 0 ? "eager" : "lazy"} />
@@ -395,8 +581,7 @@ const ProjectsGrid = () => {
               >
                 <IconWrapper>{renderProjectIconDesktop(p)}</IconWrapper>
                 <h3>{t(`projects.slider.${p.key}.title`)}</h3>
-                <p>{t(`projects.slider.${p.key}.desc`)}</p>
-                {t(`projects.slider.${p.key}.result`, { defaultValue: "" }) && <p style={{ fontSize: "0.95rem", marginTop: "0.4rem", opacity: 0.9 }}>{t(`projects.slider.${p.key}.result`)}</p>}
+                <CarouselDesc>{getPreviewText(p.key)}</CarouselDesc>
                 {p.demo && (
                   <ActionLink href={p.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                     {p.demo.includes("github") ? <FaGithub /> : <FaExternalLinkAlt />}
@@ -419,16 +604,28 @@ const ProjectsGrid = () => {
         <AllTitle>{t("projects.allTitle")}</AllTitle>
         <Grid>
           {allProjects.map((p) => (
-            <Card key={p.id}>
+            <Card
+              key={p.id}
+              role="button"
+              tabIndex={0}
+              onClick={() => setOpenProjectKey(p.key)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setOpenProjectKey(p.key);
+                }
+              }}
+              aria-label={t(`projects.slider.${p.key}.title`)}
+            >
               <CardImage>
                 <img src={p.img} alt="" loading="lazy" />
               </CardImage>
               <CardContent>
                 <h3>{t(`projects.slider.${p.key}.title`)}</h3>
-                <p>{t(`projects.slider.${p.key}.desc`)}</p>
-                {t(`projects.slider.${p.key}.result`, { defaultValue: "" }) && <p style={{ fontSize: "0.85rem", marginTop: "0.25rem", color: "#01be96" }}>{t(`projects.slider.${p.key}.result`)}</p>}
+                <CardPreview>{getPreviewText(p.key)}</CardPreview>
+                <CardHint>{t("project.detailsHint")}</CardHint>
                 {p.demo && (
-                  <CardLink href={p.demo} target="_blank" rel="noopener noreferrer">
+                  <CardLink href={p.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                     {p.demo.includes("github") ? <FaGithub /> : <FaExternalLinkAlt />}
                     {t("project.link.view")}
                   </CardLink>
@@ -438,6 +635,36 @@ const ProjectsGrid = () => {
           ))}
         </Grid>
       </AllSection>
+
+      {openProject && (
+        <ProjectOverlay onClick={handleProjectOverlayClick} role="dialog" aria-modal="true" aria-label={t("project.modalAria")}>
+          <ProjectModalBox onClick={(e) => e.stopPropagation()}>
+            <ProjectCloseBtn type="button" onClick={() => setOpenProjectKey(null)} aria-label={t("project.close")}>
+              <HiX />
+            </ProjectCloseBtn>
+            <ProjectModalImageWrap>
+              <img src={openProject.img} alt={t(`projects.slider.${openProject.key}.title`)} />
+            </ProjectModalImageWrap>
+            <ProjectModalScroll>
+              <h3>{t(`projects.slider.${openProject.key}.title`)}</h3>
+              {t(`projects.slider.${openProject.key}.desc`).split("\n\n").map((para, idx) => (
+                <p key={idx}>{para}</p>
+              ))}
+              {t(`projects.slider.${openProject.key}.result`, { defaultValue: "" }) && (
+                <p className="result">{t(`projects.slider.${openProject.key}.result`)}</p>
+              )}
+              {openProject.demo && (
+                <ModalActions>
+                  <a href={openProject.demo} target="_blank" rel="noopener noreferrer">
+                    {openProject.demo.includes("github") ? <FaGithub /> : <FaExternalLinkAlt />}
+                    {openProject.demo.includes("github") ? t("project.link.github") : t("project.link.view")}
+                  </a>
+                </ModalActions>
+              )}
+            </ProjectModalScroll>
+          </ProjectModalBox>
+        </ProjectOverlay>
+      )}
     </>
   );
 };

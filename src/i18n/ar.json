@@ -47,7 +47,10 @@
     "link": {
       "view": "عرض المشروع",
       "github": "عرض على GitHub"
-    }
+    },
+    "detailsHint": "انقر لعرض الوصف كاملاً",
+    "close": "إغلاق",
+    "modalAria": "تفاصيل المشروع"
   },
   "projects": {
     "title": "المشاريع",
@@ -62,12 +65,14 @@
       { "title": "IT-Services Informáticos", "desc": "منصة ويب مؤسسية بـ React وTailwind CSS مع إدارة العملاء." },
       { "title": "Chubutex ERP", "desc": "منصة ERP بـ React وNode.js وPostgreSQL وJWT وDocker للمخزون والمبيعات." },
       { "title": "Estudio Kaisen", "desc": "موقع إنتاجي بـ React وVite وTailwind CSS." },
-      { "title": "Gaming Zone Blog", "desc": "مدونة CRUD بـ Django مع مصادقة المستخدمين وإدارة المحتوى." },
+      { "title": "Gaming Zone Blog", "summary": "مدونة تقنية متعددة اللغات (ES/EN/DE) بـ Django 5 وTailwind وCKEditor 5، وضع فاتح/داكن، i18n وSEO.", "desc": "مدونة تقنية متعددة اللغات (ES / EN / DE) بـ Django 5 وTailwind CSS وdjango-ckeditor-5. تتضمن وضع فاتح/داكن، إشعارات منبثقة، ونافذة تأكيد عند الحذف، i18n عبر gettext، SEO (وسوم ميتا ديناميكية، Open Graph، خريطة موقع، robots.txt)، سلامة البيانات (طوابع زمنية تلقائية للمنشورات)، وإعداد جاهز للإنتاج (متغيرات بيئة مع python-dotenv، DEBUG وSECRET_KEY حسب البيئة). يبرز التطوير الشامل، تجربة المستخدم، وأفضل ممارسات النشر." },
       { "title": "FirstPrintWizard", "desc": "أداة سطح مكتب بـ Python (Tkinter) لطباعة PDF دفعات مع اختيار الطابعة." },
       { "title": "Estudio Kaisen - Prototype", "desc": "نموذج أولي للعرض على العميل، بتصميم حديث ووظائف React أساسية." },
       { "title": "Dolce&Ricco", "desc": "موقع مخبز حرفي مع وصفات منزلية وبيع منتجات." },
-      { "title": "HealthyHearts", "desc": "موقع صحة وعافية مطوّر بـ Flask." },
-      { "title": "AFIP Viewer", "desc": "أداة لعرض وتحليل تقارير ARCA (AFIP) في الأرجنتين." }
+      { "title": "Kaisen Med Platform", "summary": "منصة Flask لإدارة العيادات: مواعيد، متعددة العيادات، سجلات، فوترة، امتثال، Docker/Redis. قيد التطوير.", "desc": "Kaisen Med Platform — منصة ويب لإدارة العمليات السريرية بـ Flask للعيادات والفرق: جدولة المواعيد، تنسيق الطبيب–المريض، الاستقبال والإدارة، مع التركيز على التشغيل الفعلي والتزامن العالي.\n\nتشمل عيادات متعددة (مستأجر)، تقويمات متقدمة، سجلات سريرية ومرفقات، فوترة بأتعاب لكل مختص وتتبع الدافع/التغطية، Webhooks للتكامل، لوحة مقاييس للعمليات، مصادقة ثنائية، سجلات تدقيق، ووثائق امتثال (مراجع EU/GDPR، NZ، US/HIPAA). بنية تحتية جاهزة للإنتاج: Docker، Redis (حد معدل وطوابير RQ)، اختبارات حمل، وتعزيز أمني.\n\nالمكدس: Python، Flask، SQLAlchemy، PostgreSQL/SQLite، Redis، Jinja2/Bootstrap، بريد/SMS اختياري.", "result": "قيد التطوير" },
+      { "title": "AFIP Viewer", "desc": "أداة لعرض وتحليل تقارير ARCA (AFIP) في الأرجنتين." },
+      { "title": "Medinte Sur", "summary": "SPA مؤسسي لشبكة صحية في باتاغونيا: عرض قيمة، عيادات، اتصال وصفحات قانونية. React 18 وTypeScript وVite وRR7 وTailwind، استضافة ثابتة.", "desc": "تطبيق ويب تفاعلي (SPA) مؤسسي لشبكة رعاية صحية في باتاغونيا. يتضمن صفحة رئيسية بعرض قيمة، وبطاقات لـ Clínica Santa María وInstituto Médico del Sur، ونموذج اتصال وصفحات قانونية، مع وسوم ميتا ديناميكية وألوان العلامة. التقنيات: React 18 وTypeScript وVite وReact Router 7 وTailwind، مُصمم للنشر الثابت (مثل Apache)." },
+      { "title": "TaiFlow", "summary": "SaaS للحجوزات لمشغلي الجولات: دفع موجّه، متعدد المستأجرين، Stripe، Resend، فواتير PDF GST NZ، واجهات REST على Next.js 16. قيد التطوير.", "desc": "محرك حجز مباشر لمشغلي الجولات. TaiFlow منصة على نمط SaaS تتيح بيع الحجوزات على موقعهم الخاص، مع تجربة دفع موجّهة، علامات متعددة المستأجرين، لوحة إدارة، وتدفق دفع عبر Stripe (Checkout وWebhooks)، تأكيدات بريد عبر Resend، فواتير PDF (GST NZ)، وواجهات REST على Next.js 16. التركيز: تقليل الاعتماد على الوسطاء (OTAs) وتجربة حجز متميزة مع سيطرة المشغل على الجولات والتوفر وبيانات العمل.", "result": "قيد التطوير" }
     ]
   },
   "itsupport": {

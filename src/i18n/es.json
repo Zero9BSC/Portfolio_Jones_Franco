@@ -47,7 +47,10 @@
     "link": {
       "view": "Ver Proyecto",
       "github": "Ver en GitHub"
-    }
+    },
+    "detailsHint": "Clic para ver la descripción completa",
+    "close": "Cerrar",
+    "modalAria": "Detalle del proyecto"
   },
   "projects": {
     "title": "Proyectos",
@@ -88,7 +91,8 @@
       },
       {
         "title": "Gaming Zone",
-        "desc": "Blog CRUD con Django: autenticación de usuarios y gestión de contenido.",
+        "summary": "Blog técnico multilingüe (ES/EN/DE) con Django 5, Tailwind, CKEditor 5, tema claro/oscuro, i18n y SEO.",
+        "desc": "Blog técnico multilingüe (ES / EN / DE) hecho con Django 5, Tailwind CSS y django-ckeditor-5. Incluye modo claro/oscuro, toasts y modal de confirmación al borrar, i18n con gettext, SEO (meta dinámicas, Open Graph, sitemap, robots.txt), integridad de datos (fechas automáticas en posts) y configuración lista para producción (variables de entorno con python-dotenv, DEBUG y SECRET_KEY por entorno). Demuestra full stack, UX y despliegue con buenas prácticas.",
         "result": ""
       },
       {
@@ -107,14 +111,27 @@
         "result": ""
       },
       {
-        "title": "HealthyHearts",
-        "desc": "Sitio de salud y bienestar desarrollado con Flask.",
-        "result": ""
+        "title": "Kaisen Med Platform",
+        "summary": "Plataforma Flask de gestión clínica: citas, multi-clínica, historia clínica, facturación, cumplimiento, Docker/Redis. En desarrollo.",
+        "desc": "Kaisen Med Platform — Plataforma web de gestión clínica desarrollada con Flask para clínicas y equipos sanitarios: agenda de citas, coordinación médico–paciente, recepción y administración, con foco en operación real y alta concurrencia.\n\nIncluye multi-clínica (tenant), calendarios avanzados, historia clínica y adjuntos, facturación con honorarios por profesional y registro de pagador/cobertura, webhooks para integraciones, panel de métricas para operaciones, 2FA, auditoría y documentación orientada a cumplimiento (referencia UE/GDPR, NZ, EEUU/HIPAA). Infra pensada para producción: Docker, Redis (rate limiting y colas con RQ), pruebas de carga y hardening de seguridad.\n\nStack: Python, Flask, SQLAlchemy, PostgreSQL/SQLite, Redis, Jinja2/Bootstrap, email/SMS opcionales.",
+        "result": "En desarrollo."
       },
       {
         "title": "Visor AFIP",
         "desc": "Herramienta para visualización y análisis de reportes ARCA (AFIP) en Argentina.",
         "result": "Facilita el análisis de reportes para profesionales."
+      },
+      {
+        "title": "Medinte Sur",
+        "summary": "SPA corporativa para red de salud en Patagonia: propuesta de valor, fichas de clínicas, contacto y legales. React 18, TypeScript, Vite, React Router 7, Tailwind, despliegue estático.",
+        "desc": "Medinte Sur es una SPA corporativa para una red de salud en la Patagonia. Incluye inicio con propuesta de valor, fichas de Clínica Santa María e Instituto Médico del Sur, formulario de contacto y páginas legales, con meta tags dinámicos y paleta de marca. Stack: React 18, TypeScript, Vite, React Router 7 y Tailwind, pensado para un despliegue estático (p. ej. Apache).",
+        "result": "Sitio corporativo para red de salud en Patagonia."
+      },
+      {
+        "title": "TaiFlow",
+        "summary": "Motor de reservas SaaS para operadores turísticos: checkout guiado, multi-tenant, Stripe, Resend, factura PDF GST NZ, APIs REST en Next.js 16. En desarrollo.",
+        "desc": "Motor de reservas directas para operadores turísticos. TaiFlow es una plataforma tipo SaaS para que operadores de tours vendan reservas en su propio sitio, con experiencia de checkout guiada, multi‑tenant por marca, panel de administración y flujo de pago con Stripe (Checkout y webhooks), confirmaciones por email (Resend), factura PDF (GST NZ) y APIs REST en Next.js 16. El foco del producto es reducir dependencia de OTAs y ofrecer un booking “premium” con control del operador sobre tours, disponibilidad y datos del negocio.",
+        "result": "En desarrollo."
       }
     ]
   },

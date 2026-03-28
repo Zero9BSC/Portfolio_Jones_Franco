@@ -47,7 +47,10 @@
     "link": {
       "view": "View Project",
       "github": "View on GitHub"
-    }
+    },
+    "detailsHint": "Click for full description",
+    "close": "Close",
+    "modalAria": "Project details"
   },
   "projects": {
     "title": "Projects",
@@ -88,7 +91,8 @@
       },
       {
         "title": "Gaming Zone Blog",
-        "desc": "Django-based CRUD blog platform with user authentication and content management.",
+        "summary": "Multilingual technical blog (ES/EN/DE) with Django 5, Tailwind, CKEditor 5, light/dark mode, i18n, and SEO.",
+        "desc": "Multilingual technical blog (ES / EN / DE) built with Django 5, Tailwind CSS, and django-ckeditor-5. Includes light/dark mode, toasts and a confirmation modal on delete, i18n with gettext, SEO (dynamic meta tags, Open Graph, sitemap, robots.txt), data integrity (automatic timestamps on posts), and production-ready configuration (environment variables with python-dotenv, DEBUG and SECRET_KEY per environment). Demonstrates full-stack development, UX, and deployment best practices.",
         "result": ""
       },
       {
@@ -107,14 +111,27 @@
         "result": ""
       },
       {
-        "title": "HealthyHearts",
-        "desc": "Health and wellness website developed with Flask.",
-        "result": ""
+        "title": "Kaisen Med Platform",
+        "summary": "Flask clinical management platform: appointments, multi-clinic tenancy, records, billing, compliance docs, Docker/Redis. In development.",
+        "desc": "Kaisen Med Platform — Clinical operations web platform built with Flask for clinics and care teams: appointment scheduling, clinician–patient coordination, reception and administration, focused on real-world operations and high concurrency.\n\nIncludes multi-clinic tenancy, advanced calendars, clinical records and attachments, billing with per-professional fees and payer/coverage tracking, webhooks for integrations, an operations metrics dashboard, 2FA, audit trails, and compliance-oriented documentation (EU/GDPR, NZ, US/HIPAA references). Production-minded infrastructure: Docker, Redis (rate limiting and RQ queues), load testing, and security hardening.\n\nStack: Python, Flask, SQLAlchemy, PostgreSQL/SQLite, Redis, Jinja2/Bootstrap, optional email/SMS.",
+        "result": "In development."
       },
       {
         "title": "AFIP Viewer",
         "desc": "Tool for viewing and analyzing ARCA (AFIP) reports in Argentina.",
         "result": "Streamlines report analysis for professionals."
+      },
+      {
+        "title": "Medinte Sur",
+        "summary": "Corporate SPA for a Patagonia healthcare network: value proposition, clinic profiles, contact and legal pages. React 18, TypeScript, Vite, React Router 7, Tailwind, static deploy.",
+        "desc": "Corporate SPA for a healthcare network in Patagonia. Includes a home page with value proposition, profiles for Clínica Santa María and Instituto Médico del Sur, a contact form and legal pages, with dynamic meta tags and brand palette. Stack: React 18, TypeScript, Vite, React Router 7 and Tailwind, designed for static deployment (e.g. Apache).",
+        "result": "Corporate healthcare network site in Patagonia."
+      },
+      {
+        "title": "TaiFlow",
+        "summary": "SaaS booking engine for tour operators: guided checkout, multi-tenant branding, Stripe, Resend, GST NZ PDF invoices, REST APIs on Next.js 16. In development.",
+        "desc": "Direct booking engine for tour operators. TaiFlow is a SaaS-style platform that lets tour operators sell bookings on their own site, with a guided checkout experience, multi-tenant branding, an admin panel, and Stripe payments (Checkout and webhooks), email confirmations via Resend, GST NZ PDF invoices, and REST APIs on Next.js 16. The product focus is reducing reliance on OTAs and delivering a premium booking experience with operator control over tours, availability, and business data.",
+        "result": "In development."
       }
     ]
   },
