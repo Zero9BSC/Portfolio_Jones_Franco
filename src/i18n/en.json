@@ -132,6 +132,21 @@
         "summary": "SaaS booking engine for tour operators: guided checkout, multi-tenant branding, Stripe, Resend, GST NZ PDF invoices, REST APIs on Next.js 16. In development.",
         "desc": "Direct booking engine for tour operators. TaiFlow is a SaaS-style platform that lets tour operators sell bookings on their own site, with a guided checkout experience, multi-tenant branding, an admin panel, and Stripe payments (Checkout and webhooks), email confirmations via Resend, GST NZ PDF invoices, and REST APIs on Next.js 16. The product focus is reducing reliance on OTAs and delivering a premium booking experience with operator control over tours, availability, and business data.",
         "result": "In development."
+      },
+      {
+        "title": "Damasalud S.A.S — Corporate landing",
+        "desc": "One-page corporate landing for a comprehensive health management company: service presentation, contact with an integrated form (Formspree), and responsive layout. Static stack (HTML, modular CSS, vanilla JavaScript) with a simple build for deployment.",
+        "result": ""
+      },
+      {
+        "title": "MANLI S.A.S. — Corporate website (cleaning services)",
+        "desc": "Static site with Astro and Tailwind CSS for a cleaning company in Puerto Madryn: introduction, services, FAQ, and contact with a Formspree-integrated form (submit without redirect). Includes SEO (meta tags, Open Graph, robots.txt, sitemap), production-ready favicons and web app manifest, and deployment on static hosting.",
+        "result": ""
+      },
+      {
+        "title": "LIMPIOMARIS S.A.S. — Institutional site & bookings (Next.js)",
+        "desc": "Static site for a comprehensive cleaning company (buildings and institutions) in Puerto Madryn. Corporate pages in Spanish, contact form, and booking flow with calendar, Formspree integration, local SEO (JSON-LD, sitemap, robots), brand palette, and static export ready for Apache or static hosting.",
+        "result": ""
       }
     ]
   },

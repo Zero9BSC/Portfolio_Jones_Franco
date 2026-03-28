@@ -120,6 +120,21 @@
         "summary": "SaaS-Buchungsmotor für Reiseveranstalter: geführter Checkout, Multi-Tenant, Stripe, Resend, GST-NZ-PDF-Rechnungen, REST-APIs auf Next.js 16. In Entwicklung.",
         "desc": "Direkter Buchungsmotor für Reiseveranstalter. TaiFlow ist eine SaaS-nahe Plattform, mit der Touranbieter Buchungen auf der eigenen Website verkaufen: geführter Checkout, mandantenfähige Markenführung, Admin-Panel und Zahlungsfluss mit Stripe (Checkout und Webhooks), E-Mail-Bestätigungen über Resend, PDF-Rechnungen (GST NZ) und REST-APIs auf Next.js 16. Fokus: weniger Abhängigkeit von OTAs und ein Premium-Booking mit voller Kontrolle über Touren, Verfügbarkeit und Geschäftsdaten.",
         "result": "In Entwicklung."
+      },
+      {
+        "title": "Damasalud S.A.S — Unternehmens-Landingpage",
+        "desc": "One-Page-Landing für ein Unternehmen im integrierten Gesundheitsmanagement: Leistungspräsentation, Kontakt mit integriertem Formular (Formspree) und responsives Layout. Statischer Stack (HTML, modulares CSS, Vanilla JavaScript) mit einfachem Build für das Deployment.",
+        "result": ""
+      },
+      {
+        "title": "MANLI S.A.S. — Unternehmenswebsite (Reinigungsdienste)",
+        "desc": "Statische Website mit Astro und Tailwind CSS für ein Reinigungsunternehmen in Puerto Madryn: Vorstellung, Leistungen, FAQ und Kontakt mit Formspree-Formular (Absenden ohne Weiterleitung). SEO (Meta-Tags, Open Graph, robots.txt, Sitemap), produktionsreife Favicons und Web-App-Manifest, Hosting als statische Site.",
+        "result": ""
+      },
+      {
+        "title": "LIMPIOMARIS S.A.S. — Institutionelle Website & Buchungen (Next.js)",
+        "desc": "Statische Website für ein umfassendes Reinigungsunternehmen (Gebäude und Institutionen) in Puerto Madryn. Spanische Unternehmensseiten, Kontaktformular und Buchungsablauf mit Kalender, Formspree, lokales SEO (JSON-LD, Sitemap, robots), Markenfarben und statischer Export für Apache/statisches Hosting.",
+        "result": ""
       }
     ]
   },

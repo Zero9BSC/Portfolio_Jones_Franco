@@ -132,6 +132,21 @@
         "summary": "Motor de reservas SaaS para operadores turísticos: checkout guiado, multi-tenant, Stripe, Resend, factura PDF GST NZ, APIs REST en Next.js 16. En desarrollo.",
         "desc": "Motor de reservas directas para operadores turísticos. TaiFlow es una plataforma tipo SaaS para que operadores de tours vendan reservas en su propio sitio, con experiencia de checkout guiada, multi‑tenant por marca, panel de administración y flujo de pago con Stripe (Checkout y webhooks), confirmaciones por email (Resend), factura PDF (GST NZ) y APIs REST en Next.js 16. El foco del producto es reducir dependencia de OTAs y ofrecer un booking “premium” con control del operador sobre tours, disponibilidad y datos del negocio.",
         "result": "En desarrollo."
+      },
+      {
+        "title": "Damasalud S.A.S — Landing corporativa",
+        "desc": "Landing one-page para una empresa de gestión integral en salud: presentación de servicios, contacto con formulario integrado (Formspree) y diseño responsive. Stack estático (HTML, CSS modular, JavaScript vanilla) con build simple para despliegue.",
+        "result": ""
+      },
+      {
+        "title": "Sitio web corporativo MANLI S.A.S. (servicios de limpieza)",
+        "desc": "Sitio estático con Astro y Tailwind CSS para una empresa de limpieza en Puerto Madryn: secciones de presentación, servicios, FAQ y contacto con formulario integrado a Formspree, envío sin redirección. Incluye SEO (meta, Open Graph, robots.txt, sitemap), favicons y manifest listos para producción y despliegue en hosting estático.",
+        "result": ""
+      },
+      {
+        "title": "LIMPIOMARIS S.A.S. — Sitio institucional y reservas (Next.js)",
+        "desc": "Sitio estático para empresa de limpieza integral (edificios e instituciones) en Puerto Madryn. Incluye páginas corporativas en español, formulario de contacto y flujo de reserva con calendario, integración con Formspree, SEO local (JSON-LD, sitemap, robots), paleta de marca y export listo para Apache/hosting estático.",
+        "result": ""
       }
     ]
   },

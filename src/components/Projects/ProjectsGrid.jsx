@@ -26,6 +26,9 @@ const ALL_PROJECTS_DATA = [
   { id: 12, key: "8", img: "https://i.imgur.com/GsgHJsz.png", demo: "https://estudiokaisen.netlify.app/", Icon: FaRocket },
   { id: 13, key: "9", img: "https://i.imgur.com/vhB5SYf.png", demo: "https://dolcericco.netlify.app/", Icon: FaDatabase },
   { id: 14, key: "11", img: "https://i.imgur.com/Kj2wxE4.png", demo: "https://afipreportviewer.netlify.app/", Icon: FaChartBar },
+  { id: 15, key: "14", img: "https://i.imgur.com/TybPIfD.png", demo: "https://damasalud.com.ar/", Icon: FaHospital },
+  { id: 16, key: "15", img: "https://i.imgur.com/AE8D9KO.png", demo: "https://manli.com.ar/", Icon: FaBuilding },
+  { id: 17, key: "16", img: "https://i.imgur.com/eHxkh1I.png", demo: "https://limpiomaris.com.ar/", Icon: FaBuilding },
 ];
 
 const Section = styled.section`
