@@ -151,7 +151,7 @@ const Footer = () => {
           <div>
             <span><FiPhoneCall /></span>
             <Slide direction="left">
-              <a href="tel:+64266000031">+64 26 600 0031</a>
+              <a href="https://wa.me/64266000031" target="_blank" rel="noopener noreferrer">+64 26 600 0031</a>
             </Slide>
           </div>
           <div>
